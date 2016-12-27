@@ -17,5 +17,5 @@
     <bean id="baseDao" class="dao.base.BaseDaoImpl">
         <property name="sessionFactory" ref="sessionFactory"/>
     </bean>
-    <bean id="userDao" class="dao.UserDao" parent="baseDao"/>
+    <bean id="userDao" class="dao.StudentsDao" parent="baseDao"/>
 </beans>

@@ -3,12 +3,14 @@ package model;
 /**
  * Created by Willow on 16/11/19.
  */
-public class User extends BaseModel {
+public class Students extends BaseModel {
     private Integer id;
     private String ln;
     private String pw;
+    private String no;
+    private String role;
 
-    public User() {
+    public Students() {
     }
 
     public Integer getId() {
@@ -33,5 +35,21 @@ public class User extends BaseModel {
 
     public void setPw(String pw) {
         this.pw = pw;
+    }
+
+    public String getNo() {
+        return no;
+    }
+
+    public void setNo(String no) {
+        this.no = no;
+    }
+
+    public String getRole() {
+        return role;
+    }
+
+    public void setRole(String role) {
+        this.role = role;
     }
 }

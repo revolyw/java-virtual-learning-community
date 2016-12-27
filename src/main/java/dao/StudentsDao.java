@@ -1,10 +1,10 @@
 package dao;
 
 import dao.base.BaseDaoImpl;
-import model.User;
+import model.Students;
 
 /**
  * Created by Willow on 16/11/21.
  */
-public class UserDao extends BaseDaoImpl<User> {
+public class StudentsDao extends BaseDaoImpl<Students> {
 }

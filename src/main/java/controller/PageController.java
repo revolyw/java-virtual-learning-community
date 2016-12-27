@@ -1,7 +1,6 @@
 package controller;
 
-import dao.UserDao;
-import org.springframework.beans.factory.annotation.Autowired;
+import dao.StudentsDao;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.stereotype.Controller;
 
@@ -12,6 +11,6 @@ import org.springframework.stereotype.Controller;
 @Controller
 @Configuration
 public class PageController {
-    @Autowired
-    private UserDao userDao;
+
+    private StudentsDao studentsDao;
 }

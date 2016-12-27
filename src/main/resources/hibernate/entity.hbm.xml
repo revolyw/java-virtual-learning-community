@@ -1,15 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <hibernate-mapping package="model">
-    <class name="User" table="user">
+    <class name="Students" table="students">
         <id column="id" name="id">
             <generator class="native"/>
         </id>
-        <property name="loginName" column="login_name"/>
-        <property name="userName" column="user_name"/>
-        <property name="email"/>
-        <property name="phone"/>
-        <property name="password"/>
-        <property name="status"/>
-        <property name="createTime" column="create_time"/>
+        <property name="ln" column="ln"/>
+        <property name="pw" column="pw"/>
     </class>
 </hibernate-mapping>
