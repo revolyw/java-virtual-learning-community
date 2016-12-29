@@ -1,5 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="home.aspx.cs" Inherits="home" %>
-
+﻿${host}
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
@@ -182,7 +181,7 @@
                           <li><a href="http://www.oracle.com/technetwork/cn/java/javase/documentation/api-jsp-136079-zhs.html" target="_blank">Java SE API 中文文档</a></li>
                           <li><a href="http://www.oracle.com/technetwork/cn/java/javaee/overview/index.html" target="_blank">Java2EE API 中文文档</a></li>
                           <li><a href="http://www.eclipse.org/downloads/" target="_blank">Eclipse (Java ADT)</a></li>
-                          <li><a href="http://maven.apache.org/download.cgi" target="_blank">Maven</a></li>
+                          <li><a href="http://maven.apache.org/download.HTTP" target="_blank">Maven</a></li>
                           <li><a href="http://www.mysql.com/downloads/" target="_blank">MySql Database</a></li>
                           <li><a href="https://www.oracle.com/downloads/index.html" target="_blank">Oracle Database</a></li>
                           <li><a href="http://msdn.itellyou.cn/" target="_blank">各类开发人员工具</a></li>

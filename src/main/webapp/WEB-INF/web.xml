@@ -55,6 +55,16 @@
     <!--<filter-name>hibernateFilter</filter-name>-->
     <!--<url-pattern>/admin/*</url-pattern>-->
     <!--</filter-mapping>-->
+
+    <!--设置静态资源部拦截，default这个servlet配置在dispatcher-servlet.xml中（<mvc:default-servlet-handler/>）-->
+    <servlet-mapping>
+        <servlet-name>default</servlet-name>
+        <url-pattern>*.js</url-pattern>
+        <url-pattern>*.css</url-pattern>
+        <url-pattern>/dist/*</url-pattern>
+        <url-pattern>/img/*</url-pattern>
+        <url-pattern>/resource/*</url-pattern>
+    </servlet-mapping>
     <!--DispatcherServlet-->
     <servlet>
         <servlet-name>dispatcher</servlet-name>

@@ -10,9 +10,10 @@
 
     <properties>
         <junit.version>4.12</junit.version>
-        <spring.context.version>4.1.6.RELEASE</spring.context.version>
-        <spring.mvc.version>4.1.6.RELEASE</spring.mvc.version>
-        <spring.orm.version>4.1.6.RELEASE</spring.orm.version>
+        <spring.context.version>4.3.3.RELEASE</spring.context.version>
+        <spring.core.version>4.3.3.RELEASE</spring.core.version>
+        <spring.mvc.version>4.3.3.RELEASE</spring.mvc.version>
+        <spring.orm.version>4.3.3.RELEASE</spring.orm.version>
         <druid.version>1.0.26</druid.version>
         <hibernate.version>5.2.2.Final</hibernate.version>
         <apache.poi.version>3.15</apache.poi.version>
@@ -54,12 +55,6 @@
             <artifactId>slf4j-log4j12</artifactId>
             <version>1.7.21</version>
         </dependency>
-        <!-- spring-data-jpa -->
-        <dependency>
-            <groupId>org.springframework.data</groupId>
-            <artifactId>spring-data-jpa</artifactId>
-            <version>1.9.0.M1</version>
-        </dependency>
         <!--Servlet api-->
         <dependency>
             <groupId>javax.servlet</groupId>
@@ -72,7 +67,6 @@
             <artifactId>UserAgentUtils</artifactId>
             <version>1.20</version>
         </dependency>
-
         <!--druid-->
         <dependency>
             <groupId>com.alibaba</groupId>
@@ -84,12 +78,6 @@
             <groupId>mysql</groupId>
             <artifactId>mysql-connector-java</artifactId>
             <version>5.1.34</version>
-        </dependency>
-        <!--spring orm-->
-        <dependency>
-            <groupId>org.springframework</groupId>
-            <artifactId>spring-orm</artifactId>
-            <version>${spring.orm.version}</version>
         </dependency>
         <!--hibernate-->
         <dependency>
@@ -110,17 +98,35 @@
             <version>${junit.version}</version>
             <scope>test</scope>
         </dependency>
-        <!--spring-->
+        <!--spring context-->
         <dependency>
             <groupId>org.springframework</groupId>
             <artifactId>spring-context</artifactId>
             <version>${spring.context.version}</version>
+        </dependency>
+        <!--spring core-->
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-core</artifactId>
+            <version>${spring.core.version}</version>
         </dependency>
         <!--spring mvc-->
         <dependency>
             <groupId>org.springframework</groupId>
             <artifactId>spring-webmvc</artifactId>
             <version>${spring.mvc.version}</version>
+        </dependency>
+        <!--spring orm-->
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-orm</artifactId>
+            <version>${spring.orm.version}</version>
+        </dependency>
+        <!-- spring-data-jpa -->
+        <dependency>
+            <groupId>org.springframework.data</groupId>
+            <artifactId>spring-data-jpa</artifactId>
+            <version>1.9.0.M1</version>
         </dependency>
         <!--aspectjweaver-->
         <dependency>

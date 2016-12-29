@@ -1,12 +1,12 @@
 package controller;
 
 import dao.StudentsDao;
+import framework.HTTP;
+import framework.SysConfig;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.servlet.ModelAndView;
-
-import javax.servlet.http.HttpServletRequest;
 
 
 /**
@@ -16,9 +16,16 @@ import javax.servlet.http.HttpServletRequest;
 @Configuration
 public class PageController {
     private StudentsDao studentsDao;
+
     @RequestMapping("/community")
-    public ModelAndView goCommunity(HttpServletRequest req){
-        ModelAndView mv = new ModelAndView("community");
-        return mv;
+    public String goCommunity(HTTP HTTP, ModelMap context) {
+        context.put("host", SysConfig.HOST);
+        return "community";
+    }
+
+    @RequestMapping("/home")
+    public String goHome(HTTP HTTP, ModelMap context) {
+        context.put("host", SysConfig.HOST);
+        return "home";
     }
 }

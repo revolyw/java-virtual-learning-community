@@ -9,30 +9,30 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) 调用jquery引擎 -->
 
-    <script src="dist/jquery.min.js"></script>
+    <script src="${host}/dist/jquery.min.js"></script>
 
     <!-- bootstrap开源库-->
-    <link rel="stylesheet" href="dist/css/bootstrap.min.css" />
-    <link rel="stylesheet" href="css/flat-ui.css" />
+    <link rel="stylesheet" href="${host}/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="${host}/css/flat-ui.css" />
     <!-- 自己定制的样式 -->
-    <link rel="stylesheet" href="css/public.css" />
-    <link rel="stylesheet" href="css/community.css" />
+    <link rel="stylesheet" href="${host}/css/public.css" />
+    <link rel="stylesheet" href="${host}/css/community.css" />
 
-    <script src="dist/js/bootstrap.min.js"></script>
+    <script src="${host}/dist/js/bootstrap.min.js"></script>
 
     <!--钉住导航-->
     <!--
     <script src="js/stickUp.min.js"></script>-->
     <!--affix插件-->
 
-    <script src="js/affix.js"></script>
+    <script src="${host}/js/affix.js"></script>
 
     <!--自定义js代码-->
 
-    <script src="js/public.js"></script>
-    <script type="text/javascript" src="js/pageTool.js"></script>
+    <script src="${host}/js/public.js"></script>
+    <script type="text/javascript" src="${host}/js/pageTool.js"></script>
     
-    <script src="js/community.js"></script>
+    <script src="${host}/js/community.js"></script>
     
 
 </head>

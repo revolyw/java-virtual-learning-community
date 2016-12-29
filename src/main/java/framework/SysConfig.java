@@ -8,11 +8,11 @@ import util.LoggerUtil;
  */
 public class SysConfig {
     public static boolean DEV = false;
-    public static String ONLINE = "http://www.willowspace.cn";
-    public static String OUTLINE = "http://www.willowspace.net";
+    public static String HOST;
 
     static {
         DEV = "dev".equals(System.getProperty("environment"));
+        HOST = DEV ? "http://java.willowspace.net" : "http://java.willowspace.cn";
     }
 
     public void init() {
