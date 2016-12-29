@@ -14,7 +14,7 @@
         $.ajax({
             type:"post",
             cache:false,
-            url:"community.aspx/getThemes",
+            url:"community.ftl/getThemes",
             contentType:"application/json; charset=utf-8",
             dataType:"json",
             data:submitParam,
@@ -49,7 +49,7 @@
             var content = $("#fatie_content").val();
             $.ajax({
                 type:"post",
-                url:"community.aspx/fatie",
+                url:"community.ftl/fatie",
                 contentType: "application/json; charset=utf-8",
                 dataType: "json",
                 data:"{title:\""+title+"\",content:\""+content+"\"}",
@@ -139,7 +139,7 @@ function LinkToDiezi(currentTieziId){
 //    $(".scrollToTop").click();    
     $.ajax({
         type:"post",
-        url:"community.aspx/getOneTheme",
+        url:"community.ftl/getOneTheme",
         contentType: "application/json; charset=utf-8",
         dataType: "json",
         data:"{themeId:\""+currentTieziId+"\",pageSize:\""+pageSize+"\"}",
@@ -182,7 +182,7 @@ function commentSubmit(){
         var parameter = "{theme_id:\""+theme_id+"\",submitString:\""+submitString+"\"}";
         $.ajax({
             type:"post",
-            url:"community.aspx/commentSubmit",
+            url:"community.ftl/commentSubmit",
             contentType: "application/json; charset=utf-8",
             dataType: "json",
             data:parameter,
@@ -251,7 +251,7 @@ function loadReplys(commentId,div_replysArea){
     $.ajax({
         type:"post",
         async:false,
-        url:"community.aspx/getReplys",
+        url:"community.ftl/getReplys",
         contentType: "application/json; charset=utf-8",
         dataType: "json",
         data:submitParam,
@@ -306,7 +306,7 @@ function replyInterAction(pagingAreaDomObj){
         var submitParam = '{toId:"'+toId+'",commentId:"'+commentId+'",content:"'+content+'"}';
         $.ajax({
             type:"post",
-            url:"community.aspx/reply",
+            url:"community.ftl/reply",
             contentType: "application/json; charset=utf-8",
             dataType: "json",
             data:submitParam,

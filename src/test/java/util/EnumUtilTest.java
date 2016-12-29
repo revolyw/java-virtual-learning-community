@@ -1,11 +1,10 @@
 package util;
 
-import model.Cipher;
 import org.junit.Test;
 import type.EnumInterface;
 import type.enumeration.CipherEnum;
 
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertEquals;
 
 /**
  * Created by Willow on 12/4/16.

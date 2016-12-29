@@ -12,7 +12,7 @@ $(document).ready(function(e){
         $.ajax({
              type:"post",
             aysnc:false,
-            url:"teacLogin.aspx/login",
+            url:"teacLogin.ftl/login",
             contentType:"application/json; charset=utf-8",
             dataType:"json",
             data:submitParam
@@ -20,7 +20,7 @@ $(document).ready(function(e){
                 var json = eval("("+data.d+")");
                 var info = "";
                 if(json=="1"){
-                    location.href="teacher.aspx";
+                    location.href="teacher.ftl";
                 }else if(json=="-1"){
                     info += "输入有误\n";
                 }else if(json=="-2"){
@@ -76,7 +76,7 @@ function loadMessages(){
     $.ajax({
             type:"post",
             aysnc:false,
-            url:"teacher.aspx/loadMessages",
+            url:"teacher.ftl/loadMessages",
             contentType:"application/json; charset=utf-8",
             dataType:"json",
             data:submitParam
@@ -128,7 +128,7 @@ function initPerPageAction(pgTool){
         $.ajax({
             type:"post",
             aysnc:false,
-            url:"teacher.aspx/submitReplyMsg",
+            url:"teacher.ftl/submitReplyMsg",
             contentType:"application/json; charset=utf-8",
             dataType:"json",
             data:submitParam
@@ -152,7 +152,7 @@ function getPendingLns(){
     $.ajax({
             type:"post",
             aysnc:false,
-            url:"teacher.aspx/getPendingLns",
+            url:"teacher.ftl/getPendingLns",
             contentType:"application/json; charset=utf-8",
             dataType:"json"
             }).done(function(data){
@@ -189,7 +189,7 @@ function approveLn(){
         $.ajax({
             type:"post",
             aysnc:false,
-            url:"teacher.aspx/approveLn",
+            url:"teacher.ftl/approveLn",
             contentType:"application/json; charset=utf-8",
             dataType:"json",
             data:submitParam
@@ -400,7 +400,7 @@ function asyncDataToServer(){
     }
     jsonStr += ']"}';
     
-    $.ajax({type:"post",url:"teacher.aspx/insertStuByBatch",contentType:"application/json; charset=utf-8",dataType: "json",data:jsonStr})
+    $.ajax({type:"post",url:"teacher.ftl/insertStuByBatch",contentType:"application/json; charset=utf-8",dataType: "json",data:jsonStr})
     .done(function(data){
         var json = eval("("+data.d+")");
         if(json=="False")

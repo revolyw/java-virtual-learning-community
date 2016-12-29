@@ -7,7 +7,7 @@ $(document).ready(function(e){
     });
     $.ajax({              
         type: "post",            
-        url: "onDemand.aspx/getVideos",
+        url: "onDemand.ftl/getVideos",
         contentType: "application/json; charset=utf-8",
         dataType: "json",     
         success: function(data) {    
@@ -82,7 +82,7 @@ function catalogue(json){
           $("#video_object").html(video_object);
           $.ajax({              
             type: "post",            
-            url: "onDemand.aspx/getTeachers",
+            url: "onDemand.ftl/getTeachers",
             contentType: "application/json; charset=utf-8",
             dataType: "json",     
             success: function(data) {   
@@ -138,7 +138,7 @@ function refreshMessages(){
         $.ajax({
                 type: "post",           
                 async:false,
-                url: "onDemand.aspx/getMessages",
+                url: "onDemand.ftl/getMessages",
                 contentType: "application/json; charset=utf-8",
                 dataType: "json",
                 data:submitParam
@@ -164,7 +164,7 @@ function refreshMessages(){
             $.ajax({
                 type: "post",  
                 async:false,          
-                url: "onDemand.aspx/submitMessage",
+                url: "onDemand.ftl/submitMessage",
                 contentType: "application/json; charset=utf-8",
                 dataType: "json",
                 data:submitParam, 
@@ -222,7 +222,7 @@ function initPerPageAction(pgTool){
         $.ajax({
             type: "post",  
             async:false,          
-            url: "onDemand.aspx/submitMessage",
+            url: "onDemand.ftl/submitMessage",
             contentType: "application/json; charset=utf-8",
             dataType: "json",
             data:submitParam, 

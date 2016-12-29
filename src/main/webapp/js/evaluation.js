@@ -2,7 +2,7 @@
 $(document).ready(function(e){
     $.ajax({              
             type: "post",            
-            url: "evaluation.aspx/getTests",
+            url: "evaluation.ftl/getTests",
             contentType: "application/json; charset=utf-8",
             dataType: "json",     
             success: function(data) {    
@@ -42,7 +42,7 @@ $(document).ready(function(e){
             var secTitle=$(this).find("span#sectionTitle").html();
             $.ajax({
                 type:"post",
-                url:"evaluation.aspx/getOneTest",
+                url:"evaluation.ftl/getOneTest",
                 contentType: "application/json; charset=utf-8",
                 dataType: "json",
                 data: '{"sectionId":"'+secId+'"}',
@@ -66,8 +66,8 @@ $(document).ready(function(e){
     
     
     function content_frame_init(secId,secTitle){
-        var initStr = "<li><a href=\"home.aspx\">首页</a> </li>"+
-                      "<li><a href=\"evaluation.aspx\">学习评价</a> </li>"+
+        var initStr = "<li><a href=\"home.ftl\">首页</a> </li>"+
+                      "<li><a href=\"evaluation.ftl\">学习评价</a> </li>"+
                       "<li class=\"active\">第"+secId+"章 "+secTitle+"</li>";
         $(".breadcrumb").html(initStr);
         initStr = "<div class=\"dividing\">"+

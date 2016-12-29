@@ -6,5 +6,20 @@
         </id>
         <property name="ln" column="ln"/>
         <property name="pw" column="pw"/>
+        <property name="no"/>
+        <property name="role"/>
+        <property name="name" type="string"/>
+        <property name="sex" type="string"/>
+        <property name="cls" type="string"/>
+        <property name="birthday" type="string"/>
+        <property name="introduce" type="string"/>
+        <property name="phone" type="string"/>
+        <property name="email" type="string"/>
+        <property name="grp" type="string"/>
+        <property name="learnLevel" type="string" column="learn_level"/>
+        <property name="power"/>
+        <property name="isUsed" type="string" column="is_used"/>
+        <property name="regDate" type="string" column="reg_date"/>
+        <property name="passDate" type="string" column="pass_date"/>
     </class>
 </hibernate-mapping>

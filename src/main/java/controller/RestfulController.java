@@ -2,7 +2,6 @@ package controller;
 
 import dao.StudentsDao;
 import dto.AjaxResult;
-import model.Cipher;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -60,14 +59,6 @@ public class RestfulController {
         }
         System.setProperty(argument, value);
         return "change jvm argument " + argument + " value equals " + value + "  success";
-    }
-
-    //置顶Method，并绑定接受参数,并以json返回pojo,json格式转换详见配置
-    @RequestMapping(value = "/getCipher", method = RequestMethod.GET)
-    public Cipher getCipher(@RequestParam(value = "plain", defaultValue = "i'm a plain") String plain) {
-        Cipher cipher = new Cipher();
-        cipher.setPlain(plain);
-        return cipher;
     }
 
     //返回指定视图

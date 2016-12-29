@@ -14,7 +14,7 @@ function getQueryString(name)
 //$(document).ready(function(){
 //$.ajax({              
 //            type: "post", //要用post方式                 
-//            url: "home.aspx/SayHello",//方法所在页面和方法名
+//            url: "home.btl/SayHello",//方法所在页面和方法名
 //            contentType: "application/json; charset=utf-8",     
 //            dataType: "json",     
 //            success: function(data) {

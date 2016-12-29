@@ -1,12 +1,6 @@
 package util;
 
-import model.Cipher;
-import model.User;
 import org.junit.Test;
-
-import java.util.Date;
-
-import static org.junit.Assert.*;
 
 /**
  * 一般对象工具 测试用例

@@ -2,7 +2,7 @@
 $(document).ready(function(e){
 $.ajax({              
             type: "post",            
-            url: "knowledge.aspx/getKnowledgeTree",
+            url: "knowledge.ftl/getKnowledgeTree",
             contentType: "application/json; charset=utf-8",
             dataType: "json",     
             success: function(data) {    //待改进，一次数据量太大
@@ -133,7 +133,7 @@ function catalogue(json){
         $("#dividing").html(dividing);
         $.ajax({              
             type: "post",            
-            url: "knowledge.aspx/getKnowledgeContent",
+            url: "knowledge.ftl/getKnowledgeContent",
             contentType: "application/json; charset=utf-8",
             data:'{"contentId":"'+contentId+'"}',
             dataType: "json",     
