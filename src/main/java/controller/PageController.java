@@ -19,6 +19,7 @@ public class PageController {
     @RequestMapping("/community")
     public ModelAndView goCommunity(HttpServletRequest req){
         ModelAndView mv = new ModelAndView("community");
+        mv.addObject("host", "http://willowspace.net");
         return mv;
     }
 }
