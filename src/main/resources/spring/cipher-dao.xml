@@ -8,14 +8,15 @@
                            http://www.springframework.org/schema/context/spring-context-4.0.xsd">
     <!-- ************************************************************************ -->
     <!-- ************************************************************************ -->
-
     <!-- 此处配置的bean如果需要注入到controller或者service组件中，还需要配置扫描对应bean所在的包-->
     <context:component-scan base-package="dao"/>
+    <!--扫描model-->
     <!-- ************************************************************************ -->
     <!-- ************************************************************************ -->
 
-    <bean id="baseDao" class="dao.base.BaseDaoImpl">
-        <property name="sessionFactory" ref="sessionFactory"/>
-    </bean>
-    <bean id="userDao" class="dao.StudentsDao" parent="baseDao"/>
+    <!--<bean id="baseDao" class="dao.base.BaseDaoImpl">-->
+        <!--<property name="sessionFactory" ref="sessionFactory"/>-->
+    <!--</bean>-->
+    <!--<bean id="studentsDao" class="dao.StudentsDao"/>-->
+    <!--<bean id="knowledgeDao" class="dao.KnowledgeDao"/>-->
 </beans>

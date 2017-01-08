@@ -1,65 +1,57 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="knowledge.aspx.cs" Inherits="knowledge" %>
-
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
+﻿<!doctype html>
+<html lang="en">
 <head>
     <title>知识管理</title>
-    <meta http-equiv="Content-Type" content="text/html;" />
-    <meta charset="utf-8" />
-    <meta name="description" content="Java 虚拟学习社区" />
-    <meta name="author" content="yW" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="Content-Type" content="text/html;"/>
+    <meta charset="utf-8"/>
+    <meta name="description" content="Java 虚拟学习社区"/>
+    <meta name="author" content="yW"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) 调用jquery引擎 -->
 
     <script src="dist/jquery.min.js"></script>
 
     <!-- bootstrap开源库-->
-    <link rel="stylesheet" href="dist/css/bootstrap.min.css" />
-    <link rel="stylesheet" href="css/flat-ui.css" />
+    <link rel="stylesheet" href="dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="css/flat-ui.css"/>
     <!-- 自己定制的样式 -->
-    <link rel="stylesheet" href="css/public.css" />
-    <link rel="stylesheet" href="css/knowledge.css" />
+    <link rel="stylesheet" href="css/public.css"/>
+    <link rel="stylesheet" href="css/knowledge.css"/>
 
     <script type="text/javascript" src="dist/js/bootstrap.min.js"></script>
-<!--钉住导航-->
-    <%--<script src="js/stickUp.min.js"></script>--%>
-
-    
- <!--affix插件-->
+    <!--钉住导航-->
+    <script src="js/stickUp.min.js"></script>
+    <!--affix插件-->
     <script src="js/affix.js"></script>
-
-   
     <!--公共js代码-->
     <script src="js/public.js"></script>
-    
     <script src="js/knowledge.js"></script>
-
 </head>
 <body>
-    <form id="Form1" runat="server">
+<form id="Form1">
     <!--页头logo-->
     <div class="container bodySize">
         <div class="demo-headline header">
-            <asp:Label ID="display_lg_off" class="show-off" runat="server">
-	                    <ul class="sign-in">
-		                    <li><a data-toggle="modal" data-target="#LoginModal" href="#">
-			                	登录
-		                        </a></li>
-	                    	<li><a data-toggle="modal" data-target="#RegModal" href="#">
-			                	注册
-		                        </a></li>
-	                    </ul>
-            </asp:Label>
-            <asp:Label ID="display_lg_on" class="show-off" runat="server">
+            <Label ID="display_lg_off" class="show-off" runat="server">
+                <ul class="sign-in">
+                    <li><a data-toggle="modal" data-target="#LoginModal" href="#">
+                        登录
+                    </a></li>
+                    <li><a data-toggle="modal" data-target="#RegModal" href="#">
+                        注册
+                    </a></li>
+                </ul>
+            </Label>
+            <Label ID="display_lg_on" class="show-off" runat="server">
                 <ul class="sign-in">
                     <li>
-                        <asp:Label ID="s_u_name"  runat="server" Text="" Style="color: WindowText"></asp:Label>
+                        <Label ID="s_u_name" runat="server" Text="" Style="color: WindowText"><Label>
                     </li>
                     <li>
-                        <asp:LinkButton ID="loginOff" runat="server">注销</asp:LinkButton>
+                        <button ID="loginOff" runat="server">注销</button>
                     </li>
                 </ul>
-            </asp:Label>
+            </Label>
         </div>
         <!--导航-->
         <div class="navbar-inverse">
@@ -95,8 +87,8 @@
                 <img src="img/icon1.png" style="padding:0 0 5px 5px;"/>
                 <ul class="breadcrumb">
                     <li>您的位置：</li>
-                    <li><a href="home.ftl">首页</a> </li>
-                    <li><a href="knowledge.btl" class="active">知识管理</a> </li>
+                    <li><a href="home.ftl">首页</a></li>
+                    <li><a href="knowledge.btl" class="active">知识管理</a></li>
                 </ul>
             </div>
             <div class="row">
@@ -121,17 +113,18 @@
                                         <li><a href="#">1</a></li>
                                     </ul>
                                 </li>
-                                <li><a href="#test-way">考核方式</a> </li>
+                                <li><a href="#test-way">考核方式</a></li>
                             </ul>
                         </div>
                     </div>
                 </div>
                 <!--内容展示-->
                 <div class="col-md-9" role="main">
-                    <div style="width:100%; min-height:100%;border:1px solid #e8e8e8;padding:3px; box-shadow:-2px 2px 3px #aaa;" class="col-md-9" role="main">
+                    <div style="width:100%; min-height:100%;border:1px solid #e8e8e8;padding:3px; box-shadow:-2px 2px 3px #aaa;"
+                         class="col-md-9" role="main">
                         <div id="dividing"></div>
                         <div id="content_frame">
-                            <img src="img/loading1.gif" />
+                            <img src="img/loading1.gif"/>
                         </div>
                     </div>
                 </div>
@@ -147,6 +140,6 @@
             </p>
         </div>
     </div>
-    </form>
+</form>
 </body>
 </html>

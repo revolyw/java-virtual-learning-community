@@ -4,7 +4,7 @@
     var div_pgArea = $("#LastContent1");
     $.ajax({         
         type: "post",            
-        url: "practiceTeaching.ftl/getPractices",
+        url: "practiceTeaching.aspx/getPractices",
         contentType: "application/json; charset=utf-8",
         dataType: "json",
         data:submitParam,     

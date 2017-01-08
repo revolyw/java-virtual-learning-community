@@ -19,7 +19,7 @@ public class RequestInterceptor implements HandlerInterceptor {
 
     @Override
     public void postHandle(HttpServletRequest httpServletRequest, HttpServletResponse httpServletResponse, Object handler, ModelAndView modelAndView) throws Exception {
-        LoggerUtil.println("...");
+//        LoggerUtil.println("...");
     }
 
     @Override

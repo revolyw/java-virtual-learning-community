@@ -7,7 +7,7 @@
 //              });
 $(document).ready(function(){
     var footerStr = "<label style=\"width:100%; margin:0px; text-align:center; display:block;\">Copyright © 2014 njujlxy & Optimize For Web Page By Bootstrap</label>"+
-    "<a style=\"width:100%; text-align:center; font-size:12px; height:18px; float:left;\" href=\"teacLogin.ftl\">管理界面</a>";
+    "<a style=\"width:100%; text-align:center; font-size:12px; height:18px; float:left;\" href=\"teacLogin.aspx\">管理界面</a>";
     $("#footer .container").html(footerStr);
     
     var modalStr = '<!-- start Modal -->'+
@@ -21,7 +21,7 @@ $(document).ready(function(){
                 '<button type="button" class="close text-right" aria-hidden="true" data-dismiss="modal">&times;</button>'+
                 '</div>'+
                 '<div class="modal-body">'+
-                    '<iframe class="sign-frame" src="login.ftl" frameborder="0"></iframe>'+
+                    '<iframe class="sign-frame" src="login.aspx" frameborder="0"></iframe>'+
                 '</div>'+
                 '<div class="modal-footer">'+
                 '</div>'+
@@ -40,7 +40,7 @@ $(document).ready(function(){
                 '<button type="button" class="close text-right" aria-hidden="true" data-dismiss="modal">&times;</button>'+
                 '</div>'+
                 '<div class="modal-body">'+
-                    '<iframe class="sign-frame" src="reg.ftl" frameborder="0"></iframe>'+
+                    '<iframe class="sign-frame" src="reg.aspx" frameborder="0"></iframe>'+
                 '</div>'+
                 '<div class="modal-footer">'+
                 '</div>'+

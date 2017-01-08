@@ -1,18 +1,28 @@
 package dao.base;
 
-import org.apache.log4j.Logger;
+import org.hibernate.SessionFactory;
 import org.hibernate.criterion.DetachedCriteria;
 import org.hibernate.criterion.Restrictions;
 import org.springframework.orm.hibernate4.support.HibernateDaoSupport;
+import org.springframework.stereotype.Repository;
+
+import javax.annotation.Resource;
 import java.lang.reflect.ParameterizedType;
 import java.util.List;
 
 /**
  * Created by Willow on 16/11/22.
  */
+@Repository
 public class BaseDaoImpl<T> extends HibernateDaoSupport implements BaseDao<T> {
-    private static final Logger log = Logger.getLogger(BaseDaoImpl.class);
-
+    /**
+     * 注入sessionFactory
+     * @param sessionFactory
+     */
+    @Resource
+    public void setMySessionFactory(SessionFactory sessionFactory){
+        super.setSessionFactory(sessionFactory);
+    }
     /**
      * 获取泛型的实际类型
      *
@@ -51,8 +61,9 @@ public class BaseDaoImpl<T> extends HibernateDaoSupport implements BaseDao<T> {
     }
 
     @Override
-    public Iterable<T> findAll() {
-        return null;
+    public List<T> findAll() {
+        DetachedCriteria dc = DetachedCriteria.forClass(getGenericClass());
+        return (List<T>) getHibernateTemplate().findByCriteria(dc);
     }
 
     @Override

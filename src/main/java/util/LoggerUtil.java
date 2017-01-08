@@ -36,7 +36,7 @@ public class LoggerUtil {
     }
 
     //控制台输出信息
-    public static void println(String message) {
+    public static void println(Object message) {
         System.out.println(message);
     }
 
