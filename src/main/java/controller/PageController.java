@@ -1,6 +1,5 @@
 package controller;
 
-import dao.StudentsDao;
 import dao.base.BaseDao;
 import framework.HTTP;
 import framework.SysConfig;
@@ -20,9 +19,9 @@ import org.springframework.web.bind.annotation.RequestMethod;
 public class PageController {
     private BaseDao<Students> studentsDao;
 
-    @RequestMapping(value = {"","/"},method = RequestMethod.GET)
+    @RequestMapping(value = {"", "/"}, method = RequestMethod.GET)
     public String goIndex(HTTP http, ModelMap context) {
-        return goHome(http,context);
+        return goHome(http, context);
     }
 
     @RequestMapping("/community")

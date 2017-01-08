@@ -45,6 +45,9 @@
         </mvc:message-converters>
     </mvc:annotation-driven>
 
+    <!--default-servlet用于放行静态资源-->
+    <mvc:default-servlet-handler/>
+
     <!--视图freemarker解释器 -->
     <bean id="viewResolver"
           class="org.springframework.web.servlet.view.freemarker.FreeMarkerViewResolver">

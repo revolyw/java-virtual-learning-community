@@ -2,6 +2,7 @@ package controller;
 
 import dao.base.BaseDao;
 import framework.HTTP;
+import framework.SysConfig;
 import model.Knowledge;
 import model.KnowledgeContent;
 import model.Students;
@@ -28,7 +29,7 @@ public class RestfulController {
     @Autowired
     private BaseDao<Knowledge> knowledgeDao;
     @Autowired
-    private BaseDao<KnowledgeContent> knowledgeContentBaseDao;
+    private BaseDao<KnowledgeContent> knowledgeContentDao;
 
     //获取知识目录
     @RequestMapping("/getKnowledgeTree")
@@ -39,11 +40,12 @@ public class RestfulController {
 
     //获取知识点内容
     @RequestMapping("/getKnowledgeContent")
-    public KnowledgeContent getKnowledgeContent(@RequestParam(value = "content_id", defaultValue = "0") String contentId) {
+    public KnowledgeContent getKnowledgeContent(@RequestParam(value = "content_id", defaultValue = "0") String contentId,HTTP http, ModelMap context) {
+        context.put("host", SysConfig.HOST);
         if (StringUtil.isEmpty(contentId) || !StringUtil.isNumberic(contentId))
             return null;
         int id = Integer.valueOf(contentId);
-        KnowledgeContent knowledgeContent = knowledgeContentBaseDao.findByField("id", id);
+        KnowledgeContent knowledgeContent = knowledgeContentDao.findByField("id", id);
         return knowledgeContent;
     }
 }
