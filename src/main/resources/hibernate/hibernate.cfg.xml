@@ -15,5 +15,6 @@
 
         <mapping resource="hibernate/entity.hbm.xml"/>
         <mapping class="model.Knowledge"/>
+        <mapping class="model.KnowledgeContent"/>
     </session-factory>
 </hibernate-configuration>

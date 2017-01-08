@@ -58,4 +58,8 @@ public class StringUtil {
         String str = "yw";
         LoggerUtil.println(md5(str));
     }
+
+    public static boolean isNumberic(String contentId) {
+        return true;
+    }
 }

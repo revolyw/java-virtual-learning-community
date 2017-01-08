@@ -14,7 +14,7 @@ public interface BaseDao<T> extends CrudRepository<T, Integer> {
      * @param value
      * @return
      */
-    T findByField(String field, String value);
+    T findByField(String field, Object value);
 
     /**
      * 找到所有匹配的记录

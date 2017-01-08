@@ -5,6 +5,8 @@ import org.hibernate.criterion.DetachedCriteria;
 import org.hibernate.criterion.Restrictions;
 import org.springframework.orm.hibernate4.support.HibernateDaoSupport;
 import org.springframework.stereotype.Repository;
+import util.ObjectUtil;
+import util.StringUtil;
 
 import javax.annotation.Resource;
 import java.lang.reflect.ParameterizedType;
@@ -17,12 +19,14 @@ import java.util.List;
 public class BaseDaoImpl<T> extends HibernateDaoSupport implements BaseDao<T> {
     /**
      * 注入sessionFactory
+     *
      * @param sessionFactory
      */
     @Resource
-    public void setMySessionFactory(SessionFactory sessionFactory){
+    public void setMySessionFactory(SessionFactory sessionFactory) {
         super.setSessionFactory(sessionFactory);
     }
+
     /**
      * 获取泛型的实际类型
      *
@@ -97,7 +101,9 @@ public class BaseDaoImpl<T> extends HibernateDaoSupport implements BaseDao<T> {
     }
 
     @Override
-    public T findByField(String field, String value) {
+    public T findByField(String field, Object value) {
+        if (StringUtil.isEmpty(field) || ObjectUtil.isEmpty(value))
+            return null;
         DetachedCriteria dc = DetachedCriteria.forClass(getGenericClass());
         dc.add(Restrictions.eq(field, value));
         List<T> list = (List<T>) getHibernateTemplate().findByCriteria(dc);

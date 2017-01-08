@@ -1,7 +1,8 @@
 package util;
 
-import org.apache.commons.beanutils.PropertyUtils;
 
+import org.apache.commons.beanutils.BeanUtils;
+import org.springframework.util.ObjectUtils;
 
 /**
  * 一般对象 通用工具
@@ -13,11 +14,14 @@ public class ObjectUtil {
         Class<?> cls = obj.getClass();
         try {
             Object newObj = cls.newInstance();
-            PropertyUtils.copyProperties(newObj, obj);
+            BeanUtils.copyProperties(newObj, obj);
             return (T) newObj;
         } catch (Exception e) {
             LoggerUtil.error("copy vo error!", e);
         }
         return null;
+    }
+    public static boolean isEmpty(Object o) {
+        return ObjectUtils.isEmpty(o);
     }
 }

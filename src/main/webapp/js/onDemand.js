@@ -1,4 +1,4 @@
-﻿
+﻿var host = "http://java.willowspace.net";
 $(document).ready(function(e){
     //导航交互效果
     $("ul.sidenav li").click(function(){
@@ -7,11 +7,11 @@ $(document).ready(function(e){
     });
     $.ajax({              
         type: "post",            
-        url: "onDemand.aspx/getVideos",
-        contentType: "application/json; charset=utf-8",
+        url: host+"/getVideos",
+        contentType: "application/x-www-form-urlencoded; charset=utf-8",
         dataType: "json",     
         success: function(data) {    
-            var json = eval("("+data.d+")"); //将json字符串转换成json对象
+            var json = data; //将json字符串转换成json对象
             catalogue(json);
         },
         error: function(err) {     
@@ -28,14 +28,14 @@ function catalogue(json){
     rsString += "<ul class='nav sidenav nav-tabs nav-stacked'>";
     var tmp_num = 0;                
     for(i = 0;i<json.length;i++){
-        var id = json[i].Id;
-        var level = json[i].Level;
-        var sup = json[i].Super_level;
-        var sub_num = json[i].Sub_num;
-        var number = json[i].Number;
-        var video_name = json[i].Video_name;
-        var description = json[i].Description;
-        var link_url = json[i].Link_url;
+        var id = json[i].id;
+        var level = json[i].level;
+        var sup = json[i].superLevel;
+        var sub_num = json[i].subNum;
+        var number = json[i].number;
+        var video_name = json[i].videoName;
+        var description = json[i].description;
+        var link_url = json[i].linkUrl;
         
         if(level == 1 && sub_num == 0){
             rsString += "<li class=''><a id='#"+id+"'href='javascript:void(0);'>"+video_name+"</a></li>";

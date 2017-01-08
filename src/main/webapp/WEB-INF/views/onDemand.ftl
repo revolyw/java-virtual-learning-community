@@ -1,24 +1,22 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="onDemand.aspx.cs" Inherits="onDemand" %>
-
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
+﻿<!doctype html>
+<html lang="en">
 <head>
     <title>微客点播</title>
-    <meta http-equiv="Content-Type" content="text/html;" />
-    <meta charset="utf-8" />
-    <meta name="description" content="Java 虚拟学习社区" />
-    <meta name="author" content="yW" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="Content-Type" content="text/html;"/>
+    <meta charset="utf-8"/>
+    <meta name="description" content="Java 虚拟学习社区"/>
+    <meta name="author" content="yW"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) 调用jquery引擎 -->
 
     <script src="dist/jquery.min.js"></script>
 
     <!-- bootstrap开源库-->
-    <link rel="stylesheet" href="dist/css/bootstrap.min.css" />
-    <link rel="stylesheet" href="css/flat-ui.css" />
+    <link rel="stylesheet" href="dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="css/flat-ui.css"/>
     <!-- 自己定制的样式 -->
-    <link rel="stylesheet" href="css/public.css" />
-    <link rel="stylesheet" href="css/onDemand.css" />
+    <link rel="stylesheet" href="css/public.css"/>
+    <link rel="stylesheet" href="css/onDemand.css"/>
 
     <script type="text/javascript" src="dist/js/bootstrap.min.js"></script>
 
@@ -37,19 +35,19 @@
 
 </head>
 <body>
-    <form id="Form1" runat="server">
+<form id="Form1" runat="server">
     <!--页头logo-->
     <div class="container bodySize">
         <div class="demo-headline header">
             <asp:Label ID="display_lg_off" class="show-off" runat="server">
-	                    <ul class="sign-in">
-		                    <li><a data-toggle="modal" data-target="#LoginModal" href="#">
-			                	登录
-		                        </a></li>
-	                    	<li><a data-toggle="modal" data-target="#RegModal" href="#">
-			                	注册
-		                        </a></li>
-	                    </ul>
+                <ul class="sign-in">
+                    <li><a data-toggle="modal" data-target="#LoginModal" href="#">
+                        登录
+                    </a></li>
+                    <li><a data-toggle="modal" data-target="#RegModal" href="#">
+                        注册
+                    </a></li>
+                </ul>
             </asp:Label>
             <asp:Label ID="display_lg_on" class="show-off" runat="server">
                 <ul class="sign-in">
@@ -96,8 +94,8 @@
                 <img src="img/icon1.png" style="padding:0 0 5px 5px;"/>
                 <ul class="breadcrumb">
                     <li>您的位置：</li>
-                    <li><a href="home.btl">首页</a> </li>
-                    <li><a href="courseIntrod.btl" class="active">微课点播</a> </li>
+                    <li><a href="home.btl">首页</a></li>
+                    <li><a href="courseIntrod.btl" class="active">微课点播</a></li>
                 </ul>
             </div>
             <div class="row">
@@ -123,7 +121,7 @@
                                         <li><a href="#">1</a></li>
                                     </ul>
                                 </li>
-                                <li><a href="#test-way">考核方式</a> </li>
+                                <li><a href="#test-way">考核方式</a></li>
                             </ul>
                         </div>
                     </div>
@@ -132,17 +130,21 @@
                 <div class="col-md-9" role="main">
                     <div id="content_frame" class="col-md-9" role="main">
                         <div id="video_object">
-                            <object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=7,0,19,0"
-                                width="700" height="500">
-                                <param name="movie" value="Flvplayer.swf" />
-                                <param name="quality" value="high" />
+                            <object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000"
+                                    codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=7,0,19,0"
+                                    width="700" height="500">
+                                <param name="movie" value="Flvplayer.swf"/>
+                                <param name="quality" value="high"/>
                                 <param name="AutoStart" value="true">
-                                <param name="auto" value="true" />
-                                <param name="allowFullScreen" value="true" />
-                                <param name="FlashVars" value="vcastr_file=demo.flv&LogoText=iopen.com.cn&BufferTime=3" />
-                                <embed src="resource/video/Flvplayer.swf" allowfullscreen="true" flashvars="vcastr_file=video_1_1.mp4"
-                                    quality="high" pluginspage="http://www.macromedia.com/go/getflashplayer" type="application/x-shockwave-flash"
-                                    width="700" height="500"></embed>
+                                <param name="auto" value="true"/>
+                                <param name="allowFullScreen" value="true"/>
+                                <param name="FlashVars"
+                                       value="vcastr_file=demo.flv&LogoText=iopen.com.cn&BufferTime=3"/>
+                                <embed src="resource/video/Flvplayer.swf" allowfullscreen="true"
+                                       flashvars="vcastr_file=video_1_1.mp4"
+                                       quality="high" pluginspage="http://www.macromedia.com/go/getflashplayer"
+                                       type="application/x-shockwave-flash"
+                                       width="700" height="500"></embed>
                             </object>
                             </br>
                         </div>
@@ -162,6 +164,6 @@
             </p>
         </div>
     </div>
-    </form>
+</form>
 </body>
 </html>

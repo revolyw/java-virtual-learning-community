@@ -20,7 +20,7 @@
 
     <script type="text/javascript" src="dist/js/bootstrap.min.js"></script>
     <!--钉住导航-->
-    <script src="js/stickUp.min.js"></script>
+    <#--<script src="js/stickUp.min.js"></script>-->
     <!--affix插件-->
     <script src="js/affix.js"></script>
     <!--公共js代码-->
@@ -62,17 +62,17 @@
                             <ul class="nav navbar-nav">
                                 <li class=""><a href="home.ftl">首页</a></li>
                                 <li class="span">&nbsp;&nbsp;</li>
-                                <li class=""><a href="courseIntrod.btl">课程概述</a></li>
+                                <li class=""><a href="courseIntrod.ftl">课程概述</a></li>
                                 <li class="span">&nbsp;&nbsp;</li>
-                                <li class="active"><a href="knowledge.btl">知识管理</a></li>
+                                <li class="active"><a href="knowledge.ftl">知识管理</a></li>
                                 <li class="span">&nbsp;&nbsp;</li>
-                                <li class=""><a href="onDemand.aspx">微课点播</a></li>
+                                <li class=""><a href="onDemand.ftl">微课点播</a></li>
                                 <li class="span">&nbsp;&nbsp;</li>
-                                <li class=""><a href="evaluation.btl">学习评价</a></li>
+                                <li class=""><a href="evaluation.ftl">学习评价</a></li>
                                 <li class="span">&nbsp;&nbsp;</li>
-                                <li class=""><a href="practiceTeaching.aspx">实例教学</a></li>
+                                <li class=""><a href="practiceTeaching.ftl">实例教学</a></li>
                                 <li class="span">&nbsp;&nbsp;</li>
-                                <li class=""><a href="community.btl" target="_blank">社区交流</a></li>
+                                <li class=""><a href="community.ftl" target="_blank">社区交流</a></li>
                             </ul>
                         </div>
                     </div>
