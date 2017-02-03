@@ -48,6 +48,7 @@ public class PageController {
         return "evaluation";
     }
 
+    //知识管理
     @RequestMapping("/knowledge")
     public String goKnowledge(HTTP http, ModelMap context) {
         context.put("host", SysConfig.HOST);
@@ -60,6 +61,7 @@ public class PageController {
         return "login";
     }
 
+    //微课点播
     @RequestMapping("/onDemand")
     public String goOnDemand(HTTP http, ModelMap context) {
         context.put("host", SysConfig.HOST);

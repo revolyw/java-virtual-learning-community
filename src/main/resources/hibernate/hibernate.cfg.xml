@@ -16,5 +16,9 @@
         <mapping resource="hibernate/entity.hbm.xml"/>
         <mapping class="model.Knowledge"/>
         <mapping class="model.KnowledgeContent"/>
+        <mapping class="model.Video"/>
+        <mapping class="model.Teachers"/>
+        <mapping class="model.QuestionCatalogue"/>
+        <mapping class="model.RelationshipForQuestion"/>
     </session-factory>
 </hibernate-configuration>

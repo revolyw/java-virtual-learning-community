@@ -31,7 +31,7 @@
     <!--页头logo-->
     <div class="container bodySize">
         <div class="demo-headline header">
-            <Label ID="display_lg_off" class="show-off" runat="server">
+            <Label ID="display_lg_off" class="show-off" >
                 <ul class="sign-in">
                     <li><a data-toggle="modal" data-target="#LoginModal" href="#">
                         登录
@@ -41,13 +41,13 @@
                     </a></li>
                 </ul>
             </Label>
-            <Label ID="display_lg_on" class="show-off" runat="server">
+            <Label ID="display_lg_on" class="show-off" >
                 <ul class="sign-in">
                     <li>
-                        <Label ID="s_u_name" runat="server" Text="" Style="color: WindowText"><Label>
+                        <Label ID="s_u_name"  Text="" Style="color: WindowText"><Label>
                     </li>
                     <li>
-                        <button ID="loginOff" runat="server">注销</button>
+                        <button ID="loginOff" >注销</button>
                     </li>
                 </ul>
             </Label>

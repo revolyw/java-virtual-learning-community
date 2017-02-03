@@ -19,11 +19,6 @@ abstract class BaseModel implements Serializable, Cloneable {
         return obj;
     }
 
-    @Override
-    protected Object clone() throws CloneNotSupportedException {
-        return super.clone();
-    }
-
     public String toString() {
         return this.toJson().toString();
     }
