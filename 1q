@@ -1,8 +1,0 @@
-#! /bin/zsh
-if [$1 == ""]
-then
-	echo "null"
-elif
-then
-	echo "$1"
-fi	
