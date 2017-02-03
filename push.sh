@@ -6,6 +6,7 @@ then
 elif
 then
 	msg="$1"
+	echo $msg
 fi
 
 git add .
