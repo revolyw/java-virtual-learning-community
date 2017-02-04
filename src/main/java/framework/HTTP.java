@@ -18,10 +18,19 @@ public class HTTP {
         this.rep = rep;
     }
 
-    public String getString(String sectionId, String defaultValue) {
-        String value = req.getParameter(sectionId);
+    public String getString(String key, String defaultValue) {
+        String value = req.getParameter(key);
         if (StringUtil.isEmpty(value))
             return defaultValue;
         return value;
+    }
+
+    public int getInt(String key, int defaultValue) {
+        String value = req.getParameter(key);
+        if (StringUtil.isEmpty(value))
+            return defaultValue;
+        if(!StringUtil.isNumberic(value))
+            return defaultValue;
+        return Integer.valueOf(value);
     }
 }

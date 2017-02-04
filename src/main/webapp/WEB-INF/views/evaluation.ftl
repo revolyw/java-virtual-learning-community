@@ -253,9 +253,8 @@
                 $.ajax({
                     type: "post",
                     url: host + "/getOneTest",
-                    contentType: "application/json; charset=utf-8",
                     dataType: "json",
-                    data: '{"sectionId":"' + secId + '"}',
+                    data: 'sectionId=' + secId,
                     success: function (data) {
                         var json = data;
                         content_frame_init(secId, secTitle);
@@ -333,7 +332,7 @@
             for (var i = 0; i < rs.length; i++) {
                 fiquestion +=
                         "<ul class=\"ul_tiankong\">" +
-                        "<li class=\"li_tiankong_question\">" + (i + 1) + "." + rs[i].Content + "</li>" +
+                        "<li class=\"li_tiankong_question\">" + (i + 1) + "." + rs[i].content + "</li>" +
                         "<li class=\"li_tiankong_answer\">回答：<input name=\"tiankong_" + (i + 1) + "\" type=\"text\" /></li>" +
                         "</ul>";
             }

@@ -10,6 +10,7 @@ import util.StringUtil;
 
 import javax.annotation.Resource;
 import java.lang.reflect.ParameterizedType;
+import java.util.Collection;
 import java.util.List;
 
 /**
@@ -52,23 +53,10 @@ public class BaseDaoImpl<T> extends HibernateDaoSupport implements BaseDao<T> {
     }
 
     @Override
-    public T findOne(Integer integer) {
-        DetachedCriteria dc = DetachedCriteria.forClass(getGenericClass());
-        dc.add(Restrictions.eq("id", integer));
-        List<T> list = (List<T>) getHibernateTemplate().findByCriteria(dc);
-        return (null != list && list.size() > 0) ? list.get(0) : null;
-    }
-
-    @Override
     public boolean exists(Integer integer) {
         return false;
     }
 
-    @Override
-    public List<T> findAll() {
-        DetachedCriteria dc = DetachedCriteria.forClass(getGenericClass());
-        return (List<T>) getHibernateTemplate().findByCriteria(dc);
-    }
 
     @Override
     public Iterable<T> findAll(Iterable<Integer> iterable) {
@@ -108,5 +96,39 @@ public class BaseDaoImpl<T> extends HibernateDaoSupport implements BaseDao<T> {
         dc.add(Restrictions.eq(field, value));
         List<T> list = (List<T>) getHibernateTemplate().findByCriteria(dc);
         return (null != list && list.size() > 0) ? list.get(0) : null;
+    }
+
+    @Override
+    public T findOne(Integer integer) {
+        DetachedCriteria dc = DetachedCriteria.forClass(getGenericClass());
+        dc.add(Restrictions.eq("id", integer));
+        List<T> list = (List<T>) getHibernateTemplate().findByCriteria(dc);
+        return (null != list && list.size() > 0) ? list.get(0) : null;
+    }
+
+    @Override
+    public List<T> findAll() {
+        DetachedCriteria dc = DetachedCriteria.forClass(getGenericClass());
+        return (List<T>) getHibernateTemplate().findByCriteria(dc);
+    }
+
+    @Override
+    public List<T> findInField(String field, Collection collection) {
+        if (StringUtil.isEmpty(field) || ObjectUtil.isEmpty(collection))
+            return null;
+        DetachedCriteria dc = DetachedCriteria.forClass(getGenericClass());
+        dc.add(Restrictions.in(field, collection));
+        List<T> list = (List<T>) getHibernateTemplate().findByCriteria(dc);
+        return (null != list && list.size() > 0) ? list : null;
+    }
+
+    @Override
+    public List<T> findListByField(String field, Object value) {
+        if (StringUtil.isEmpty(field) || ObjectUtil.isEmpty(value))
+            return null;
+        DetachedCriteria dc = DetachedCriteria.forClass(getGenericClass());
+        dc.add(Restrictions.eq(field, value));
+        List<T> list = (List<T>) getHibernateTemplate().findByCriteria(dc);
+        return (null != list && list.size() > 0) ? list : null;
     }
 }

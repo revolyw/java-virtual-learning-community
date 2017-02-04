@@ -1,6 +1,7 @@
 package util;
 
 import org.apache.commons.codec.binary.Base64;
+
 import java.io.UnsupportedEncodingException;
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
@@ -59,7 +60,14 @@ public class StringUtil {
         LoggerUtil.println(md5(str));
     }
 
-    public static boolean isNumberic(String contentId) {
+    public static boolean isNumberic(String string) {
+        if (isEmpty(string))
+            return false;
+        for (int i = 0; i < string.length(); i++) {
+            //ascii 0 = 48, 9 = 57
+            if (string.charAt(i) < 48 || string.charAt(i) > 57)
+                return false;
+        }
         return true;
     }
 }
