@@ -1,5 +1,16 @@
-﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
+﻿<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+
+</body>
+</html>
 <head>
     <title>课程概述</title>
     <meta http-equiv="Content-Type" content="text/html" />
@@ -65,19 +76,19 @@
                     <div class="container">
                         <div class="navbar-collapse collapse">
                             <ul class="nav navbar-nav">
-                                <li class=""><a href="home.aspx">首页</a></li>
+                                <li class=""><a href="home.ftl">首页</a></li>
                                 <li class="span">&nbsp;&nbsp;</li>
-                                <li class="active"><a href="courseIntrod.btl">课程概述</a></li>
+                                <li class="active"><a href="courseIntrod.ftl">课程概述</a></li>
                                 <li class="span">&nbsp;&nbsp;</li>
-                                <li class=""><a href="knowledge.aspx">知识管理</a></li>
+                                <li class=""><a href="knowledge.ftl">知识管理</a></li>
                                 <li class="span">&nbsp;&nbsp;</li>
-                                <li class=""><a href="onDemand.aspx">微课点播</a></li>
+                                <li class=""><a href="onDemand.ftl">微课点播</a></li>
                                 <li class="span">&nbsp;&nbsp;</li>
-                                <li class=""><a href="evaluation.aspx">学习评价</a></li>
+                                <li class=""><a href="evaluation.ftl">学习评价</a></li>
                                 <li class="span">&nbsp;&nbsp;</li>
-                                <li class=""><a href="practiceTeaching.aspx">实例教学</a></li>
+                                <li class=""><a href="practiceTeaching.ftl">实例教学</a></li>
                                 <li class="span">&nbsp;&nbsp;</li>
-                                <li class=""><a href="community.btl" target="_blank">社区交流</a></li>
+                                <li class=""><a href="community.ftl" target="_blank">社区交流</a></li>
                             </ul>
                         </div>
                     </div>
@@ -92,8 +103,8 @@
                 <img src="img/icon1.png" style="padding:0 0 5px 5px;"/>
                 <ul class="breadcrumb">
                     <li>您的位置：</li>
-                    <li><a href="home.aspx">首页</a> </li>
-                    <li><a href="courseIntrod.btl" class="active">课程概述</a> </li>
+                    <li><a href="home.ftl">首页</a> </li>
+                    <li><a href="courseIntrod.ftl" class="active">课程概述</a> </li>
                 </ul>
             </div>
             <div class="row">    
@@ -117,8 +128,8 @@
                     <div id="content_frame" class="col-md-9" role="main">
                         <!--
                         <ul class="breadcrumb">
-                            <li><a href="home.aspx">首页</a> </li>
-                            <li><a href="courseIntrod.aspx" class="active">课程概述</a> </li>
+                            <li><a href="home.ftl">首页</a> </li>
+                            <li><a href="courseIntrod.ftl" class="active">课程概述</a> </li>
                         </ul>-->
                         <div class="dividing">
                             <h2>

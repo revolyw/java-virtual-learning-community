@@ -87,7 +87,7 @@
                 <ul class="breadcrumb">
                     <li>您的位置：</li>
                     <li><a href="home.ftl">首页</a></li>
-                    <li><a href="knowledge.btl" class="active">知识管理</a></li>
+                    <li><a href="knowledge.ftl" class="active">知识管理</a></li>
                 </ul>
             </div>
             <div class="row">

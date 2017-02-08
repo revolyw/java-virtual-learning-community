@@ -1,5 +1,5 @@
-﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
+﻿<!doctype html>
+<html lang="en">
 <head>
     <title>Java 虚拟学习社区</title>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
@@ -81,19 +81,19 @@
                     <div class="container">
                         <div class="navbar-collapse collapse">
                             <ul class="nav navbar-nav">
-                                <li class="active"><a href="home.btl">首页</a></li>
+                                <li class="active"><a href="home.ftl">首页</a></li>
                                 <li class="span">&nbsp;</li>
-                                <li class=""><a href="courseIntrod.btl">课程概述</a></li>
+                                <li class=""><a href="courseIntrod.ftl">课程概述</a></li>
                                 <li class="span">&nbsp;</li>
-                                <li class=""><a href="knowledge.aspx">知识管理</a></li>
+                                <li class=""><a href="knowledge.ftl">知识管理</a></li>
                                 <li class="span">&nbsp;</li>
-                                <li class=""><a href="onDemand.aspx">微课点播</a></li>
+                                <li class=""><a href="onDemand.ftl">微课点播</a></li>
                                 <li class="span">&nbsp;</li>
-                                <li class=""><a href="evaluation.btl">学习评价</a></li>
+                                <li class=""><a href="evaluation.ftl">学习评价</a></li>
                                 <li class="span">&nbsp;</li>
-                                <li class=""><a href="practiceTeaching.aspx">实例教学</a></li>
+                                <li class=""><a href="practiceTeaching.ftl">实例教学</a></li>
                                 <li class="span">&nbsp;</li>
-                                <li class=""><a href="community.btl" target="_blank">社区交流</a></li>
+                                <li class=""><a href="community.ftl" target="_blank">社区交流</a></li>
                             </ul>
                         </div>
                     </div>
@@ -140,14 +140,14 @@
                     <div class="text">
                          Java 语言诞生于1995年，Java的名字来源于印度尼西亚爪哇岛的英文名称，因盛产咖啡而闻名，Java的标志正是一杯冒着热气的咖啡。Java是一种可以撰写跨平台应用软件的面向对象的程序设计语言，也是目前编程的主流语言。
                     </div>
-                    <a class="more" href="courseIntrod.btl"><img src="img/little2.jpg"/></a>
+                    <a class="more" href="courseIntrod.ftl"><img src="img/little2.jpg"/></a>
                 </div>
                 <div class="communityMessage floatLeft panel panel-default col-md-4">
-                    <a class="cmsg_1" href="onDemand.aspx">【视频】最新视频上线，可以点播</a>
-                    <a class="cmsg_2" href="onDemand.aspx">【通知】交流社区开通，欢迎大家参与交流分享</a>
-                    <a class="cmsg_3" href="onDemand.aspx">【案例】最新程序设计案例：计算器</a>
-                    <a class="cmsg_4" href="onDemand.aspx">【通知】学习评价系统，可以在线测验，欢迎点击测试</a>
-                    <a class="more" href="community.btl"><img src="img/little2.jpg"/></a>
+                    <a class="cmsg_1" href="onDemand.ftl">【视频】最新视频上线，可以点播</a>
+                    <a class="cmsg_2" href="onDemand.ftl">【通知】交流社区开通，欢迎大家参与交流分享</a>
+                    <a class="cmsg_3" href="onDemand.ftl">【案例】最新程序设计案例：计算器</a>
+                    <a class="cmsg_4" href="onDemand.ftl">【通知】学习评价系统，可以在线测验，欢迎点击测试</a>
+                    <a class="more" href="community.ftl"><img src="img/little2.jpg"/></a>
                 </div>
                 <div class="three floatLeft panel panel-default col-md-4">
                      <div class="panel-heading">
@@ -157,7 +157,7 @@
                     <div class="panel-body">
                           Java程序设计是计算机专业学生的必修科目，也是学习后续课程的基础。开发本学习社区的初衷正是为了更好地帮助学习者完成Java课程的学习任务。在本社区,同学们可以完成相应知识点的预习、复习；可以反复观看微课点播模块的教学视频，对于不懂的内容，可以在相应的模块下提问，会得到任课教师的解答；还可以在学习评价模块对自己学习效果进行检测；在社区交流模块，还为所有学习者提供了交流讨论的空间。
                           </div>
-                    <div class="panel-footer"><a href="courseIntrod.btl">查看更多</a></div>
+                    <div class="panel-footer"><a href="courseIntrod.ftl">查看更多</a></div>
                 </div>
                 <div class="four floatLeft panel panel-default col-md-4">
                    <div class="panel-heading">
@@ -167,7 +167,7 @@
                     <div class="panel-body">
                        贪吃蛇是一款非常经典的小游戏，玩过贪吃蛇游戏的朋友一定不会陌生了，这款游戏既简单又耐玩。通过控制蛇头方向，尽可能多的吃到东西，每吃一口就能得到一定的积分，使得蛇变长，身子越长玩的难度就越大，不能碰墙，不能咬到自己的身体，更不能咬自己的尾巴，等到了一定的分数，就能过关，然后继续玩下一关。在学习完Java后，我们也可以开发出这样有趣的游戏噢。喜欢贪吃蛇小游戏的朋友们，快来挑战一下吧!
                     </div>
-                    <div class="panel-footer"><a href="practiceTeaching.aspx">查看更多</a></div>
+                    <div class="panel-footer"><a href="practiceTeaching.ftl">查看更多</a></div>
                 </div>
                 <div class="five floatLeft panel panel-default col-md-4">
                     <div class="panel-heading">

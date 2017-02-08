@@ -61,19 +61,19 @@
                     <div class="container">
                         <div class="navbar-collapse collapse">
                             <ul class="nav navbar-nav">
-                                <li class=""><a href="home.aspx">首页</a></li>
+                                <li class=""><a href="home.ftl">首页</a></li>
                                 <li class="span">&nbsp;&nbsp;</li>
-                                <li class=""><a href="courseIntrod.btl">课程概述</a></li>
+                                <li class=""><a href="courseIntrod.ftl">课程概述</a></li>
                                 <li class="span">&nbsp;&nbsp;</li>
-                                <li class=""><a href="knowledge.aspx">知识管理</a></li>
+                                <li class=""><a href="knowledge.ftl">知识管理</a></li>
                                 <li class="span">&nbsp;&nbsp;</li>
-                                <li class=""><a href="onDemand.aspx">微课点播</a></li>
+                                <li class=""><a href="onDemand.ftl">微课点播</a></li>
                                 <li class="span">&nbsp;&nbsp;</li>
-                                <li class="active"><a href="evaluation.btl">学习评价</a></li>
+                                <li class="active"><a href="evaluation.ftl">学习评价</a></li>
                                 <li class="span">&nbsp;&nbsp;</li>
-                                <li class=""><a href="practiceTeaching.aspx">实例教学</a></li>
+                                <li class=""><a href="practiceTeaching.ftl">实例教学</a></li>
                                 <li class="span">&nbsp;&nbsp;</li>
-                                <li class=""><a href="community.btl" target="_blank">社区交流</a></li>
+                                <li class=""><a href="community.ftl" target="_blank">社区交流</a></li>
                             </ul>
                         </div>
                     </div>
@@ -275,8 +275,8 @@
 
 
         function content_frame_init(secId, secTitle) {
-            var initStr = "<li><a href=\"home.aspx\">首页</a> </li>" +
-                    "<li><a href=\"evaluation.aspx\">学习评价</a> </li>" +
+            var initStr = "<li><a href=\"home.ftl\">首页</a> </li>" +
+                    "<li><a href=\"evaluation.ftl\">学习评价</a> </li>" +
                     "<li class=\"active\">第" + secId + "章 " + secTitle + "</li>";
             $(".breadcrumb").html(initStr);
             initStr = "<div class=\"dividing\">" +

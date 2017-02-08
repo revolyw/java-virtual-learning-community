@@ -1,7 +1,5 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="teacLogin.aspx.cs" Inherits="teacLogin" %>
-
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
+﻿<!doctype html>
+<html lang="en">
 <head runat="server">
     <title>教师登陆</title>
 
@@ -61,7 +59,7 @@
 
     <script>
         var footerStr = "<label style=\"width:100%; margin:0px; text-align:center; display:block;\">Copyright © 2014 njujlxy & Optimize For Web Page By Bootstrap</label>"+
-        "<a style=\"width:100%; text-align:center; color:#fff; font-size:12px; height:18px; float:left;\" href=\"home.btl\">学生界面</a>";
+        "<a style=\"width:100%; text-align:center; color:#fff; font-size:12px; height:18px; float:left;\" href=\"home.ftl\">学生界面</a>";
         $("#footer .container").html(footerStr);
     </script>
 

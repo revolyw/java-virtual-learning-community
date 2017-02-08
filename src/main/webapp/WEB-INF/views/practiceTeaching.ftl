@@ -60,19 +60,19 @@
                     <div class="container">
                         <div class="navbar-collapse collapse">
                             <ul class="nav navbar-nav">
-                                <li class=""><a href="home.btl">首页</a></li>
+                                <li class=""><a href="home.ftl">首页</a></li>
                                 <li class="span">&nbsp;&nbsp;</li>
-                                <li class=""><a href="courseIntrod.btl">课程概述</a></li>
+                                <li class=""><a href="courseIntrod.ftl">课程概述</a></li>
                                 <li class="span">&nbsp;&nbsp;</li>
-                                <li class=""><a href="knowledge.btl">知识管理</a></li>
+                                <li class=""><a href="knowledge.ftl">知识管理</a></li>
                                 <li class="span">&nbsp;&nbsp;</li>
-                                <li class=""><a href="onDemand.btl">微课点播</a></li>
+                                <li class=""><a href="onDemand.ftl">微课点播</a></li>
                                 <li class="span">&nbsp;&nbsp;</li>
-                                <li class=""><a href="evaluation.btl">学习评价</a></li>
+                                <li class=""><a href="evaluation.ftl">学习评价</a></li>
                                 <li class="span">&nbsp;&nbsp;</li>
-                                <li class="active"><a href="practiceTeaching.btl">实例教学</a></li>
+                                <li class="active"><a href="practiceTeaching.ftl">实例教学</a></li>
                                 <li class="span">&nbsp;&nbsp;</li>
-                                <li class=""><a href="community.btl" target="_blank">社区交流</a></li>
+                                <li class=""><a href="community.ftl" target="_blank">社区交流</a></li>
                             </ul>
                         </div>
                     </div>
@@ -87,8 +87,8 @@
                 <img src="img/icon1.png" style="padding:0 0 5px 5px;"/>
                 <ul class="breadcrumb" style="display:inline; padding:0; background:#f5f5f5;">
                     <li>您的位置：</li>
-                    <li><a href="home.btl">首页</a></li>
-                    <li><a href="practiceTeaching.btl" class="active">实例教学</a></li>
+                    <li><a href="home.ftl">首页</a></li>
+                    <li><a href="practiceTeaching.ftl" class="active">实例教学</a></li>
                 </ul>
             </div>
             <div class="row container">

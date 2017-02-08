@@ -80,19 +80,19 @@
                 <div class="container">
                     <div class="navbar-collapse collapse">
                         <ul class="nav navbar-nav">
-                            <li class=""><a href="home.aspx">首页</a></li>
+                            <li class=""><a href="home.ftl">首页</a></li>
                             <li class="span">&nbsp;|</li>
-                            <li class=""><a href="courseIntrod.aspx">课程概述</a></li>
+                            <li class=""><a href="courseIntrod.ftl">课程概述</a></li>
                             <li class="span">&nbsp;|</li>
-                            <li class=""><a href="knowledge.aspx">知识管理</a></li>
+                            <li class=""><a href="knowledge.ftl">知识管理</a></li>
                             <li class="span">&nbsp;|</li>
-                            <li class=""><a href="onDemand.aspx">微课点播</a></li>
+                            <li class=""><a href="onDemand.ftl">微课点播</a></li>
                             <li class="span">&nbsp;|</li>
-                            <li class=""><a href="practiceTeaching.aspx">实验教学</a></li>
+                            <li class=""><a href="practiceTeaching.ftl">实验教学</a></li>
                             <li class="span">&nbsp;|</li>
-                            <li class=""><a href="evaluation.aspx">学习评价</a></li>
+                            <li class=""><a href="evaluation.ftl">学习评价</a></li>
                             <li class="span">&nbsp;|</li>
-                            <li class="active"><a href="community.aspx" target="_blank">社区交流</a></li>
+                            <li class="active"><a href="community.ftl" target="_blank">社区交流</a></li>
                         </ul>
                     </div>
                 </div>
@@ -117,9 +117,9 @@
                     <a href="javascript:void(0);" class="search_img"></a>
                 </div>
                 <div class="top_logo">
-                    <a href="home.aspx"><img src="img/communityLogo.png" style="border:1px solid #e8e8e8;"/></a>
+                    <a href="home.ftl"><img src="img/communityLogo.png" style="border:1px solid #e8e8e8;"/></a>
                 </div>
-                <div class="top_btn"><a href="home.aspx">去社区学习</a></div>
+                <div class="top_btn"><a href="home.ftl">去社区学习</a></div>
             </div>
             <div id="bottom" class="col-md-12">
                 <ul>
@@ -216,7 +216,7 @@
                 var content = $("#fatie_content").val();
                 $.ajax({
                     type: "post",
-                    url: "community.aspx/fatie",
+                    url: "community.ftl/fatie",
                     contentType: "application/json; charset=utf-8",
                     dataType: "json",
                     data: "{title:\"" + title + "\",content:\"" + content + "\"}",
@@ -347,7 +347,7 @@
             var parameter = "{theme_id:\"" + theme_id + "\",submitString:\"" + submitString + "\"}";
             $.ajax({
                 type: "post",
-                url: "community.aspx/commentSubmit",
+                url: "community.ftl/commentSubmit",
                 contentType: "application/json; charset=utf-8",
                 dataType: "json",
                 data: parameter,
@@ -470,7 +470,7 @@
             var submitParam = '{toId:"' + toId + '",commentId:"' + commentId + '",content:"' + content + '"}';
             $.ajax({
                 type: "post",
-                url: "community.aspx/reply",
+                url: "community.ftl/reply",
                 contentType: "application/json; charset=utf-8",
                 dataType: "json",
                 data: submitParam,
