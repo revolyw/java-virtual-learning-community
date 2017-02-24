@@ -158,7 +158,7 @@
             var title = Data[i].title;
             var description = Data[i].description;
             var type = Data[i].type;
-            var img_url = Data[i].omgUrl;
+            var img_url = Data[i].imgUrl;
             var link_url = Data[i].linkUrl;
             var uploadTime = Data[i].uploadTime;
             htmlStr += "<li>"
