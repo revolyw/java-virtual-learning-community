@@ -33,25 +33,24 @@
     <script type="text/javascript" src="${host}/js/pageTool.js"></script>
 </head>
 <body>
-<form id="Form1" runat="server">
-    <div class="btn btn-default view_tiezi_back displayNone">
-        返回
+<div class="btn btn-default view_tiezi_back displayNone">
+    返回
+</div>
+<div class="btn btn-danger view_tiezi_liuyan displayNone">
+    评论
+</div>
+<div class="btn btn-primary scrollToTop">
+    回顶
+</div>
+<div class="opacity">
+    <div class="decorate_left_top"></div>
+    <div class="view_tiezi displayNone">
     </div>
-    <div class="btn btn-danger view_tiezi_liuyan displayNone">
-        评论
-    </div>
-    <div class="btn btn-primary scrollToTop">
-        回顶
-    </div>
-    <div class="opacity">
-        <div class="decorate_left_top"></div>
-        <div class="view_tiezi displayNone">
-        </div>
-    </div>
-    <!--页头logo--><!--
+</div>
+<!--页头logo--><!--
     <div class="container bodySize">
         <div class="demo-headline header">
-            <asp:Label ID="display_lg_off" class="show-off" runat="server">
+            <label id="display_lg_off" class="show-off" >
 	                    <ul class="sign-in">
 		                    <li><a data-toggle="modal" data-target="#LoginModal" href="#">
 			                	登录
@@ -60,109 +59,108 @@
 			                	注册
 		                        </a></li>
 	                    </ul>
-            </asp:Label>
-            <asp:Label ID="display_lg_on" class="show-off" runat="server">
+            </label>
+            <label id="display_lg_on" class="show-off" >
                 <ul class="sign-in">
                     <li>
-                        <asp:Label ID="s_u_name" runat="server" Text="" Style="color: WindowText"></asp:Label>
+                        <label id="s_u_name"  Text="" Style="color: WindowText"></label>
                     </li>
                     <li>
-                        <asp:LinkButton ID="loginOff" runat="server">注销</asp:LinkButton>
+                        <button id="loginOff" >注销</button>
                     </li>
                 </ul>
-            </asp:Label>
+            </label>
         </div>
         <!--导航-->
-    <!--
-    <div class="navbar-inverse">
-        <div class="navwrapper navbar-static-top">
-            <div class="navbar navbar-inverse">
-                <div class="container">
-                    <div class="navbar-collapse collapse">
-                        <ul class="nav navbar-nav">
-                            <li class=""><a href="home.ftl">首页</a></li>
-                            <li class="span">&nbsp;|</li>
-                            <li class=""><a href="courseIntrod.ftl">课程概述</a></li>
-                            <li class="span">&nbsp;|</li>
-                            <li class=""><a href="knowledge.ftl">知识管理</a></li>
-                            <li class="span">&nbsp;|</li>
-                            <li class=""><a href="onDemand.ftl">微课点播</a></li>
-                            <li class="span">&nbsp;|</li>
-                            <li class=""><a href="practiceTeaching.ftl">实验教学</a></li>
-                            <li class="span">&nbsp;|</li>
-                            <li class=""><a href="evaluation.ftl">学习评价</a></li>
-                            <li class="span">&nbsp;|</li>
-                            <li class="active"><a href="community.ftl" target="_blank">社区交流</a></li>
-                        </ul>
-                    </div>
+<!--
+<div class="navbar-inverse">
+    <div class="navwrapper navbar-static-top">
+        <div class="navbar navbar-inverse">
+            <div class="container">
+                <div class="navbar-collapse collapse">
+                    <ul class="nav navbar-nav">
+                        <li class=""><a href="home.ftl">首页</a></li>
+                        <li class="span">&nbsp;|</li>
+                        <li class=""><a href="courseIntrod.ftl">课程概述</a></li>
+                        <li class="span">&nbsp;|</li>
+                        <li class=""><a href="knowledge.ftl">知识管理</a></li>
+                        <li class="span">&nbsp;|</li>
+                        <li class=""><a href="onDemand.ftl">微课点播</a></li>
+                        <li class="span">&nbsp;|</li>
+                        <li class=""><a href="practiceTeaching.ftl">实验教学</a></li>
+                        <li class="span">&nbsp;|</li>
+                        <li class=""><a href="evaluation.ftl">学习评价</a></li>
+                        <li class="span">&nbsp;|</li>
+                        <li class="active"><a href="community.ftl" target="_blank">社区交流</a></li>
+                    </ul>
                 </div>
             </div>
         </div>
     </div>
+</div>
 </div>-->
-    <!-- 页面主体部分  -->
-    <div id="wrap">
+<!-- 页面主体部分  -->
+<div id="wrap">
 
-        <div class="bg container bodySize">
-            <div class="top_bg"></div>
-            <div id="top" class="col-md-12">
-                <!--<div class="community_top_bkg"><img src="img/community_top.jpg" /></div>-->
-                <ul>
-                    <li id="nav_kantie" class="active">看帖</li>
-                    <li id="nav_fatie">发帖</li>
-                    <li id="nav_dongtai">动态</li>
-                </ul>
-                <div id="search">
-                    <input id="input_search" type="text" placeholder="帖子搜索"/>
-                    <a href="javascript:void(0);" class="search_img"></a>
-                </div>
-                <div class="top_logo">
-                    <a href="home.ftl"><img src="img/communityLogo.png" style="border:1px solid #e8e8e8;"/></a>
-                </div>
-                <div class="top_btn"><a href="home.ftl">去社区学习</a></div>
+    <div class="bg container bodySize">
+        <div class="top_bg"></div>
+        <div id="top" class="col-md-12">
+            <!--<div class="community_top_bkg"><img src="img/community_top.jpg" /></div>-->
+            <ul>
+                <li id="nav_kantie" class="active">看帖</li>
+                <li id="nav_fatie">发帖</li>
+                <li id="nav_dongtai">动态</li>
+            </ul>
+            <div id="search">
+                <input id="input_search" type="text" placeholder="帖子搜索"/>
+                <a href="javascript:void(0);" class="search_img"></a>
             </div>
-            <div id="bottom" class="col-md-12">
-                <ul>
-                    <!--<li>
-                        <div class="tie_left">
-                            <div class="hot">
-                                <span class="hot_txt">2048</span>
-                            </div>
-                        </div>
-                        <div class="tie_center">
-                            <div class="tie_center_top">
-                                <span id="title_txt">J2EE中过滤器的用法</span>
-                            </div>
-                            <div class="tie_center_bottom">
-                                <span id="tie_main">J2EE中的过滤器到底该如何使用呢？ 今天我们就来探讨一下，这里是这片帖子的摘要</span>
-                            </div>
-                        </div>
-                        <div class="tie_right">
-                            <div class="tie_right_top">
-                                <span id="user_txt">骑大象抢内衣</span>
-                            </div>
-                            <div class="tie_right_bottom">
-                                <span id="time_txt">2015-04-08 14:00</span>
-                            </div>
-                        </div>
-                    </li>-->
-                    <li style="line-height:100px; text-align:center;">
-                        <img src="img/loading1.gif"/>
-                    </li>
-                </ul>
+            <div class="top_logo">
+                <a href="home.ftl"><img src="img/communityLogo.png" style="border:1px solid #e8e8e8;"/></a>
             </div>
+            <div class="top_btn"><a href="home.ftl">去社区学习</a></div>
+        </div>
+        <div id="bottom" class="col-md-12">
+            <ul>
+                <!--<li>
+                    <div class="tie_left">
+                        <div class="hot">
+                            <span class="hot_txt">2048</span>
+                        </div>
+                    </div>
+                    <div class="tie_center">
+                        <div class="tie_center_top">
+                            <span id="title_txt">J2EE中过滤器的用法</span>
+                        </div>
+                        <div class="tie_center_bottom">
+                            <span id="tie_main">J2EE中的过滤器到底该如何使用呢？ 今天我们就来探讨一下，这里是这片帖子的摘要</span>
+                        </div>
+                    </div>
+                    <div class="tie_right">
+                        <div class="tie_right_top">
+                            <span id="user_txt">骑大象抢内衣</span>
+                        </div>
+                        <div class="tie_right_bottom">
+                            <span id="time_txt">2015-04-08 14:00</span>
+                        </div>
+                    </div>
+                </li>-->
+                <li style="line-height:100px; text-align:center;">
+                    <img src="img/loading1.gif"/>
+                </li>
+            </ul>
         </div>
     </div>
-    <!-- 页面主体部分  -->
-    <!-- 固定在底部的页脚 -->
-    <div id="footer">
-        <div class="container">
-            <p class="text-muted text-center">
-                Copyright © 2014 njujlxy & Design By yW & Optimize For Web Page By Bootstrap
-            </p>
-        </div>
+</div>
+<!-- 页面主体部分  -->
+<!-- 固定在底部的页脚 -->
+<div id="footer">
+    <div class="container">
+        <p class="text-muted text-center">
+            Copyright © 2014 njujlxy & Design By yW & Optimize For Web Page By Bootstrap
+        </p>
     </div>
-</form>
+</div>
 </body>
 <script>
     var host = "${host}";
@@ -269,7 +267,7 @@
                     "</div>" +
                     "<div class=\"tie_center\">" +
                     "<div class=\"tie_center_top\">" +
-                    "<span id=\"title_txt\"><a class=\"linkTo_title\" linkId=\"" + Data[i].id + "\">" + Data[i].title + "</a></span>" +
+                    "<span id=\"title_txt\"><a class=\"linkTo_title\" linkid=\"" + Data[i].id + "\">" + Data[i].title + "</a></span>" +
                     "</div>" +
                     "<div class=\"tie_center_bottom\">" +
                     "<span id=\"tie_main\">" + Data[i].content + "</span>" +
@@ -308,7 +306,7 @@
             type: "post",
             url: host + "/getOneTheme",
             dataType: "json",
-            data: "themeId=" + currentTieziId + "&pageSize=" + pageSize,
+            data: "themeid=" + currentTieziId + "&pageSize=" + pageSize,
             success: function (data) {
                 var json = data;
                 var htmlStr = "";
@@ -412,7 +410,7 @@
     //加载一条评论所有回复
     function loadReplys(commentId, div_replysArea) {
         var pageSize = 3;
-        var submitParam = 'commentId=' + commentId + '&pageSize=' + pageSize;
+        var submitParam = 'commentid=' + commentId + '&pageSize=' + pageSize;
         $.ajax({
             type: "post",
             async: false,

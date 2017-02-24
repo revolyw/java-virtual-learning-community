@@ -27,119 +27,117 @@
     <script src="js/public.js"></script>
 </head>
 <body>
-<form id="Form1">
-    <!--页头logo-->
+<!--页头logo-->
+<div class="container bodySize">
+    <div class="demo-headline header">
+        <Label id="display_lg_off" class="show-off">
+            <ul class="sign-in">
+                <li><a data-toggle="modal" data-target="#LoginModal" href="#">
+                    登录
+                </a></li>
+                <li><a data-toggle="modal" data-target="#RegModal" href="#">
+                    注册
+                </a></li>
+            </ul>
+        </Label>
+        <Label id="display_lg_on" class="show-off">
+            <ul class="sign-in">
+                <li>
+                    <Label id="s_u_name" Text="" Style="color: WindowText"><Label>
+                </li>
+                <li>
+                    <button id="loginOff">注销</button>
+                </li>
+            </ul>
+        </Label>
+    </div>
+    <!--导航-->
+    <div class="navbar-inverse">
+        <div class="navwrapper navbar-static-top">
+            <div class="navbar navbar-inverse">
+                <div class="container">
+                    <div class="navbar-collapse collapse">
+                        <ul class="nav navbar-nav">
+                            <li class=""><a href="home.ftl">首页</a></li>
+                            <li class="span">&nbsp;&nbsp;</li>
+                            <li class=""><a href="courseIntrod.ftl">课程概述</a></li>
+                            <li class="span">&nbsp;&nbsp;</li>
+                            <li class="active"><a href="knowledge.ftl">知识管理</a></li>
+                            <li class="span">&nbsp;&nbsp;</li>
+                            <li class=""><a href="onDemand.ftl">微课点播</a></li>
+                            <li class="span">&nbsp;&nbsp;</li>
+                            <li class=""><a href="evaluation.ftl">学习评价</a></li>
+                            <li class="span">&nbsp;&nbsp;</li>
+                            <li class=""><a href="practiceTeaching.ftl">实例教学</a></li>
+                            <li class="span">&nbsp;&nbsp;</li>
+                            <li class=""><a href="community.ftl" target="_blank">社区交流</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- 页面主体部分  -->
+<div id="wrap">
     <div class="container bodySize">
-        <div class="demo-headline header">
-            <Label ID="display_lg_off" class="show-off" >
-                <ul class="sign-in">
-                    <li><a data-toggle="modal" data-target="#LoginModal" href="#">
-                        登录
-                    </a></li>
-                    <li><a data-toggle="modal" data-target="#RegModal" href="#">
-                        注册
-                    </a></li>
-                </ul>
-            </Label>
-            <Label ID="display_lg_on" class="show-off" >
-                <ul class="sign-in">
-                    <li>
-                        <Label ID="s_u_name"  Text="" Style="color: WindowText"><Label>
-                    </li>
-                    <li>
-                        <button ID="loginOff" >注销</button>
-                    </li>
-                </ul>
-            </Label>
+        <div id="nav_position">
+            <img src="img/icon1.png" style="padding:0 0 5px 5px;"/>
+            <ul class="breadcrumb">
+                <li>您的位置：</li>
+                <li><a href="home.ftl">首页</a></li>
+                <li><a href="knowledge.ftl" class="active">知识管理</a></li>
+            </ul>
         </div>
-        <!--导航-->
-        <div class="navbar-inverse">
-            <div class="navwrapper navbar-static-top">
-                <div class="navbar navbar-inverse">
-                    <div class="container">
-                        <div class="navbar-collapse collapse">
-                            <ul class="nav navbar-nav">
-                                <li class=""><a href="home.ftl">首页</a></li>
-                                <li class="span">&nbsp;&nbsp;</li>
-                                <li class=""><a href="courseIntrod.ftl">课程概述</a></li>
-                                <li class="span">&nbsp;&nbsp;</li>
-                                <li class="active"><a href="knowledge.ftl">知识管理</a></li>
-                                <li class="span">&nbsp;&nbsp;</li>
-                                <li class=""><a href="onDemand.ftl">微课点播</a></li>
-                                <li class="span">&nbsp;&nbsp;</li>
-                                <li class=""><a href="evaluation.ftl">学习评价</a></li>
-                                <li class="span">&nbsp;&nbsp;</li>
-                                <li class=""><a href="practiceTeaching.ftl">实例教学</a></li>
-                                <li class="span">&nbsp;&nbsp;</li>
-                                <li class=""><a href="community.ftl" target="_blank">社区交流</a></li>
-                            </ul>
-                        </div>
+        <div class="row">
+            <div id="catalogue_frame"></div>
+            <div class="col-md-3">
+                <div class="sidebar">
+                    <div id="toc">
+                        <ul class="nav sidenav nav-tabs nav-stacked">
+                            <li class="active"><a href="#know-java">了解Java</a></li>
+                            <li class=""><a href="#teach-outline">教学大纲</a>
+                                <ul class="nav">
+                                    <li><a href="#teach-outline-">大纲1</a></li>
+                                    <li><a href="#teach-outline-">大纲2</a></li>
+                                    <li><a href="#teach-outline-less">大纲3</a></li>
+                                    <li><a href="#teach-outline-">大纲4</a></li>
+                                    <li><a href="#teach-outline-grunt">大纲5</a></li>
+                                    <li><a href="#teach-outline-">大纲6</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="#teach-calendar">教学日历</a>
+                                <ul class="nav">
+                                    <li><a href="#">1</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="#test-way">考核方式</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <!--内容展示-->
+            <div class="col-md-9" role="main">
+                <div style="width:100%; min-height:100%;border:1px solid #e8e8e8;padding:3px; box-shadow:-2px 2px 3px #aaa;"
+                     class="col-md-9" role="main">
+                    <div id="dividing"></div>
+                    <div id="content_frame">
+                        <img src="img/loading1.gif"/>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    <!-- 页面主体部分  -->
-    <div id="wrap">
-        <div class="container bodySize">
-            <div id="nav_position">
-                <img src="img/icon1.png" style="padding:0 0 5px 5px;"/>
-                <ul class="breadcrumb">
-                    <li>您的位置：</li>
-                    <li><a href="home.ftl">首页</a></li>
-                    <li><a href="knowledge.ftl" class="active">知识管理</a></li>
-                </ul>
-            </div>
-            <div class="row">
-                <div id="catalogue_frame"></div>
-                <div class="col-md-3">
-                    <div class="sidebar">
-                        <div id="toc">
-                            <ul class="nav sidenav nav-tabs nav-stacked">
-                                <li class="active"><a href="#know-java">了解Java</a></li>
-                                <li class=""><a href="#teach-outline">教学大纲</a>
-                                    <ul class="nav">
-                                        <li><a href="#teach-outline-">大纲1</a></li>
-                                        <li><a href="#teach-outline-">大纲2</a></li>
-                                        <li><a href="#teach-outline-less">大纲3</a></li>
-                                        <li><a href="#teach-outline-">大纲4</a></li>
-                                        <li><a href="#teach-outline-grunt">大纲5</a></li>
-                                        <li><a href="#teach-outline-">大纲6</a></li>
-                                    </ul>
-                                </li>
-                                <li><a href="#teach-calendar">教学日历</a>
-                                    <ul class="nav">
-                                        <li><a href="#">1</a></li>
-                                    </ul>
-                                </li>
-                                <li><a href="#test-way">考核方式</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                <!--内容展示-->
-                <div class="col-md-9" role="main">
-                    <div style="width:100%; min-height:100%;border:1px solid #e8e8e8;padding:3px; box-shadow:-2px 2px 3px #aaa;"
-                         class="col-md-9" role="main">
-                        <div id="dividing"></div>
-                        <div id="content_frame">
-                            <img src="img/loading1.gif"/>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+</div>
+<!-- 页面主体部分  -->
+<!-- 固定在底部的页脚 -->
+<div id="footer">
+    <div class="container">
+        <p class="text-muted text-center">
+            Copyright © 2014 njujlxy & Design By yW & Optimize For Web Page By Bootstrap
+        </p>
     </div>
-    <!-- 页面主体部分  -->
-    <!-- 固定在底部的页脚 -->
-    <div id="footer">
-        <div class="container">
-            <p class="text-muted text-center">
-                Copyright © 2014 njujlxy & Design By yW & Optimize For Web Page By Bootstrap
-            </p>
-        </div>
-    </div>
-</form>
+</div>
 </body>
 </html>
 <script>
