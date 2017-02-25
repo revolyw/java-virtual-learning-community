@@ -6,8 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <title>Reg</title>
     <!-- Bootstrap core CSS -->
-    <link href="dist/css/bootstrap.css" rel="stylesheet"/>
-    <link href="css/signin.css" rel="stylesheet"/>
+    <link href="../../../dist/css/bootstrap.css" rel="stylesheet"/>
+    <link href="../../../css/signin.css" rel="stylesheet"/>
 </head>
 <body>
 <div class="container" style="font-family:幼圆;">
@@ -48,8 +48,8 @@
         <div class="form-group">
             <button class="btn btn-lg btn-success btn-block"
                     style="background:url(img/register2.png) no-repeat; background-size:100% 100%; border:0; width:300px;"
-                    type="submit"
-                    Text="立即注册"/>
+                    type="submit">立即注册
+            </button>
         </div>
     </form>
 </div>

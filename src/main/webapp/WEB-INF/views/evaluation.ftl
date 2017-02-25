@@ -16,7 +16,101 @@
     <link rel="stylesheet" href="css/flat-ui.css"/>
     <!-- 自己定制的样式 -->
     <link rel="stylesheet" href="css/public.css"/>
-    <link rel="stylesheet" href="css/evaluation.css"/>
+    <style>
+        body
+        {
+            margin:0px;
+            padding:0px;
+        }
+        ul
+        {
+            font-size:12px;
+        }
+        .btn
+        {
+            margin-top:30px;
+            width:100%
+        }
+
+
+
+        .question_title{border-left: 3px solid #0F7463;	font-style:italic;	font-size:20px;}
+        #content
+        {
+            font-size:14px;
+        }
+        table,tbody
+        {
+            width:100%;
+            padding:5px;
+            font-size: 14px;
+        }
+        table th,.li_tiankong_question
+        {
+            font-size:14px;
+            font-weight:bold;
+            padding:5px;
+            color:#1C8C00;
+        }
+        table td
+        {
+            white-space:nowrap;
+            padding:5px;
+        }
+        table td label
+        {
+            font-size:12px;
+            white-space:normal;
+            line-height:normal;
+        }
+        table .oushu{
+            background:#EFF6FB;
+        }
+        table input{
+            margin: 3px 5px 0px!important;
+        }
+        input[type="text"]{
+            color:#333;
+            line-height:normal;
+            font-family: "Microsoft YaHei", Tahoma, Verdana, SimSun, serif;
+            font-style:normal;
+            font-variant:normal;
+            font-stretch:normal;
+            font-weight:normal;
+            margin:0px;
+            padding:4px;
+            font-size:14px;
+            outline-width:medium;
+            outline-style:none;
+            outline-color:invert;
+            border-color:#599200;
+            border-width:1px;
+            border-style:none;
+            border-bottom-style:solid;
+            text-shadow:0px 1px 2px #fff;
+            background-attachment:scroll;
+            background-repeat:repeat-x;
+            background-position-x:left;
+            background-position-y:top;
+            background-size:auto;
+            background-origin:padding-box;
+            background-clip:border-box;
+            background-color:rgb(255,255,255);
+        }
+        input[type="text"]:hover {
+            border: 1px solid #fafafa;
+            -webkit-box-shadow: 0px 0px 6px #007eff;
+            -moz-box-shadow: 0px 0px 5px #007eff;
+            box-shadow: 0px 0px 5px #007eff;
+        }
+        .li_tiankong_answer
+        {
+            font-size:14px;
+            font-weight:normal;
+            color:#1B725C;
+            list-style:none;
+        }
+    </style>
 
     <script src="dist/js/bootstrap.min.js"></script>
 
@@ -29,57 +123,10 @@
     <script src="js/public.js"></script>
 </head>
 <body>
-<!--页头logo-->
-<div class="container bodySize">
-    <div class="demo-headline header">
-        <label id="display_lg_off" class="show-off">
-            <ul class="sign-in">
-                <li><a data-toggle="modal" data-target="#LoginModal" href="#">
-                    登录
-                </a></li>
-                <li><a data-toggle="modal" data-target="#RegModal" href="#">
-                    注册
-                </a></li>
-            </ul>
-        </label>
-        <label id="display_lg_on" class="show-off">
-            <ul class="sign-in">
-                <li>
-                    <label id="s_u_name" Text="" Style="color: WindowText"></label>
-                </li>
-                <li>
-                    <button id="loginOff">注销</button>
-                </li>
-            </ul>
-        </label>
-    </div>
-    <!--导航-->
-    <div class="navbar-inverse">
-        <div class="navwrapper navbar-static-top">
-            <div class="navbar navbar-inverse">
-                <div class="container">
-                    <div class="navbar-collapse collapse">
-                        <ul class="nav navbar-nav">
-                            <li class=""><a href="home.ftl">首页</a></li>
-                            <li class="span">&nbsp;&nbsp;</li>
-                            <li class=""><a href="courseIntrod.ftl">课程概述</a></li>
-                            <li class="span">&nbsp;&nbsp;</li>
-                            <li class=""><a href="knowledge.ftl">知识管理</a></li>
-                            <li class="span">&nbsp;&nbsp;</li>
-                            <li class=""><a href="onDemand.ftl">微课点播</a></li>
-                            <li class="span">&nbsp;&nbsp;</li>
-                            <li class="active"><a href="evaluation.ftl">学习评价</a></li>
-                            <li class="span">&nbsp;&nbsp;</li>
-                            <li class=""><a href="practiceTeaching.ftl">实例教学</a></li>
-                            <li class="span">&nbsp;&nbsp;</li>
-                            <li class=""><a href="community.ftl" target="_blank">社区交流</a></li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
+<!--头部-->
+<#assign page="evaluation">
+<#include "common/header.ftl">
+
 <!-- 页面主体部分  -->
 <div id="wrap">
     <div class="container bodySize">
@@ -196,14 +243,8 @@
     </div>
 </div>
 <!-- 页面主体部分  -->
-<!-- 固定在底部的页脚 -->
-<div id="footer">
-    <div class="container">
-        <p class="text-muted text-center">
-            Copyright © 2014 njujlxy & Design By yW & Optimize For Web Page By Bootstrap
-        </p>
-    </div>
-</div>
+<#-- 页脚 -->
+<#include "common/footer.ftl">
 </body>
 <script>
     var host = "${host}";
@@ -252,7 +293,7 @@
                     type: "post",
                     url: host + "/getOneTest",
                     dataType: "json",
-                    data: 'sectionid=' + secId,
+                    data: 'sectionId=' + secId,
                     success: function (data) {
                         var json = data;
                         content_frame_init(secId, secTitle);
@@ -288,6 +329,9 @@
 
         //选择题
         function xuanze(rs) {
+            if (null == rs || typeof(rs) == "undefined")
+                return;
+
             var mcquestionStr = "<blockquote class=\"question_title\">选择题</blockquote>";
             for (var i = 0; i < rs.length; i++) {
                 mcquestionStr += "<table>" +
@@ -326,6 +370,8 @@
 
         //填空题
         function tiankong(rs) {
+            if(null==rs||typeof(rs)=="undefined")
+                return ;
             var fiquestion = "<blockquote class=\"question_title\">填空题</blockquote>";
             for (var i = 0; i < rs.length; i++) {
                 fiquestion +=

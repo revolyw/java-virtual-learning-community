@@ -4,6 +4,8 @@ import org.aspectj.lang.JoinPoint;
 import org.aspectj.lang.ProceedingJoinPoint;
 import org.aspectj.lang.annotation.*;
 import org.springframework.stereotype.Component;
+import org.springframework.ui.ModelMap;
+import org.springframework.web.servlet.ModelAndView;
 import util.LoggerUtil;
 
 /**
@@ -21,6 +23,25 @@ public class ExceptionAspect {
     public void aspect() {
     }
 
+    @Pointcut("execution(* controller.PageController.*(..))")
+    public void layout() {
+    }
+
+    @Around("layout()")
+    public String layoutAround(ProceedingJoinPoint joinPoint) {
+        try {
+            ModelMap context = (ModelMap) joinPoint.getArgs()[1];
+            Object retVal = joinPoint.proceed();
+            if (retVal instanceof String) {
+                context.put("_page_body_", retVal + ".ftl");
+                return "layout/layout";
+            }
+        } catch (Throwable e) {
+            LoggerUtil.error("return layout error", e);
+            return "404";
+        }
+        return "404";
+    }
 
     /*
      * 配置前置通知,使用在方法aspect()上注册的切入点
@@ -39,10 +60,10 @@ public class ExceptionAspect {
 
     //配置环绕通知,使用在方法aspect()上注册的切入点
 //    @Around("aspect()")
-    public void around(JoinPoint joinPoint) {
+    public void around(ProceedingJoinPoint joinPoint) {
         long start = System.currentTimeMillis();
         try {
-            ((ProceedingJoinPoint) joinPoint).proceed();
+            joinPoint.proceed();
             long end = System.currentTimeMillis();
             LoggerUtil.info("around " + joinPoint + "\tUse time : " + (end - start) + " ms!");
 

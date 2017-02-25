@@ -27,7 +27,6 @@
     <link rel="stylesheet" href="css/flat-ui.css"/>
     <!-- 自己定制的样式 -->
     <link rel="stylesheet" href="css/public.css"/>
-    <link rel="stylesheet" href="css/CourseIntrod.css"/>
 
     <script src="dist/js/bootstrap.min.js"></script>
 
@@ -44,57 +43,10 @@
 
 </head>
 <body>
-<!--页头logo-->
-<div class="container bodySize">
-    <div class="demo-headline header">
-        <label id="display_lg_off" class="show-off">
-            <ul class="sign-in">
-                <li><a data-toggle="modal" data-target="#LoginModal" href="#">
-                    登录
-                </a></li>
-                <li><a data-toggle="modal" data-target="#RegModal" href="#">
-                    注册
-                </a></li>
-            </ul>
-        </label>
-        <label id="display_lg_on" class="show-off">
-            <ul class="sign-in">
-                <li>
-                    <label id="s_u_name" Text="" Style="color: WindowText"></label>
-                </li>
-                <li>
-                    <button id="loginOff">注销</button>
-                </li>
-            </ul>
-        </label>
-    </div>
-    <!--导航-->
-    <div class="navbar-inverse">
-        <div class="navwrapper navbar-static-top">
-            <div class="navbar navbar-inverse">
-                <div class="container">
-                    <div class="navbar-collapse collapse">
-                        <ul class="nav navbar-nav">
-                            <li class=""><a href="home.ftl">首页</a></li>
-                            <li class="span">&nbsp;&nbsp;</li>
-                            <li class="active"><a href="courseIntrod.ftl">课程概述</a></li>
-                            <li class="span">&nbsp;&nbsp;</li>
-                            <li class=""><a href="knowledge.ftl">知识管理</a></li>
-                            <li class="span">&nbsp;&nbsp;</li>
-                            <li class=""><a href="onDemand.ftl">微课点播</a></li>
-                            <li class="span">&nbsp;&nbsp;</li>
-                            <li class=""><a href="evaluation.ftl">学习评价</a></li>
-                            <li class="span">&nbsp;&nbsp;</li>
-                            <li class=""><a href="practiceTeaching.ftl">实例教学</a></li>
-                            <li class="span">&nbsp;&nbsp;</li>
-                            <li class=""><a href="community.ftl" target="_blank">社区交流</a></li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
+<!--头部-->
+<#assign page="course">
+<#include "common/header.ftl">
+
 <!-- 页面主体部分  -->
 <div id="wrap">
     <div class="container bodySize">
@@ -198,13 +150,7 @@
         </div>
     </div>
     <!-- 页面主体部分  -->
-    <!-- 固定在底部的页脚 -->
-    <div id="footer">
-        <div class="container">
-            <p class="text-muted text-center">
-                Copyright © 2014 njujlxy & Design By yW & Optimize For Web Page By Bootstrap
-            </p>
-        </div>
-    </div>
+<#-- 页脚 -->
+<#include "common/footer.ftl">
 </body>
 </html>

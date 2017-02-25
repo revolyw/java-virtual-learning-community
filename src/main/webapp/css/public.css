@@ -1,8 +1,7 @@
 /* CSS Document */
 html, body 
 {
-	font: Helvetica,Arial,"Hiragino Sans GB",STXihei,"华文细黑","Microsoft YaHei","微软雅黑",SimHei,"黑体",SimSun,"宋体",sans-serif;
-	font-family: "微软雅黑";
+    font-family: Helvetica,Arial,"Hiragino Sans GB",STXihei,"华文细黑","Microsoft YaHei","微软雅黑",SimHei,"黑体",SimSun,"宋体",sans-serif;
 	height: 100%;/* The html and body elements cannot have any padding or margin. *//*overflow-x:hidden;擦去导航的滚动条*/
 	background: url(../img/background1.gif);
 }
@@ -172,7 +171,7 @@ a:hover
   .sidebar.affix {
     position: fixed;
     /* Undo the static from mobile first approach */
-    top: 80px;
+    top: 0px;
   }
   .sidebar.affix-bottom {
     position: absolute;
@@ -190,7 +189,7 @@ a:hover
   .sidebar.affix {
     width: 263px;
   }
-}*/
+}
 .row{
 	margin:0px;
 	}

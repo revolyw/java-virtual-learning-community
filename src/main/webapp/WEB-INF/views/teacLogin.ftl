@@ -8,8 +8,6 @@
     <link rel="Stylesheet" href="dist/css/bootstrap.min.css"/>
     <link rel="Stylesheet" href="css/teacher.css"/>
 
-    <script src="js/teacher.js"></script>
-
 </head>
 <body>
 <div id="container" class="container">

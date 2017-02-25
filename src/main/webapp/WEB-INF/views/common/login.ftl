@@ -7,15 +7,15 @@
 <title>Login</title>
 
 <!-- Bootstrap core CSS -->
-<link href="dist/css/bootstrap.css" rel="stylesheet"/>
-<link href="css/signin.css" rel="stylesheet"/>
+<link href="../../../dist/css/bootstrap.css" rel="stylesheet"/>
+<link href="../../../css/signin.css" rel="stylesheet"/>
 </head>
 
 <body>
 <div class="container">
 		<form  class="form-signin" role="form" action="" target="_parent" >
-		        <img src="img/login2.png" style="position:absolute; top:9%; left:15%; width:40px;height:40px;" />
-		        <img src="img/login3.png" style="position:absolute; top:25%; left:15%; width:40px;height:40px;"/>
+		        <img src="../../../img/login2.png" style="position:absolute; top:9%; left:15%; width:40px;height:40px;" />
+		        <img src="../../../img/login3.png" style="position:absolute; top:25%; left:15%; width:40px;height:40px;"/>
 		        <br />
 				<input  id="userName" type="text" class="form-control" placeholder="帐号" />
 				<br />

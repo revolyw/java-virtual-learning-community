@@ -16,7 +16,24 @@
     <link rel="stylesheet" href="css/flat-ui.css"/>
     <!-- 自己定制的样式 -->
     <link rel="stylesheet" href="css/public.css"/>
-    <link rel="stylesheet" href="css/practice.css"/>
+    <style>
+        *{font-size: 12px; color:#000;}
+        .row
+        #sub_bright{padding :0 0 30px 5px; min-height: 960px; width: 750px; float: left; height: 960px;}
+        #LastContent1{width:1024px;min-height:100%;padding:20px 5%;background:#eee; color:#09935F;background-size:1024px 100%;}
+        ul{padding:0px; margin:0px; list-style-type: none;}
+        #big_ulist{width:100%;min-height:350px; margin:0 auto;}
+        #big_ulist li{list-style-type: none; width: 295px; height: 160px; padding: 5px 0 0 5px;  background:#fff; border-radius:20px; box-shadow:5px 5px 5px #ccc;margin:0 10px 10px 0; float: left; list-style-image: none;}
+        #big_ulist li:hover{color:#000!important; background:#00C671!important;}
+        #big_ulist li .li-up{width:100%;height:45%;padding:5px 4% 5px 5px;}
+        #big_ulist li .li-up a:hover{color:#2f4154!important;}
+        #big_ulist .li-up img{width:33%;height:100%;}
+        #big_ulist li .li-down{width:100%;height:45%;padding:5px 4% 5px 5px;}
+        #big_ulist .uinfo{line-height: 150%;max-width:60%;width:auto;height:100%; float: right;}
+        /*分页样式调整*/
+        .pagingArea{width:1024px; min-height:100%;}
+        .pagingArea .pagingArea_index{right:14%;}
+    </style>
 
     <script src="dist/js/bootstrap.min.js"></script>
 
@@ -28,57 +45,9 @@
     <script type="text/javascript" src="js/pageTool.js"></script>
 </head>
 <body>
-<!--页头logo-->
-<div class="container bodySize">
-    <div class="demo-headline header">
-        <label id="display_lg_off" class="show-off">
-            <ul class="sign-in">
-                <li><a data-toggle="modal" data-target="#LoginModal" href="#">
-                    登录
-                </a></li>
-                <li><a data-toggle="modal" data-target="#RegModal" href="#">
-                    注册
-                </a></li>
-            </ul>
-        </label>
-        <label id="display_lg_on" class="show-off">
-            <ul class="sign-in">
-                <li>
-                    <label id="s_u_name" Text="" Style="color: WindowText"></label>
-                </li>
-                <li>
-                    <button id="loginOff">注销</button>
-                </li>
-            </ul>
-        </label>
-    </div>
-    <!--导航-->
-    <div class="navbar-inverse">
-        <div class="navwrapper navbar-static-top">
-            <div class="navbar navbar-inverse">
-                <div class="container">
-                    <div class="navbar-collapse collapse">
-                        <ul class="nav navbar-nav">
-                            <li class=""><a href="home.ftl">首页</a></li>
-                            <li class="span">&nbsp;&nbsp;</li>
-                            <li class=""><a href="courseIntrod.ftl">课程概述</a></li>
-                            <li class="span">&nbsp;&nbsp;</li>
-                            <li class=""><a href="knowledge.ftl">知识管理</a></li>
-                            <li class="span">&nbsp;&nbsp;</li>
-                            <li class=""><a href="onDemand.ftl">微课点播</a></li>
-                            <li class="span">&nbsp;&nbsp;</li>
-                            <li class=""><a href="evaluation.ftl">学习评价</a></li>
-                            <li class="span">&nbsp;&nbsp;</li>
-                            <li class="active"><a href="practiceTeaching.ftl">实例教学</a></li>
-                            <li class="span">&nbsp;&nbsp;</li>
-                            <li class=""><a href="community.ftl" target="_blank">社区交流</a></li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
+<!--头部-->
+<#assign page="practice">
+<#include "common/header.ftl">
 <!-- 页面主体部分  -->
 <div id="wrap">
     <div class="container bodySize">
@@ -90,7 +59,7 @@
                 <li><a href="practiceTeaching.ftl" class="active">实例教学</a></li>
             </ul>
         </div>
-        <div class="row container">
+        <div class="row container" style="padding:0;">
             <div id="LastContent1">
                 <ul id="big_ulist">
                     <li>
@@ -114,14 +83,8 @@
 </div>
 </div>
 <!-- 页面主体部分  -->
-<!-- 固定在底部的页脚 -->
-<div id="footer">
-    <div class="container">
-        <p class="text-muted text-center">
-            Copyright © 2014 njujlxy & Design By yW & Optimize For Web Page By Bootstrap
-        </p>
-    </div>
-</div>
+<#-- 页脚 -->
+<#include "common/footer.ftl">
 </body>
 <script>
     var host = "${host}";

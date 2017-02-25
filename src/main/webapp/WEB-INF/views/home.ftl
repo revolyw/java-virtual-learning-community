@@ -16,7 +16,244 @@
     <link rel="stylesheet" href="css/flat-ui.css"/>
     <!-- 自己定制的样式 -->
     <link rel="stylesheet" href="css/public.css"/>
-    <link rel="stylesheet" href="css/home.css"/>
+    <style>
+        /* CSS Document */
+        * {
+            margin: 0px;
+            padding: 0px;
+            font-family: "microsoft YaHei", serif;
+            font-size: 14px;
+            color: rgb(52, 73, 94);
+        }
+
+        .navbar {
+            margin: 0px;
+        }
+
+        /*页面主体*/
+        .floatLeft {
+            float: left;
+        }
+
+        .blockBorder {
+            border: 1px solid #009966;
+        }
+
+        .row {
+            min-height: 300px;
+            margin: 0px;
+        }
+
+        .one {
+            position: relative;
+            width: 100%;
+            height: auto;
+            background: #000;
+            margin: 0;
+            padding: 0px;
+        }
+
+        .one .banner1 .dots {
+            position: absolute;
+            left: 0;
+            right: 0;
+            text-align: center;
+            bottom: 20px;
+        }
+
+        .one .banner1 .dots li {
+            display: inline-block;
+            width: 10px;
+            height: 10px;
+            margin: 0 4px;
+            text-indent: -999em;
+            border: 2px solid #fff;
+            border-radius: 6px;
+            cursor: pointer;
+            opacity: .4;
+            -webkit-transition: background .5s, opacity .5s;
+            -moz-transition: background .5s, opacity .5s;
+            transition: background .5s, opacity .5s;
+        }
+
+        .one .banner1 .dots li.active {
+            background: #fff;
+            opacity: 1;
+        }
+
+        .one .prev {
+            position: absolute;
+            left: 30%;
+            bottom: 5%;
+            width: 40px;
+            height: 50px;
+            background: url(../img/banner_control.png) no-repeat 0 0;
+            color: #fff;
+            text-align: center;
+            line-height: 20px;
+        }
+
+        .one .next {
+            position: absolute;
+            right: 30%;
+            bottom: 5%;
+            width: 40px;
+            height: 50px;
+            background: url(../img/banner_control.png) no-repeat -40px 0;
+            color: #fff;
+            text-align: center;
+            line-height: 20px;
+        }
+
+        .one .prev:hover {
+            background-position: 0 -50px;
+        }
+
+        .one .next:hover {
+            background-position: -40px -50px;
+        }
+
+        .one ul {
+            list-style: none;
+        }
+
+        .one ul li {
+            padding: 0px;
+            margin: 0px;
+        }
+
+        .one li img {
+            width: 100%;
+            height: 250px;
+        }
+
+        /*
+        .two{ position:relative; width:22%; min-height:300px; background:#111; margin:1% 0 1% 1%; padding:0px; }
+        .two .banner2{width:100%!important;}
+        .two .banner2 .dots { position: absolute; left: 0; right: 0; text-align:center; bottom: 20px;}
+        .two .banner2 .dots li{ display: inline-block; width: 10px; height: 10px; margin: 0 4px; text-indent: -999em; border: 2px solid #fff; border-radius: 6px; cursor: pointer; opacity: .4; -webkit-transition: background .5s, opacity .5s; -moz-transition: background .5s, opacity .5s; transition: background .5s, opacity .5s; }
+        .two .banner2 .dots li.active{ background: #fff; opacity: 1;}
+        .two .prev{ position:absolute; left:5%; bottom:5%; width:40px; height:50px; background:url(../img/banner_control.png) no-repeat 0 0; color:#fff; text-align:center; line-height:20px;}
+        .two .next{ position:absolute; right:5%; bottom:5%; width:40px; height:50px; background:url(../img/banner_control.png) no-repeat -40px 0; color:#fff; text-align:center; line-height:20px;}
+        .two .prev:hover{background-position:0 -50px;}
+        .two .next:hover{background-position:-40px -50px;}
+        .two ul{ list-style:none;}
+        .two ul li{ padding:0px; margin:0px;}
+        .two li img{ width:100%; height:298px;}
+        */
+
+        /*.panel-heading{ background:#000!important; }*/
+        .panel-title {
+            font-family: "Microsoft YaHei";
+            color: #000;
+        }
+
+        .panel-body {
+            height: 250px;
+            overflow-y: hidden;
+        }
+
+        .panel-body p strong {
+            color: #009933;
+            font-size: 20px;
+        }
+
+        .panel-footer {
+            text-align: right; /*background:rgb(15, 116, 99);*/
+            background: #000;
+        }
+
+        .panel-footer a {
+            color: #fff;
+            text-decoration: underline;
+            font-size: 12px;
+        }
+
+        .more {
+            position: absolute;
+            width: 60px;
+            height: 20px;
+            right: 6px;
+            top: 5px;
+        }
+
+        .aboutJava {
+            width: 32%;
+            min-height: 200px;
+            margin: 1% 0 0 1%;
+            padding: 37px 21px 0 21px;
+            background: url(../img/areaLeft2.jpg) no-repeat -4px -5px;
+        }
+
+        .aboutJava .text {
+            height: 155px;
+            overflow-y: hidden;
+            padding: 5px;
+        }
+
+        .communityMessage {
+            width: 65%;
+            min-height: 200px;
+            margin: 1% 0 0 1%;
+            padding: 0px;
+            background: url(../img/areaRight2.jpg) no-repeat -1px -5px;
+        }
+
+        .communityMessage > a:not(.more) {
+            display: block;
+            color: #000;
+            text-decoration: none;
+            margin: 1.1em 0 0 50px;
+        }
+
+        .communityMessage > a:first-child {
+            margin-top: 3.1em;
+        }
+
+        .communityMessage > a:hover {
+            color: Blue;
+        }
+
+        .three {
+            width: 32%;
+            min-height: 300px;
+            margin: 1% 0 0 1%;
+            padding: 0px;
+        }
+
+        .four {
+            width: 32%;
+            min-height: 300px;
+            margin: 1% 0 0 1%;
+            padding: 0px;
+        }
+
+        .five {
+            width: 32%;
+            min-height: 300px;
+            margin: 1% 0 0 1%;
+            padding: 0px;
+        }
+
+        .five ul {
+            list-style: none;
+        }
+
+        .five li a {
+            cursor: pointer;
+            text-decoration: underline;
+            color: #0066CC;
+        }
+
+        .five li a::before {
+            content: url(../img/download.gif);
+            padding-right: 5px;
+        }
+
+        .five li a:hover {
+            color: Red;
+        }
+    </style>
 
     <script type="text/javascript" src="dist/js/bootstrap.min.js"></script>
 
@@ -37,8 +274,6 @@
     <!--公用js-->
     <script src="js/public.js"></script>
 
-    <script type="text/javascript" src="js/home.js"></script>
-
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -47,58 +282,9 @@
     <![endif]-->
 </head>
 <body>
-<!--页头logo-->
-<div class="container bodySize">
-    <div class="demo-headline header">
-        <label id="display_lg_off" class="show-off">
-            <ul class="sign-in">
-                <li><a data-toggle="modal" data-target="#LoginModal" href="#">
-                    登录
-                </a></li>
-                <li>|</li>
-                <li><a data-toggle="modal" data-target="#RegModal" href="#">
-                    注册
-                </a></li>
-            </ul>
-        </label>
-        <label id="display_lg_on" class="show-off">
-            <ul class="sign-in">
-                <li>
-                    <label id="s_u_name" Text="" Style="color: WindowText"></label>
-                </li>
-                <li>
-                    <button id="loginOff">注销</button>
-                </li>
-            </ul>
-        </label>
-    </div>
-    <!--导航-->
-    <div class="navbar-inverse">
-        <div class="navwrapper navbar-static-top">
-            <div class="navbar navbar-inverse">
-                <div class="container">
-                    <div class="navbar-collapse collapse">
-                        <ul class="nav navbar-nav">
-                            <li class="active"><a href="home.ftl">首页</a></li>
-                            <li class="span">&nbsp;</li>
-                            <li class=""><a href="courseIntrod.ftl">课程概述</a></li>
-                            <li class="span">&nbsp;</li>
-                            <li class=""><a href="knowledge.ftl">知识管理</a></li>
-                            <li class="span">&nbsp;</li>
-                            <li class=""><a href="onDemand.ftl">微课点播</a></li>
-                            <li class="span">&nbsp;</li>
-                            <li class=""><a href="evaluation.ftl">学习评价</a></li>
-                            <li class="span">&nbsp;</li>
-                            <li class=""><a href="practiceTeaching.ftl">实例教学</a></li>
-                            <li class="span">&nbsp;</li>
-                            <li class=""><a href="community.ftl" target="_blank">社区交流</a></li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
+<!--头部-->
+<#assign page="home">
+<#include "common/header.ftl">
 <!-- 页面主体部分  -->
 <div id="wrap">
     <div class="container bodySize">
@@ -197,15 +383,8 @@
     </div>
 </div>
 <!-- 页面主体部分  -->
-<!-- 固定在底部的页脚 -->
-<div id="footer">
-    <div class="container">
-        <p class="text-muted text-center">
-            Copyright © 2014 njujlxy & Design By yW & Optimize For Web Page By Bootstrap
-        </p>
-    </div>
-</div>
-<!-- 固定在底部的页脚 -->
+<#-- 页脚 -->
+<#include "common/footer.ftl">
 
 <script type="text/javascript">
     var unslider1 = $('.banner1').unslider({
@@ -239,6 +418,16 @@
         //  Either do unslider.data('unslider').next() or .prev() depending on the className
         unslider2.data('unslider')[fn]();
     });
+    window = getQueryString("message");
+    function getQueryString(name) {
+        var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)");
+        var r = window.location.search.substr(1).match(reg);
+        if (!r) {
+        } else {
+            alert(decodeURI(r[2]));
+            window.location.search = "";
+        }
+    }
 </script>
 
 </body>

@@ -1,10 +1,10 @@
 package framework;
 
-import antlr.StringUtils;
 import util.StringUtil;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 /**
  * Created by Willow on 1/2/17.
@@ -18,6 +18,11 @@ public class HTTP {
         this.rep = rep;
     }
 
+    public HttpSession getSession() {
+        return this.req.getSession();
+    }
+
+
     public String getString(String key, String defaultValue) {
         String value = req.getParameter(key);
         if (StringUtil.isEmpty(value))
@@ -29,7 +34,7 @@ public class HTTP {
         String value = req.getParameter(key);
         if (StringUtil.isEmpty(value))
             return defaultValue;
-        if(!StringUtil.isNumberic(value))
+        if (!StringUtil.isNumberic(value))
             return defaultValue;
         return Integer.valueOf(value);
     }
