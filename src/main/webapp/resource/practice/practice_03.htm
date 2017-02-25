@@ -4,22 +4,22 @@
 <head>
 <meta http-equiv=Content-Type content="text/html; charset=utf-8">
 <meta name=Generator content="Microsoft Word 14 (filtered)">
-<title>Java灏�绋�搴������荤��</title>
-<link rel=Stylesheet type="text/css" href="../../css/practice-resource.css" />
+<title>Java小程序——画笔</title>
+<link rel=Stylesheet type="text/css" href="/css/practice-resource.css" />
 <style>
 <!--
  /* Font Definitions */
  @font-face
-	{font-family:瀹�浣�;
+	{font-family:宋体;
 	panose-1:2 1 6 0 3 1 1 1 1 1;}
 @font-face
-	{font-family:瀹�浣�;
+	{font-family:宋体;
 	panose-1:2 1 6 0 3 1 1 1 1 1;}
 @font-face
 	{font-family:Consolas;
 	panose-1:2 11 6 9 2 2 4 3 2 4;}
 @font-face
-	{font-family:"\@瀹�浣�";
+	{font-family:"\@宋体";
 	panose-1:2 1 6 0 3 1 1 1 1 1;}
  /* Style Definitions */
  p.MsoNormal, li.MsoNormal, div.MsoNormal
@@ -68,33 +68,33 @@ ul
 
 <p class=MsoNormal align=center style='text-align:center;text-indent:36.15pt'><b><span
 lang=EN-US style='font-size:18.0pt'>Java</span></b><a name="_GoBack"></a><b><span
-style='font-size:18.0pt;font-family:瀹�浣�'>灏�绋�搴�����涔�瀹���</span></b></p>
+style='font-size:18.0pt;font-family:宋体'>小程序——九宫格</span></b></p>
 
 <p class=MsoNormal style='text-indent:28.1pt'><b><span style='font-size:14.0pt;
-font-family:瀹�浣�'>涔�瀹��兼��涓�绉�浼�缁���娓告��绋�搴�锛���杩��������烘�������板���瑰��锛���璁哥�ㄦ�风�ュ伐���烘�ョЩ�ㄦ�瑰��锛�涓�杩�������杩�绌烘�肩���瑰�����借�绉诲�ㄣ��褰��������板����搴������撮���锛�娓告��绋�搴��冲��缁���������渚�婕�绀轰�涓�绉�绠�����涔�瀹��肩�搴�锛����硅�锋敞��绉诲�ㄦ�瑰����瀹��版�规���</span></b></p>
+font-family:宋体'>九宫格是一种传统的游戏程序，通过生成随机排列的数字方块，允许用户童工单机来移动方块，不过只有靠近空格的方块才能被移动。当所有的数字按序排列整齐后，游戏程序即告结束。本范例演示了一种简单的九宫格程序，重点请注意移动方块的实现方法。</span></b></p>
 
 <p class=MsoNormal style='margin-left:0cm;text-indent:28.0pt'><span lang=EN-US
-style='font-size:14.0pt'>涓�锛�</span><span style='font-size:14.0pt;font-family:
-瀹�浣�'>��寤哄�烘��绐�浣�</span></p>
+style='font-size:14.0pt'>一．</span><span style='font-size:14.0pt;font-family:
+宋体'>创建基本窗体</span></p>
 
 <p class=MsoNormal style='text-indent:28.0pt'><span style='font-size:14.0pt;
-font-family:瀹�浣�'>璇ラ�舵�典富瑕�瀹�涔�浜�涔�瀹��肩��浣�绫�</span><span lang=EN-US style='font-size:14.0pt'>DemoWindow,</span><span
-style='font-size:14.0pt;font-family:瀹�浣�'>璇ョ被����涓�涓��剧ず涔�瀹��肩���㈢���㈡�跨被</span><span
+font-family:宋体'>该阶段主要定义了九宫格窗体类</span><span lang=EN-US style='font-size:14.0pt'>DemoWindow,</span><span
+style='font-size:14.0pt;font-family:宋体'>该类包含一个显示九宫格界面的面板类</span><span
 lang=EN-US style='font-size:14.0pt'>GridPanel</span><span style='font-size:
-14.0pt;font-family:瀹�浣�'>��涓�涓��у�堕�㈡�跨被</span><span lang=EN-US style='font-size:14.0pt'>ControlPanel</span><span
-style='font-size:14.0pt;font-family:瀹�浣�'>��</span><span lang=EN-US
+14.0pt;font-family:宋体'>和一个控制面板类</span><span lang=EN-US style='font-size:14.0pt'>ControlPanel</span><span
+style='font-size:14.0pt;font-family:宋体'>。</span><span lang=EN-US
 style='font-size:14.0pt'>GridPanel</span><span style='font-size:14.0pt;
-font-family:瀹�浣�'>绫荤�������芥�版�ユ�朵�涓��村�����帮���浠ョ������瀹�琛����扮�����烘�扮����稿��������扮�锛�涓よ��涓�涓�瀵瑰�锛���������绛炬��瀵瑰��板�兼�扮���绱����板�硷�濡����板�间负��澶у�硷���瀵瑰������剧ず绌烘�兼��绛俱��</span></p>
+font-family:宋体'>类的构造函数接收一个整型参数，可以生成指定行列数的随机数组和相应的按钮数组，两者一一对应，按钮的标签是对应数值数组元素的数值，如果数值为最大值，则对应按钮显示空格标签。</span></p>
 
 <p class=MsoNormal style='text-indent:32.0pt'><u><span style='font-size:16.0pt;
-font-family:瀹�浣�'>杩�琛�����濡�涓�</span></u></p>
+font-family:宋体'>运行效果如下</span></u></p>
 
 <p class=MsoNormal style='text-indent:21.0pt'><span lang=EN-US><img width=455
-height=256 id="�剧��妗� 1027" src="practice_03.files/image001.jpg"></span></p>
+height=256 id="图片框 1027" src="practice_03.files/image001.jpg"></span></p>
 
 <p class=MsoNormal style='text-indent:24.0pt;text-autospace:none'><span
 lang=EN-US style='font-size:12.0pt;font-family:Consolas;color:#3F7F5F'>//</span><span
-style='font-size:12.0pt;font-family:Consolas;color:#3F7F5F'>娴�璇�绫�</span></p>
+style='font-size:12.0pt;font-family:Consolas;color:#3F7F5F'>测试类</span></p>
 
 <p class=MsoNormal style='text-indent:24.1pt;text-autospace:none'><b><span
 lang=EN-US style='font-size:12.0pt;font-family:Consolas;color:#7F0055'>publicclass</span></b><span
@@ -109,7 +109,7 @@ main(String[] args) {</span></p>
 <p class=MsoNormal style='text-indent:24.0pt;text-autospace:none'><span
 lang=EN-US style='font-size:12.0pt;font-family:Consolas;color:black'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span
 lang=EN-US style='font-size:12.0pt;font-family:Consolas;color:#3F7F5F'>// </span><span
-style='font-size:12.0pt;font-family:Consolas;color:#3F7F5F'>��寤虹��浣�绫诲����</span></p>
+style='font-size:12.0pt;font-family:Consolas;color:#3F7F5F'>创建窗体类变量</span></p>
 
 <p class=MsoNormal style='text-indent:24.0pt;text-autospace:none'><span
 lang=EN-US style='font-size:12.0pt;font-family:Consolas;color:black'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; DemoWindow
@@ -117,7 +117,7 @@ dw = </span><b><span lang=EN-US style='font-size:12.0pt;font-family:Consolas;
 color:#7F0055'>new</span></b><span lang=EN-US style='font-size:12.0pt;
 font-family:Consolas;color:black'> DemoWindow(</span><span lang=EN-US
 style='font-size:12.0pt;font-family:Consolas;color:#2A00FF'>&quot;</span><span
-style='font-size:12.0pt;font-family:Consolas;color:#2A00FF'>涔�瀹���<span
+style='font-size:12.0pt;font-family:Consolas;color:#2A00FF'>九宫格<span
 lang=EN-US>&quot;</span></span><span lang=EN-US style='font-size:12.0pt;
 font-family:Consolas;color:black'>);</span></p>
 
@@ -127,8 +127,8 @@ lang=EN-US style='font-size:12.0pt;font-family:Consolas'>&nbsp;</span></p>
 <p class=MsoNormal style='text-indent:24.0pt;text-autospace:none'><span
 lang=EN-US style='font-size:12.0pt;font-family:Consolas;color:black'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span
 lang=EN-US style='font-size:12.0pt;font-family:Consolas;color:#3F7F5F'>// </span><span
-style='font-size:12.0pt;font-family:Consolas;color:#3F7F5F'>灏�绐�浣���瀹藉害��楂�搴�����璁剧疆涓哄�骞�瀹藉害��灞�骞�楂�搴���<span
-lang=EN-US>1/3</span>锛�宸�涓�瑙�浣�缃�涔�璁剧疆涓哄�骞�瀹藉害��灞�骞�楂�搴���<span lang=EN-US>1/3</span>澶�</span></p>
+style='font-size:12.0pt;font-family:Consolas;color:#3F7F5F'>将窗体的宽度和高度分别设置为屏幕宽度和屏幕高度的<span
+lang=EN-US>1/3</span>，左上角位置也设置为屏幕宽度和屏幕高度的<span lang=EN-US>1/3</span>处</span></p>
 
 <p class=MsoNormal style='text-indent:24.0pt;text-autospace:none'><span
 lang=EN-US style='font-size:12.0pt;font-family:Consolas;color:black'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Toolkit
@@ -159,7 +159,7 @@ lang=EN-US style='font-size:12.0pt;font-family:Consolas'>&nbsp;</span></p>
 <p class=MsoNormal style='text-indent:24.0pt;text-autospace:none'><span
 lang=EN-US style='font-size:12.0pt;font-family:Consolas;color:black'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span
 lang=EN-US style='font-size:12.0pt;font-family:Consolas;color:#3F7F5F'>// </span><span
-style='font-size:12.0pt;font-family:Consolas;color:#3F7F5F'>�瑰�诲�抽��������浠ラ���虹�搴�</span></p>
+style='font-size:12.0pt;font-family:Consolas;color:#3F7F5F'>点击关闭按钮可以退出程序</span></p>
 
 <p class=MsoNormal style='text-indent:24.0pt;text-autospace:none'><span
 lang=EN-US style='font-size:12.0pt;font-family:Consolas;color:black'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; dw.setDefaultCloseOperation(JFrame.</span><i><span
@@ -172,7 +172,7 @@ lang=EN-US style='font-size:12.0pt;font-family:Consolas'>&nbsp;</span></p>
 <p class=MsoNormal style='text-indent:24.0pt;text-autospace:none'><span
 lang=EN-US style='font-size:12.0pt;font-family:Consolas;color:black'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span
 lang=EN-US style='font-size:12.0pt;font-family:Consolas;color:#3F7F5F'>// </span><span
-style='font-size:12.0pt;font-family:Consolas;color:#3F7F5F'>璁剧疆绐�浣�涓哄��瑙�</span></p>
+style='font-size:12.0pt;font-family:Consolas;color:#3F7F5F'>设置窗体为可见</span></p>
 
 <p class=MsoNormal style='text-indent:24.0pt;text-autospace:none'><span
 lang=EN-US style='font-size:12.0pt;font-family:Consolas;color:black'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; dw.setVisible(</span><b><span
@@ -190,7 +190,7 @@ lang=EN-US style='font-size:12.0pt;font-family:Consolas'>&nbsp;</span></p>
 
 <p class=MsoNormal style='text-indent:24.0pt;text-autospace:none'><span
 lang=EN-US style='font-size:12.0pt;font-family:Consolas;color:#3F7F5F'>// </span><span
-style='font-size:12.0pt;font-family:Consolas;color:#3F7F5F'>���㈢��浣�</span></p>
+style='font-size:12.0pt;font-family:Consolas;color:#3F7F5F'>界面窗体</span></p>
 
 <p class=MsoNormal style='text-indent:24.1pt;text-autospace:none'><b><span
 lang=EN-US style='font-size:12.0pt;font-family:Consolas;color:#7F0055'>class</span></b><u><span
@@ -201,7 +201,7 @@ lang=EN-US style='font-size:12.0pt;font-family:Consolas;color:black'> JFrame {</
 <p class=MsoNormal style='text-indent:24.0pt;text-autospace:none'><span
 lang=EN-US style='font-size:12.0pt;font-family:Consolas;color:black'>&nbsp;&nbsp; </span><span
 lang=EN-US style='font-size:12.0pt;font-family:Consolas;color:#3F7F5F'>// </span><span
-style='font-size:12.0pt;font-family:Consolas;color:#3F7F5F'>�剧ず涔�瀹��肩���㈢���㈡��</span></p>
+style='font-size:12.0pt;font-family:Consolas;color:#3F7F5F'>显示九宫格界面的面板</span></p>
 
 <p class=MsoNormal style='text-indent:24.0pt;text-autospace:none'><span
 lang=EN-US style='font-size:12.0pt;font-family:Consolas;color:black'>&nbsp;&nbsp; GridPanel
@@ -217,7 +217,7 @@ lang=EN-US style='font-size:12.0pt;font-family:Consolas'>&nbsp;</span></p>
 <p class=MsoNormal style='text-indent:24.0pt;text-autospace:none'><span
 lang=EN-US style='font-size:12.0pt;font-family:Consolas;color:black'>&nbsp;&nbsp; </span><span
 lang=EN-US style='font-size:12.0pt;font-family:Consolas;color:#3F7F5F'>// </span><span
-style='font-size:12.0pt;font-family:Consolas;color:#3F7F5F'>�у�堕�㈡��</span></p>
+style='font-size:12.0pt;font-family:Consolas;color:#3F7F5F'>控制面板</span></p>
 
 <p class=MsoNormal style='text-indent:24.0pt;text-autospace:none'><span
 lang=EN-US style='font-size:12.0pt;font-family:Consolas;color:black'>&nbsp;&nbsp; ControlPanel
@@ -235,7 +235,7 @@ lang=EN-US style='font-size:12.0pt;font-family:Consolas'>&nbsp;</span></p>
 <p class=MsoNormal style='text-indent:24.0pt;text-autospace:none'><span
 lang=EN-US style='font-size:12.0pt;font-family:Consolas;color:black'>&nbsp;&nbsp; </span><span
 lang=EN-US style='font-size:12.0pt;font-family:Consolas;color:#3F7F5F'>// </span><span
-style='font-size:12.0pt;font-family:Consolas;color:#3F7F5F'>�����芥��</span></p>
+style='font-size:12.0pt;font-family:Consolas;color:#3F7F5F'>构造函数</span></p>
 
 <p class=MsoNormal style='text-indent:24.0pt;text-autospace:none'><span
 lang=EN-US style='font-size:12.0pt;font-family:Consolas;color:black'>&nbsp;&nbsp; </span><b><span
@@ -254,7 +254,7 @@ lang=EN-US style='font-size:12.0pt;font-family:Consolas'>&nbsp;</span></p>
 <p class=MsoNormal style='text-indent:24.0pt;text-autospace:none'><span
 lang=EN-US style='font-size:12.0pt;font-family:Consolas;color:black'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span
 lang=EN-US style='font-size:12.0pt;font-family:Consolas;color:#3F7F5F'>// </span><span
-style='font-size:12.0pt;font-family:Consolas;color:#3F7F5F'>绐�浣�甯�灞�</span></p>
+style='font-size:12.0pt;font-family:Consolas;color:#3F7F5F'>窗体布局</span></p>
 
 <p class=MsoNormal style='text-indent:24.0pt;text-autospace:none'><span
 lang=EN-US style='font-size:12.0pt;font-family:Consolas;color:black'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; add(</span><span
@@ -279,7 +279,7 @@ style='font-size:12.0pt;font-family:Consolas;color:black'>}</span></p>
 
 <p class=MsoNormal style='text-indent:24.0pt;text-autospace:none'><span
 lang=EN-US style='font-size:12.0pt;font-family:Consolas;color:#3F7F5F'>// </span><span
-style='font-size:12.0pt;font-family:Consolas;color:#3F7F5F'>�剧ず涔�瀹��肩���㈢���㈡�跨被</span></p>
+style='font-size:12.0pt;font-family:Consolas;color:#3F7F5F'>显示九宫格界面的面板类</span></p>
 
 <p class=MsoNormal style='text-indent:24.1pt;text-autospace:none'><b><span
 lang=EN-US style='font-size:12.0pt;font-family:Consolas;color:#7F0055'>class</span></b><u><span
@@ -293,7 +293,7 @@ ActionListener {</span></p>
 <p class=MsoNormal style='text-indent:24.0pt;text-autospace:none'><span
 lang=EN-US style='font-size:12.0pt;font-family:Consolas;color:black'>&nbsp;&nbsp; </span><span
 lang=EN-US style='font-size:12.0pt;font-family:Consolas;color:#3F7F5F'>// </span><span
-style='font-size:12.0pt;font-family:Consolas;color:#3F7F5F'>�剧ず�板���������扮�</span></p>
+style='font-size:12.0pt;font-family:Consolas;color:#3F7F5F'>显示数字的按钮数组</span></p>
 
 <p class=MsoNormal style='text-indent:24.0pt;text-autospace:none'><span
 lang=EN-US style='font-size:12.0pt;font-family:Consolas;color:black'>&nbsp;&nbsp; JButton[]
@@ -307,7 +307,7 @@ lang=EN-US style='font-size:12.0pt;font-family:Consolas'>&nbsp;</span></p>
 <p class=MsoNormal style='text-indent:24.0pt;text-autospace:none'><span
 lang=EN-US style='font-size:12.0pt;font-family:Consolas;color:black'>&nbsp;&nbsp; </span><span
 lang=EN-US style='font-size:12.0pt;font-family:Consolas;color:#3F7F5F'>// </span><span
-style='font-size:12.0pt;font-family:Consolas;color:#3F7F5F'>琛���</span></p>
+style='font-size:12.0pt;font-family:Consolas;color:#3F7F5F'>行数</span></p>
 
 <p class=MsoNormal style='text-indent:24.0pt;text-autospace:none'><span
 lang=EN-US style='font-size:12.0pt;font-family:Consolas;color:black'>&nbsp;&nbsp; </span><b><span
@@ -321,7 +321,7 @@ lang=EN-US style='font-size:12.0pt;font-family:Consolas'>&nbsp;</span></p>
 <p class=MsoNormal style='text-indent:24.0pt;text-autospace:none'><span
 lang=EN-US style='font-size:12.0pt;font-family:Consolas;color:black'>&nbsp;&nbsp; </span><span
 lang=EN-US style='font-size:12.0pt;font-family:Consolas;color:#3F7F5F'>// </span><span
-style='font-size:12.0pt;font-family:Consolas;color:#3F7F5F'>�ㄤ�妫��ユ����绉诲�ㄦ�������板�兼�扮�</span></p>
+style='font-size:12.0pt;font-family:Consolas;color:#3F7F5F'>用于检查是否移动成功的数值数组</span></p>
 
 <p class=MsoNormal style='text-indent:24.0pt;text-autospace:none'><span
 lang=EN-US style='font-size:12.0pt;font-family:Consolas;color:black'>&nbsp;&nbsp; </span><b><span
@@ -336,7 +336,7 @@ lang=EN-US style='font-size:12.0pt;font-family:Consolas'>&nbsp;</span></p>
 <p class=MsoNormal style='text-indent:24.0pt;text-autospace:none'><span
 lang=EN-US style='font-size:12.0pt;font-family:Consolas;color:black'>&nbsp;&nbsp; </span><span
 lang=EN-US style='font-size:12.0pt;font-family:Consolas;color:#3F7F5F'>// </span><span
-style='font-size:12.0pt;font-family:Consolas;color:#3F7F5F'>�����芥��</span></p>
+style='font-size:12.0pt;font-family:Consolas;color:#3F7F5F'>构造函数</span></p>
 
 <p class=MsoNormal style='text-indent:24.0pt;text-autospace:none'><span
 lang=EN-US style='font-size:12.0pt;font-family:Consolas;color:black'>&nbsp;&nbsp; </span><b><span
@@ -349,7 +349,7 @@ font-family:Consolas;color:black'> number) {</span></p>
 <p class=MsoNormal style='text-indent:24.0pt;text-autospace:none'><span
 lang=EN-US style='font-size:12.0pt;font-family:Consolas;color:black'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span
 lang=EN-US style='font-size:12.0pt;font-family:Consolas;color:#3F7F5F'>// </span><span
-style='font-size:12.0pt;font-family:Consolas;color:#3F7F5F'>璁剧疆琛���</span></p>
+style='font-size:12.0pt;font-family:Consolas;color:#3F7F5F'>设置行数</span></p>
 
 <p class=MsoNormal style='text-indent:24.0pt;text-autospace:none'><span
 lang=EN-US style='font-size:12.0pt;font-family:Consolas;color:black'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><b><span
@@ -364,7 +364,7 @@ lang=EN-US style='font-size:12.0pt;font-family:Consolas'>&nbsp;</span></p>
 <p class=MsoNormal style='text-indent:24.0pt;text-autospace:none'><span
 lang=EN-US style='font-size:12.0pt;font-family:Consolas;color:black'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span
 lang=EN-US style='font-size:12.0pt;font-family:Consolas;color:#3F7F5F'>// </span><span
-style='font-size:12.0pt;font-family:Consolas;color:#3F7F5F'>��寤烘�剧ず�板���������扮�</span></p>
+style='font-size:12.0pt;font-family:Consolas;color:#3F7F5F'>创建显示数字的按钮数组</span></p>
 
 <p class=MsoNormal style='text-indent:24.0pt;text-autospace:none'><span
 lang=EN-US style='font-size:12.0pt;font-family:Consolas;color:black'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span
@@ -380,7 +380,7 @@ lang=EN-US style='font-size:12.0pt;font-family:Consolas'>&nbsp;</span></p>
 <p class=MsoNormal style='text-indent:24.0pt;text-autospace:none'><span
 lang=EN-US style='font-size:12.0pt;font-family:Consolas;color:black'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span
 lang=EN-US style='font-size:12.0pt;font-family:Consolas;color:#3F7F5F'>// </span><span
-style='font-size:12.0pt;font-family:Consolas;color:#3F7F5F'>��寤虹�ㄤ�妫��ユ����绉诲�ㄦ�������板�兼�扮�</span></p>
+style='font-size:12.0pt;font-family:Consolas;color:#3F7F5F'>创建用于检查是否移动成功的数值数组</span></p>
 
 <p class=MsoNormal style='text-indent:24.0pt;text-autospace:none'><span
 lang=EN-US style='font-size:12.0pt;font-family:Consolas;color:black'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span
@@ -396,7 +396,7 @@ lang=EN-US style='font-size:12.0pt;font-family:Consolas'>&nbsp;</span></p>
 <p class=MsoNormal style='text-indent:24.0pt;text-autospace:none'><span
 lang=EN-US style='font-size:12.0pt;font-family:Consolas;color:black'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span
 lang=EN-US style='font-size:12.0pt;font-family:Consolas;color:#3F7F5F'>// </span><span
-style='font-size:12.0pt;font-family:Consolas;color:#3F7F5F'>�㈡�垮�灞�</span></p>
+style='font-size:12.0pt;font-family:Consolas;color:#3F7F5F'>面板布局</span></p>
 
 <p class=MsoNormal style='text-indent:24.0pt;text-autospace:none'><span
 lang=EN-US style='font-size:12.0pt;font-family:Consolas;color:black'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; setLayout(</span><b><span
@@ -419,7 +419,7 @@ style='font-size:12.0pt;font-family:Consolas;color:black'>; i++) {</span></p>
 <p class=MsoNormal style='text-indent:24.0pt;text-autospace:none'><span
 lang=EN-US style='font-size:12.0pt;font-family:Consolas;color:black'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span
 lang=EN-US style='font-size:12.0pt;font-family:Consolas;color:#3F7F5F'>// </span><span
-style='font-size:12.0pt;font-family:Consolas;color:#3F7F5F'>������������濮���棰�涓虹┖</span></p>
+style='font-size:12.0pt;font-family:Consolas;color:#3F7F5F'>所有按钮的初始标题为空</span></p>
 
 <p class=MsoNormal style='text-indent:24.0pt;text-autospace:none'><span
 lang=EN-US style='font-size:12.0pt;font-family:Consolas;color:black'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span
@@ -437,7 +437,7 @@ lang=EN-US style='font-size:12.0pt;font-family:Consolas;color:black'>[i].setFont
 lang=EN-US style='font-size:12.0pt;font-family:Consolas;color:#7F0055'>new</span></b><span
 lang=EN-US style='font-size:12.0pt;font-family:Consolas;color:black'> Font(</span><span
 lang=EN-US style='font-size:12.0pt;font-family:Consolas;color:#2A00FF'>&quot;</span><span
-style='font-size:12.0pt;font-family:Consolas;color:#2A00FF'>榛�浣�<span lang=EN-US>&quot;</span></span><span
+style='font-size:12.0pt;font-family:Consolas;color:#2A00FF'>黑体<span lang=EN-US>&quot;</span></span><span
 lang=EN-US style='font-size:12.0pt;font-family:Consolas;color:black'>, Font.</span><i><span
 lang=EN-US style='font-size:12.0pt;font-family:Consolas;color:#0000C0'>BOLD</span></i><span
 lang=EN-US style='font-size:12.0pt;font-family:Consolas;color:black'>, 32));</span></p>
@@ -451,7 +451,7 @@ lang=EN-US style='font-size:12.0pt;font-family:Consolas;color:black'>&nbsp;&nbsp
 <p class=MsoNormal style='text-indent:24.0pt;text-autospace:none'><span
 lang=EN-US style='font-size:12.0pt;font-family:Consolas;color:black'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span
 lang=EN-US style='font-size:12.0pt;font-family:Consolas;color:#3F7F5F'>// </span><span
-style='font-size:12.0pt;font-family:Consolas;color:#3F7F5F'>��濮������烘�板��</span></p>
+style='font-size:12.0pt;font-family:Consolas;color:#3F7F5F'>初始化随机数字</span></p>
 
 <p class=MsoNormal style='text-indent:24.0pt;text-autospace:none'><span
 lang=EN-US style='font-size:12.0pt;font-family:Consolas;color:black'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; initialize();</span></p>
@@ -462,7 +462,7 @@ style='font-size:12.0pt;font-family:Consolas;color:black'>&nbsp;&nbsp; }</span><
 <p class=MsoNormal style='text-indent:24.0pt;text-autospace:none'><span
 lang=EN-US style='font-size:12.0pt;font-family:Consolas;color:black'>&nbsp;&nbsp; </span><span
 lang=EN-US style='font-size:12.0pt;font-family:Consolas;color:#3F7F5F'>// </span><span
-style='font-size:12.0pt;font-family:Consolas;color:#3F7F5F'>��濮������烘�板�����芥��</span></p>
+style='font-size:12.0pt;font-family:Consolas;color:#3F7F5F'>初始化随机数字的函数</span></p>
 
 <p class=MsoNormal style='text-indent:24.0pt;text-autospace:none'><span
 lang=EN-US style='font-size:12.0pt;font-family:Consolas;color:black'>&nbsp;&nbsp; </span><b><span
@@ -473,7 +473,7 @@ initialize() {</span></p>
 <p class=MsoNormal style='text-indent:24.0pt;text-autospace:none'><span
 lang=EN-US style='font-size:12.0pt;font-family:Consolas;color:black'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span
 lang=EN-US style='font-size:12.0pt;font-family:Consolas;color:#3F7F5F'>// </span><span
-style='font-size:12.0pt;font-family:Consolas;color:#3F7F5F'>�╃�ㄦ�板�兼�扮��ュ��濮����剧ず�板���������扮�</span></p>
+style='font-size:12.0pt;font-family:Consolas;color:#3F7F5F'>利用数值数组来初始化显示数字的按钮数组</span></p>
 
 <p class=MsoNormal style='text-indent:24.0pt;text-autospace:none'><span
 lang=EN-US style='font-size:12.0pt;font-family:Consolas;color:black'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; initializeButton(</span><span
@@ -486,7 +486,7 @@ lang=EN-US style='font-size:12.0pt;font-family:Consolas;color:black'>&nbsp;&nbsp
 <p class=MsoNormal style='text-indent:24.0pt;text-autospace:none'><span
 lang=EN-US style='font-size:12.0pt;font-family:Consolas;color:black'>&nbsp;&nbsp; </span><span
 lang=EN-US style='font-size:12.0pt;font-family:Consolas;color:#3F7F5F'>// </span><span
-style='font-size:12.0pt;font-family:Consolas;color:#3F7F5F'>璇ュ�芥�板�╃�ㄦ�板�兼�扮���濮����剧ず�板���������扮�</span></p>
+style='font-size:12.0pt;font-family:Consolas;color:#3F7F5F'>该函数利用数值数组初始化显示数字的按钮数组</span></p>
 
 <p class=MsoNormal style='text-indent:24.0pt;text-autospace:none'><span
 lang=EN-US style='font-size:12.0pt;font-family:Consolas;color:black'>&nbsp;&nbsp; </span><b><span
@@ -497,7 +497,7 @@ jbs) {</span></p>
 <p class=MsoNormal style='text-indent:24.0pt;text-autospace:none'><span
 lang=EN-US style='font-size:12.0pt;font-family:Consolas;color:black'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span
 lang=EN-US style='font-size:12.0pt;font-family:Consolas;color:#3F7F5F'>// </span><span
-style='font-size:12.0pt;font-family:Consolas;color:#3F7F5F'>寰�������姣�涓��板�兼�扮���绱�</span></p>
+style='font-size:12.0pt;font-family:Consolas;color:#3F7F5F'>循环遍历每个数值数组元素</span></p>
 
 <p class=MsoNormal style='text-indent:24.0pt;text-autospace:none'><span
 lang=EN-US style='font-size:12.0pt;font-family:Consolas;color:black'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><b><span
@@ -512,7 +512,7 @@ font-family:Consolas;color:black'>; i++) {</span></p>
 <p class=MsoNormal style='text-indent:24.0pt;text-autospace:none'><span
 lang=EN-US style='font-size:12.0pt;font-family:Consolas;color:black'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span
 lang=EN-US style='font-size:12.0pt;font-family:Consolas;color:#3F7F5F'>// </span><span
-style='font-size:12.0pt;font-family:Consolas;color:#3F7F5F'>濡���涓�涓烘��澶х���帮�灏��肩�存�ヨ�剧疆��������棰�</span></p>
+style='font-size:12.0pt;font-family:Consolas;color:#3F7F5F'>如果不为最大的数，将值直接设置成按钮标题</span></p>
 
 <p class=MsoNormal style='text-indent:24.0pt;text-autospace:none'><span
 lang=EN-US style='font-size:12.0pt;font-family:Consolas;color:black'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><b><span
@@ -533,7 +533,7 @@ lang=EN-US style='font-size:12.0pt;font-family:Consolas;color:black'>[i]));</spa
 <p class=MsoNormal style='text-indent:24.0pt;text-autospace:none'><span
 lang=EN-US style='font-size:12.0pt;font-family:Consolas;color:black'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span
 lang=EN-US style='font-size:12.0pt;font-family:Consolas;color:#3F7F5F'>// </span><span
-style='font-size:12.0pt;font-family:Consolas;color:#3F7F5F'>濡�������澶х���帮�灏�瀵瑰���������棰�璁剧疆涓虹┖</span></p>
+style='font-size:12.0pt;font-family:Consolas;color:#3F7F5F'>如果是最大的数，将对应的按钮标题设置为空</span></p>
 
 <p class=MsoNormal style='text-indent:24.0pt;text-autospace:none'><span
 lang=EN-US style='font-size:12.0pt;font-family:Consolas;color:black'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><b><span
@@ -555,7 +555,7 @@ lang=EN-US style='font-size:12.0pt;font-family:Consolas;color:black'>&nbsp;</spa
 
 <p class=MsoNormal style='text-indent:24.0pt;text-autospace:none'><span
 lang=EN-US style='font-size:12.0pt;font-family:Consolas;color:#3F7F5F'>// </span><span
-style='font-size:12.0pt;font-family:Consolas;color:#3F7F5F'>�у�堕�㈡�跨被</span></p>
+style='font-size:12.0pt;font-family:Consolas;color:#3F7F5F'>控制面板类</span></p>
 
 <p class=MsoNormal style='text-indent:24.1pt;text-autospace:none'><b><span
 lang=EN-US style='font-size:12.0pt;font-family:Consolas;color:#7F0055'>class</span></b><u><span
@@ -569,7 +569,7 @@ ActionListener {</span></p>
 <p class=MsoNormal style='text-indent:24.0pt;text-autospace:none'><span
 lang=EN-US style='font-size:12.0pt;font-family:Consolas;color:black'>&nbsp;&nbsp; </span><span
 lang=EN-US style='font-size:12.0pt;font-family:Consolas;color:#3F7F5F'>// </span><span
-style='font-size:12.0pt;font-family:Consolas;color:#3F7F5F'>甯�灞��㈡��</span></p>
+style='font-size:12.0pt;font-family:Consolas;color:#3F7F5F'>布局面板</span></p>
 
 <p class=MsoNormal style='text-indent:24.0pt;text-autospace:none'><span
 lang=EN-US style='font-size:12.0pt;font-family:Consolas;color:black'>&nbsp;&nbsp; JPanel
@@ -629,7 +629,7 @@ lang=EN-US style='font-size:12.0pt;font-family:Consolas'>&nbsp;</span></p>
 <p class=MsoNormal style='text-indent:24.0pt;text-autospace:none'><span
 lang=EN-US style='font-size:12.0pt;font-family:Consolas;color:black'>&nbsp;&nbsp; </span><span
 lang=EN-US style='font-size:12.0pt;font-family:Consolas;color:#3F7F5F'>// </span><span
-style='font-size:12.0pt;font-family:Consolas;color:#3F7F5F'>��浣�����</span></p>
+style='font-size:12.0pt;font-family:Consolas;color:#3F7F5F'>操作按钮</span></p>
 
 <p class=MsoNormal style='text-indent:24.0pt;text-autospace:none'><span
 lang=EN-US style='font-size:12.0pt;font-family:Consolas;color:black'>&nbsp;&nbsp; JButton
@@ -639,7 +639,7 @@ Consolas;color:black'> = </span><b><span lang=EN-US style='font-size:12.0pt;
 font-family:Consolas;color:#7F0055'>new</span></b><span lang=EN-US
 style='font-size:12.0pt;font-family:Consolas;color:black'> JButton(</span><span
 lang=EN-US style='font-size:12.0pt;font-family:Consolas;color:#2A00FF'>&quot;</span><span
-style='font-size:12.0pt;font-family:Consolas;color:#2A00FF'>����<span lang=EN-US>&quot;</span></span><span
+style='font-size:12.0pt;font-family:Consolas;color:#2A00FF'>重来<span lang=EN-US>&quot;</span></span><span
 lang=EN-US style='font-size:12.0pt;font-family:Consolas;color:black'>);</span></p>
 
 <p class=MsoNormal style='text-indent:24.0pt;text-autospace:none'><span
@@ -653,7 +653,7 @@ Consolas;color:black'> = </span><b><span lang=EN-US style='font-size:12.0pt;
 font-family:Consolas;color:#7F0055'>new</span></b><span lang=EN-US
 style='font-size:12.0pt;font-family:Consolas;color:black'> JButton(</span><span
 lang=EN-US style='font-size:12.0pt;font-family:Consolas;color:#2A00FF'>&quot;</span><span
-style='font-size:12.0pt;font-family:Consolas;color:#2A00FF'>����<span lang=EN-US>&quot;</span></span><span
+style='font-size:12.0pt;font-family:Consolas;color:#2A00FF'>退出<span lang=EN-US>&quot;</span></span><span
 lang=EN-US style='font-size:12.0pt;font-family:Consolas;color:black'>);</span></p>
 
 <p class=MsoNormal style='text-indent:24.0pt;text-autospace:none'><span
@@ -662,7 +662,7 @@ lang=EN-US style='font-size:12.0pt;font-family:Consolas'>&nbsp;</span></p>
 <p class=MsoNormal style='text-indent:24.0pt;text-autospace:none'><span
 lang=EN-US style='font-size:12.0pt;font-family:Consolas;color:black'>&nbsp;&nbsp; </span><span
 lang=EN-US style='font-size:12.0pt;font-family:Consolas;color:#3F7F5F'>// </span><span
-style='font-size:12.0pt;font-family:Consolas;color:#3F7F5F'>�剧ず涔�瀹��肩���㈢���㈡�跨被����寮���</span></p>
+style='font-size:12.0pt;font-family:Consolas;color:#3F7F5F'>显示九宫格界面的面板类变量引用</span></p>
 
 <p class=MsoNormal style='text-indent:24.0pt;text-autospace:none'><span
 lang=EN-US style='font-size:12.0pt;font-family:Consolas;color:black'>&nbsp;&nbsp; GridPanel
@@ -678,7 +678,7 @@ lang=EN-US style='font-size:12.0pt;font-family:Consolas'>&nbsp;</span></p>
 <p class=MsoNormal style='text-indent:24.0pt;text-autospace:none'><span
 lang=EN-US style='font-size:12.0pt;font-family:Consolas;color:black'>&nbsp;&nbsp; </span><span
 lang=EN-US style='font-size:12.0pt;font-family:Consolas;color:#3F7F5F'>// </span><span
-style='font-size:12.0pt;font-family:Consolas;color:#3F7F5F'>�����芥��</span></p>
+style='font-size:12.0pt;font-family:Consolas;color:#3F7F5F'>构造函数</span></p>
 
 <p class=MsoNormal style='text-indent:24.0pt;text-autospace:none'><span
 lang=EN-US style='font-size:12.0pt;font-family:Consolas;color:black'>&nbsp;&nbsp; </span><b><span
@@ -689,7 +689,7 @@ ControlPanel(GridPanel gp) {</span></p>
 <p class=MsoNormal style='text-indent:24.0pt;text-autospace:none'><span
 lang=EN-US style='font-size:12.0pt;font-family:Consolas;color:black'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span
 lang=EN-US style='font-size:12.0pt;font-family:Consolas;color:#3F7F5F'>// </span><span
-style='font-size:12.0pt;font-family:Consolas;color:#3F7F5F'>�㈡�垮�灞�</span></p>
+style='font-size:12.0pt;font-family:Consolas;color:#3F7F5F'>面板布局</span></p>
 
 <p class=MsoNormal style='text-indent:24.0pt;text-autospace:none'><span
 lang=EN-US style='font-size:12.0pt;font-family:Consolas;color:black'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; setLayout(</span><b><span
@@ -739,7 +739,7 @@ lang=EN-US style='font-size:12.0pt;font-family:Consolas;color:black'>);</span></
 <p class=MsoNormal style='text-indent:24.0pt;text-autospace:none'><span
 lang=EN-US style='font-size:12.0pt;font-family:Consolas;color:black'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span
 lang=EN-US style='font-size:12.0pt;font-family:Consolas;color:#3F7F5F'>// </span><span
-style='font-size:12.0pt;font-family:Consolas;color:#3F7F5F'>璁剧疆�剧ず涔�瀹��肩���㈢���㈡�跨被����寮���</span></p>
+style='font-size:12.0pt;font-family:Consolas;color:#3F7F5F'>设置显示九宫格界面的面板类变量引用</span></p>
 
 <p class=MsoNormal style='text-indent:24.0pt;text-autospace:none'><span
 lang=EN-US style='font-size:12.0pt;font-family:Consolas;color:black'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><b><span
@@ -755,44 +755,44 @@ lang=EN-US style='font-size:12.0pt;font-family:Consolas;color:black'>&nbsp;&nbsp
 style='font-size:15.0pt;font-family:Consolas;color:black'>&nbsp;</span></p>
 
 <p class=MsoNormal style='margin-left:0cm;text-indent:30.0pt'><span lang=EN-US
-style='font-size:15.0pt'>浜�锛�</span><span style='font-size:15.0pt;font-family:
-瀹�浣�'>娣诲�����婚���浜�浠�</span></p>
+style='font-size:15.0pt'>二．</span><span style='font-size:15.0pt;font-family:
+宋体'>添加单击鼠标事件</span></p>
 
 <p class=MsoNormal style='text-indent:30.0pt'><span style='font-size:15.0pt;
-font-family:瀹�浣�'>�ㄧ�ㄦ�峰���绘�����讹�绋�搴��ゆ��褰����������逛���涓�绌烘�兼������浣�缃��崇郴锛�骞堕���朵氦�㈡������绛惧���稿����板�兼�扮���绱����ㄦ��涓�娆＄Щ�ㄦ��浣���锛�绋�搴��戒��ゆ���板�兼�扮�����宸茬���濂藉���锛��冲�ゆ������绉诲�ㄦ������</span><span
+font-family:宋体'>在用户单击按钮时，程序判断当前按钮的方位和与空格按钮的位置关系，并适时交换按钮标签和相应的数值数组元素。在每一次移动操作后，程序都会判断数值数组是否已经排好序列，即判断是否移动成功。</span><span
 lang=EN-US style='font-size:15.0pt'>ControlPanel</span><span style='font-size:
-15.0pt;font-family:瀹�浣�'>绫绘��渚�浜����ユ父�������烘父�����у�跺���姐��</span></p>
+15.0pt;font-family:宋体'>类提供了重来游戏和退出游戏的控制功能。</span></p>
 
 <p class=MsoNormal style='text-indent:32.0pt'><u><span style='font-size:16.0pt;
-font-family:瀹�浣�'>�瑰��</span></u><u><span lang=EN-US style='font-size:16.0pt'>2</span></u><u><span
-style='font-size:16.0pt;font-family:瀹�浣�'>��</span></u></p>
+font-family:宋体'>点击</span></u><u><span lang=EN-US style='font-size:16.0pt'>2</span></u><u><span
+style='font-size:16.0pt;font-family:宋体'>前</span></u></p>
 
 <p class=MsoNormal style='text-indent:24.0pt'><span lang=EN-US
-style='font-size:12.0pt'><img width=455 height=256 id="�剧��妗� 1028"
+style='font-size:12.0pt'><img width=455 height=256 id="图片框 1028"
 src="practice_03.files/image001.jpg"></span></p>
 
 <p class=MsoNormal style='text-indent:32.0pt'><u><span style='font-size:16.0pt;
-font-family:瀹�浣�'>�瑰��</span></u><u><span lang=EN-US style='font-size:16.0pt'>2</span></u><u><span
-style='font-size:16.0pt;font-family:瀹�浣�'>��</span></u></p>
+font-family:宋体'>点击</span></u><u><span lang=EN-US style='font-size:16.0pt'>2</span></u><u><span
+style='font-size:16.0pt;font-family:宋体'>后</span></u></p>
 
 <p class=MsoNormal style='text-indent:24.0pt'><span lang=EN-US
-style='font-size:12.0pt'><img width=455 height=256 id="�剧��妗� 1029"
+style='font-size:12.0pt'><img width=455 height=256 id="图片框 1029"
 src="practice_03.files/image002.jpg"></span></p>
 
 <p class=MsoNormal style='text-indent:32.0pt'><u><span style='font-size:16.0pt;
-font-family:瀹�浣�'>�瑰�婚����</span></u></p>
+font-family:宋体'>点击重来</span></u></p>
 
 <p class=MsoNormal style='text-indent:24.0pt'><span lang=EN-US
-style='font-size:12.0pt'><img width=455 height=256 id="�剧��妗� 1030"
+style='font-size:12.0pt'><img width=455 height=256 id="图片框 1030"
 src="practice_03.files/image003.jpg"></span></p>
 
 <p class=MsoNormal style='text-indent:32.0pt'><u><span style='font-size:16.0pt;
-font-family:瀹�浣�'>�ㄦ�����芥�颁腑娣诲��</span></u></p>
+font-family:宋体'>在构造函数中添加</span></u></p>
 
 <p class=MsoNormal style='text-indent:24.0pt;text-autospace:none'><span
 lang=EN-US style='font-size:12.0pt;font-family:Consolas;color:black'>&nbsp;&nbsp; </span><span
 lang=EN-US style='font-size:12.0pt;font-family:Consolas;color:#3F7F5F'>// </span><span
-style='font-size:12.0pt;font-family:Consolas;color:#3F7F5F'>娣诲��浜�浠剁������</span></p>
+style='font-size:12.0pt;font-family:Consolas;color:#3F7F5F'>添加事件监听器</span></p>
 
 <p class=MsoNormal style='text-indent:24.0pt;text-autospace:none'><span
 lang=EN-US style='font-size:12.0pt;font-family:Consolas;color:black'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span
@@ -807,13 +807,13 @@ lang=EN-US style='font-size:12.0pt;font-family:Consolas;color:#0000C0'>jbs</span
 lang=EN-US style='font-size:12.0pt;font-family:Consolas;color:black'>[i]);</span></p>
 
 <p class=MsoNormal style='text-indent:32.0pt'><u><span style='font-size:16.0pt;
-font-family:瀹�浣�;color:black'>��</span></u><u><span style='font-size:16.0pt;
-font-family:Consolas;color:black;background:white'>��濮������烘�板�����芥��</span></u><u><span
-style='font-size:16.0pt;font-family:瀹�浣�;color:black;background:white'>涓�娣诲��</span></u></p>
+font-family:宋体;color:black'>在</span></u><u><span style='font-size:16.0pt;
+font-family:Consolas;color:black;background:white'>初始化随机数字的函数</span></u><u><span
+style='font-size:16.0pt;font-family:宋体;color:black;background:white'>中添加</span></u></p>
 
 <p class=MsoNormal style='text-indent:24.0pt;text-autospace:none'><span
 lang=EN-US style='font-size:12.0pt;font-family:Consolas;color:#3F7F5F'>// </span><span
-style='font-size:12.0pt;font-family:Consolas;color:#3F7F5F'>��濮����ㄤ�妫��ユ����绉诲�ㄦ�������板�兼�扮�</span></p>
+style='font-size:12.0pt;font-family:Consolas;color:#3F7F5F'>初始化用于检查是否移动成功的数值数组</span></p>
 
 <p class=MsoNormal style='text-indent:24.0pt'><span lang=EN-US
 style='font-size:12.0pt;font-family:Consolas;color:black'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; initializeRandomNumber(</span><span
@@ -821,11 +821,11 @@ lang=EN-US style='font-size:12.0pt;font-family:Consolas;color:#0000C0'>records</
 lang=EN-US style='font-size:12.0pt;font-family:Consolas;color:black'>);</span></p>
 
 <p class=MsoNormal style='text-indent:32.0pt;text-autospace:none'><u><span
-style='font-size:16.0pt;font-family:瀹�浣�;color:black'>骞舵坊��</span></u></p>
+style='font-size:16.0pt;font-family:宋体;color:black'>并添加</span></u></p>
 
 <p class=MsoNormal style='text-indent:24.0pt;text-autospace:none'><span
 lang=EN-US style='font-size:12.0pt;font-family:Consolas;color:#3F7F5F'>// </span><span
-style='font-size:12.0pt;font-family:Consolas;color:#3F7F5F'>��搴����绘����</span></p>
+style='font-size:12.0pt;font-family:Consolas;color:#3F7F5F'>响应单击按钮</span></p>
 
 <p class=MsoNormal style='text-indent:24.0pt;text-autospace:none'><span
 lang=EN-US style='font-size:12.0pt;font-family:Consolas;color:black'>&nbsp;&nbsp; </span><b><span
@@ -843,7 +843,7 @@ lang=EN-US style='font-size:12.0pt;font-family:Consolas'>&nbsp;</span></p>
 <p class=MsoNormal style='text-indent:24.0pt;text-autospace:none'><span
 lang=EN-US style='font-size:12.0pt;font-family:Consolas;color:black'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span
 lang=EN-US style='font-size:12.0pt;font-family:Consolas;color:#3F7F5F'>// </span><span
-style='font-size:12.0pt;font-family:Consolas;color:#3F7F5F'>涓�澶������荤┖�芥����</span></p>
+style='font-size:12.0pt;font-family:Consolas;color:#3F7F5F'>不处理单击空白按钮</span></p>
 
 <p class=MsoNormal style='text-indent:24.0pt;text-autospace:none'><span
 lang=EN-US style='font-size:12.0pt;font-family:Consolas;color:black'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><b><span
@@ -856,7 +856,7 @@ style='font-size:12.0pt;font-family:Consolas;color:black'>)) {</span></p>
 <p class=MsoNormal style='text-indent:24.0pt;text-autospace:none'><span
 lang=EN-US style='font-size:12.0pt;font-family:Consolas;color:black'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span
 lang=EN-US style='font-size:12.0pt;font-family:Consolas;color:#3F7F5F'>// </span><span
-style='font-size:12.0pt;font-family:Consolas;color:#3F7F5F'>�峰��褰�����������棰�</span></p>
+style='font-size:12.0pt;font-family:Consolas;color:#3F7F5F'>获取当前按钮的标题</span></p>
 
 <p class=MsoNormal style='text-indent:24.0pt;text-autospace:none'><span
 lang=EN-US style='font-size:12.0pt;font-family:Consolas;color:black'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><b><span
@@ -870,7 +870,7 @@ lang=EN-US style='font-size:12.0pt;font-family:Consolas'>&nbsp;</span></p>
 <p class=MsoNormal style='text-indent:24.0pt;text-autospace:none'><span
 lang=EN-US style='font-size:12.0pt;font-family:Consolas;color:black'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span
 lang=EN-US style='font-size:12.0pt;font-family:Consolas;color:#3F7F5F'>// </span><span
-style='font-size:12.0pt;font-family:Consolas;color:#3F7F5F'>�峰��瀵瑰��板���ㄦ�板�兼�扮�涓���浣�缃�</span></p>
+style='font-size:12.0pt;font-family:Consolas;color:#3F7F5F'>获取对应数字在数值数组中的位置</span></p>
 
 <p class=MsoNormal style='text-indent:24.0pt;text-autospace:none'><span
 lang=EN-US style='font-size:12.0pt;font-family:Consolas;color:black'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><b><span
@@ -919,7 +919,7 @@ lang=EN-US style='font-size:12.0pt;font-family:Consolas'>&nbsp;</span></p>
 <p class=MsoNormal style='text-indent:24.0pt;text-autospace:none'><span
 lang=EN-US style='font-size:12.0pt;font-family:Consolas;color:black'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span
 lang=EN-US style='font-size:12.0pt;font-family:Consolas;color:#3F7F5F'>// </span><span
-style='font-size:12.0pt;font-family:Consolas;color:#3F7F5F'>濡������荤������涓�浣�浜�绗�涓�琛�锛�骞朵�涓�涓�琛���瀵瑰�������棰�涓虹┖锛�浜ゆ�㈡������棰���瀵瑰����板�兼�扮���绱�</span></p>
+style='font-size:12.0pt;font-family:Consolas;color:#3F7F5F'>如果单击的按钮不位于第一行，并且上一行的对应按钮标题为空，交换按钮标题和对应的数值数组元素</span></p>
 
 <p class=MsoNormal style='text-indent:24.0pt;text-autospace:none'><span
 lang=EN-US style='font-size:12.0pt;font-family:Consolas;color:black'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><b><span
@@ -963,7 +963,7 @@ lang=EN-US style='font-size:12.0pt;font-family:Consolas'>&nbsp;</span></p>
 <p class=MsoNormal style='text-indent:24.0pt;text-autospace:none'><span
 lang=EN-US style='font-size:12.0pt;font-family:Consolas;color:black'>&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span
 lang=EN-US style='font-size:12.0pt;font-family:Consolas;color:#3F7F5F'>// </span><span
-style='font-size:12.0pt;font-family:Consolas;color:#3F7F5F'>濡������荤������涓�浣�浜�����涓�琛�锛�骞朵�涓�涓�琛���瀵瑰�������棰�涓虹┖锛�浜ゆ�㈡������棰���瀵瑰����板�兼�扮���绱�</span></p>
+style='font-size:12.0pt;font-family:Consolas;color:#3F7F5F'>如果单击的按钮不位于最后一行，并且下一行的对应按钮标题为空，交换按钮标题和对应的数值数组元素</span></p>
 
 <p class=MsoNormal style='text-indent:24.0pt;text-autospace:none'><span
 lang=EN-US style='font-size:12.0pt;font-family:Consolas;color:black'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><b><span
@@ -1011,7 +1011,7 @@ lang=EN-US style='font-size:12.0pt;font-family:Consolas'>&nbsp;</span></p>
 <p class=MsoNormal style='text-indent:24.0pt;text-autospace:none'><span
 lang=EN-US style='font-size:12.0pt;font-family:Consolas;color:black'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span
 lang=EN-US style='font-size:12.0pt;font-family:Consolas;color:#3F7F5F'>// </span><span
-style='font-size:12.0pt;font-family:Consolas;color:#3F7F5F'>濡������荤������涓�浣�浜�绗�涓���锛�骞朵�宸�����瀵瑰�������棰�涓虹┖锛�浜ゆ�㈡������棰���瀵瑰����板�兼�扮���绱�</span></p>
+style='font-size:12.0pt;font-family:Consolas;color:#3F7F5F'>如果单击的按钮不位于第一列，并且左列的对应按钮标题为空，交换按钮标题和对应的数值数组元素</span></p>
 
 <p class=MsoNormal style='text-indent:24.0pt;text-autospace:none'><span
 lang=EN-US style='font-size:12.0pt;font-family:Consolas;color:black'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><b><span
@@ -1050,7 +1050,7 @@ lang=EN-US style='font-size:12.0pt;font-family:Consolas'>&nbsp;</span></p>
 <p class=MsoNormal style='text-indent:24.0pt;text-autospace:none'><span
 lang=EN-US style='font-size:12.0pt;font-family:Consolas;color:black'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span
 lang=EN-US style='font-size:12.0pt;font-family:Consolas;color:#3F7F5F'>// </span><span
-style='font-size:12.0pt;font-family:Consolas;color:#3F7F5F'>濡������荤������涓�浣�浜�����涓���锛�骞朵��冲����瀵瑰�������棰�涓虹┖锛�浜ゆ�㈡������棰���瀵瑰����板�兼�扮���绱�</span></p>
+style='font-size:12.0pt;font-family:Consolas;color:#3F7F5F'>如果单击的按钮不位于最后一列，并且右列的对应按钮标题为空，交换按钮标题和对应的数值数组元素</span></p>
 
 <p class=MsoNormal style='text-indent:24.0pt;text-autospace:none'><span
 lang=EN-US style='font-size:12.0pt;font-family:Consolas;color:black'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><b><span
@@ -1091,7 +1091,7 @@ lang=EN-US style='font-size:12.0pt;font-family:Consolas'>&nbsp;</span></p>
 <p class=MsoNormal style='text-indent:24.0pt;text-autospace:none'><span
 lang=EN-US style='font-size:12.0pt;font-family:Consolas;color:black'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span
 lang=EN-US style='font-size:12.0pt;font-family:Consolas;color:#3F7F5F'>// </span><span
-style='font-size:12.0pt;font-family:Consolas;color:#3F7F5F'>濡����板�兼�扮�绉诲�ㄦ����锛����哄惊��</span></p>
+style='font-size:12.0pt;font-family:Consolas;color:#3F7F5F'>如果数值数组移动成功，退出循环</span></p>
 
 <p class=MsoNormal style='text-indent:24.0pt;text-autospace:none'><span
 lang=EN-US style='font-size:12.0pt;font-family:Consolas;color:black'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><b><span
@@ -1143,7 +1143,7 @@ lang=EN-US style='font-size:12.0pt;font-family:Consolas'>&nbsp;</span></p>
 <p class=MsoNormal style='text-indent:24.0pt;text-autospace:none'><span
 lang=EN-US style='font-size:12.0pt;font-family:Consolas;color:black'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span
 lang=EN-US style='font-size:12.0pt;font-family:Consolas;color:#3F7F5F'>// </span><span
-style='font-size:12.0pt;font-family:Consolas;color:#3F7F5F'>濡���绉诲�ㄦ����锛��剧ず娑���瀵硅��妗�</span></p>
+style='font-size:12.0pt;font-family:Consolas;color:#3F7F5F'>如果移动成功，显示消息对话框</span></p>
 
 <p class=MsoNormal style='text-indent:24.0pt;text-autospace:none'><span
 lang=EN-US style='font-size:12.0pt;font-family:Consolas;color:black'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><b><span
@@ -1157,7 +1157,7 @@ lang=EN-US style='font-size:12.0pt;font-family:Consolas;color:black'>&nbsp;&nbsp
 lang=EN-US style='font-size:12.0pt;font-family:Consolas;color:#7F0055'>null</span></b><span
 lang=EN-US style='font-size:12.0pt;font-family:Consolas;color:black'>, </span><span
 lang=EN-US style='font-size:12.0pt;font-family:Consolas;color:#2A00FF'>&quot;</span><span
-style='font-size:12.0pt;font-family:Consolas;color:#2A00FF'>����锛�<span
+style='font-size:12.0pt;font-family:Consolas;color:#2A00FF'>成功！<span
 lang=EN-US>&quot;</span></span><span lang=EN-US style='font-size:12.0pt;
 font-family:Consolas;color:black'>);</span></p>
 
@@ -1173,7 +1173,7 @@ lang=EN-US style='font-size:12.0pt;font-family:Consolas'>&nbsp;</span></p>
 <p class=MsoNormal style='text-indent:24.0pt;text-autospace:none'><span
 lang=EN-US style='font-size:12.0pt;font-family:Consolas;color:black'>&nbsp;&nbsp; </span><span
 lang=EN-US style='font-size:12.0pt;font-family:Consolas;color:#3F7F5F'>// </span><span
-style='font-size:12.0pt;font-family:Consolas;color:#3F7F5F'>璇ュ�芥�板��濮����ㄤ�妫��ユ����绉诲�ㄦ�������板�兼�扮�</span></p>
+style='font-size:12.0pt;font-family:Consolas;color:#3F7F5F'>该函数初始化用于检查是否移动成功的数值数组</span></p>
 
 <p class=MsoNormal style='text-indent:24.0pt;text-autospace:none'><span
 lang=EN-US style='font-size:12.0pt;font-family:Consolas;color:black'>&nbsp;&nbsp; </span><b><span
@@ -1186,8 +1186,8 @@ style='font-size:12.0pt;font-family:Consolas;color:black'>[] records) {</span></
 <p class=MsoNormal style='text-indent:24.0pt;text-autospace:none'><span
 lang=EN-US style='font-size:12.0pt;font-family:Consolas;color:black'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span
 lang=EN-US style='font-size:12.0pt;font-family:Consolas;color:#3F7F5F'>// </span><span
-style='font-size:12.0pt;font-family:Consolas;color:#3F7F5F'>����<span lang=EN-US>0</span>��<span
-lang=EN-US>9</span>��涓��板��</span></p>
+style='font-size:12.0pt;font-family:Consolas;color:#3F7F5F'>生成<span lang=EN-US>0</span>到<span
+lang=EN-US>9</span>十个数值</span></p>
 
 <p class=MsoNormal style='text-indent:24.0pt;text-autospace:none'><span
 lang=EN-US style='font-size:12.0pt;font-family:Consolas;color:black'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><b><span
@@ -1212,8 +1212,8 @@ lang=EN-US style='font-size:12.0pt;font-family:Consolas'>&nbsp;</span></p>
 <p class=MsoNormal style='text-indent:24.0pt;text-autospace:none'><span
 lang=EN-US style='font-size:12.0pt;font-family:Consolas;color:black'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span
 lang=EN-US style='font-size:12.0pt;font-family:Consolas;color:#3F7F5F'>// </span><span
-style='font-size:12.0pt;font-family:Consolas;color:#3F7F5F'>���洪����涓や釜�板�兼�板�煎��绱�锛�浜ゆ�㈡�板�硷��绘�℃�颁负<span
-lang=EN-US>100</span>娆★�浜х��娣锋�娆″�������</span></p>
+style='font-size:12.0pt;font-family:Consolas;color:#3F7F5F'>随机选取两个数值数值元素，交换数值，总次数为<span
+lang=EN-US>100</span>次，产生混淆次序的效果</span></p>
 
 <p class=MsoNormal style='text-indent:24.0pt;text-autospace:none'><span
 lang=EN-US style='font-size:12.0pt;font-family:Consolas;color:black'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><b><span
@@ -1253,7 +1253,7 @@ lang=EN-US style='font-size:12.0pt;font-family:Consolas'>&nbsp;</span></p>
 <p class=MsoNormal style='text-indent:24.0pt;text-autospace:none'><span
 lang=EN-US style='font-size:12.0pt;font-family:Consolas;color:black'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span
 lang=EN-US style='font-size:12.0pt;font-family:Consolas;color:#3F7F5F'>// </span><span
-style='font-size:12.0pt;font-family:Consolas;color:#3F7F5F'>浜ゆ�㈡�板�兼�扮���涓や釜��绱���</span></p>
+style='font-size:12.0pt;font-family:Consolas;color:#3F7F5F'>交换数值数组的两个元素值</span></p>
 
 <p class=MsoNormal style='text-indent:24.0pt;text-autospace:none'><span
 lang=EN-US style='font-size:12.0pt;font-family:Consolas;color:black'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; exchangetTwoNumber(records,
@@ -1266,11 +1266,11 @@ lang=EN-US style='font-size:12.0pt;font-family:Consolas;color:black'>&nbsp;&nbsp
 lang=EN-US style='font-size:12.0pt;font-family:Consolas;color:black'>&nbsp;&nbsp; }</span></p>
 
 <p class=MsoNormal style='text-indent:32.0pt'><u><span style='font-size:16.0pt;
-font-family:瀹�浣�;color:black'>�ㄦ�у�堕�㈡�跨被涓�娣诲��</span></u></p>
+font-family:宋体;color:black'>在控制面板类中添加</span></u></p>
 
 <p class=MsoNormal style='text-indent:24.0pt;text-autospace:none'><span
 lang=EN-US style='font-size:12.0pt;font-family:Consolas;color:#3F7F5F'>// </span><span
-style='font-size:12.0pt;font-family:Consolas;color:#3F7F5F'>娣诲��浜�浠剁������</span></p>
+style='font-size:12.0pt;font-family:Consolas;color:#3F7F5F'>添加事件监听器</span></p>
 
 <p class=MsoNormal style='text-indent:24.0pt;text-autospace:none'><span
 lang=EN-US style='font-size:12.0pt;font-family:Consolas;color:black'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span
@@ -1287,11 +1287,11 @@ lang=EN-US style='font-size:12.0pt;font-family:Consolas;color:#7F0055'>this</spa
 lang=EN-US style='font-size:12.0pt;font-family:Consolas;color:black'>);</span></p>
 
 <p class=MsoNormal style='text-indent:32.0pt'><u><span style='font-size:16.0pt;
-font-family:瀹�浣�;color:black'>骞舵坊��</span></u></p>
+font-family:宋体;color:black'>并添加</span></u></p>
 
 <p class=MsoNormal style='text-indent:24.0pt;text-autospace:none'><span
 lang=EN-US style='font-size:12.0pt;font-family:Consolas;color:#3F7F5F'>// </span><span
-style='font-size:12.0pt;font-family:Consolas;color:#3F7F5F'>��搴����绘����</span></p>
+style='font-size:12.0pt;font-family:Consolas;color:#3F7F5F'>响应单击按钮</span></p>
 
 <p class=MsoNormal style='text-indent:24.0pt;text-autospace:none'><span
 lang=EN-US style='font-size:12.0pt;font-family:Consolas;color:black'>&nbsp;&nbsp; </span><b><span
@@ -1302,7 +1302,7 @@ actionPerformed(ActionEvent e) {</span></p>
 <p class=MsoNormal style='text-indent:24.0pt;text-autospace:none'><span
 lang=EN-US style='font-size:12.0pt;font-family:Consolas;color:black'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span
 lang=EN-US style='font-size:12.0pt;font-family:Consolas;color:#3F7F5F'>// </span><span
-style='font-size:12.0pt;font-family:Consolas;color:#3F7F5F'>澶��������モ��</span></p>
+style='font-size:12.0pt;font-family:Consolas;color:#3F7F5F'>处理“重来”</span></p>
 
 <p class=MsoNormal style='text-indent:24.0pt;text-autospace:none'><span
 lang=EN-US style='font-size:12.0pt;font-family:Consolas;color:black'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><b><span
@@ -1320,7 +1320,7 @@ lang=EN-US style='font-size:12.0pt;font-family:Consolas;color:black'>.initialize
 <p class=MsoNormal style='text-indent:24.0pt;text-autospace:none'><span
 lang=EN-US style='font-size:12.0pt;font-family:Consolas;color:black'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span
 lang=EN-US style='font-size:12.0pt;font-family:Consolas;color:#3F7F5F'>// </span><span
-style='font-size:12.0pt;font-family:Consolas;color:#3F7F5F'>澶��������衡��</span></p>
+style='font-size:12.0pt;font-family:Consolas;color:#3F7F5F'>处理“退出”</span></p>
 
 <p class=MsoNormal style='text-indent:24.0pt;text-autospace:none'><span
 lang=EN-US style='font-size:12.0pt;font-family:Consolas;color:black'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><b><span

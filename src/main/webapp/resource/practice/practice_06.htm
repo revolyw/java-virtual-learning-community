@@ -4,22 +4,22 @@
 <head>
 <meta http-equiv=Content-Type content="text/html; charset=utf-8">
 <meta name=Generator content="Microsoft Word 14 (filtered)">
-<title>Java灏�绋�搴�����璁颁���</title>
-<link rel=Stylesheet type="text/css" href="../../css/practice-resource.css" />
+<title>Java小程序——记事本</title>
+<link rel=Stylesheet type="text/css" href="/css/practice-resource.css" />
 <style>
 <!--
  /* Font Definitions */
  @font-face
-	{font-family:瀹�浣�;
+	{font-family:宋体;
 	panose-1:2 1 6 0 3 1 1 1 1 1;}
 @font-face
-	{font-family:瀹�浣�;
+	{font-family:宋体;
 	panose-1:2 1 6 0 3 1 1 1 1 1;}
 @font-face
 	{font-family:Consolas;
 	panose-1:2 11 6 9 2 2 4 3 2 4;}
 @font-face
-	{font-family:"\@瀹�浣�";
+	{font-family:"\@宋体";
 	panose-1:2 1 6 0 3 1 1 1 1 1;}
  /* Style Definitions */
  p.MsoNormal, li.MsoNormal, div.MsoNormal
@@ -68,34 +68,34 @@ ul
 
 <p class=MsoNormal align=center style='text-align:center'><b><span lang=EN-US
 style='font-size:18.0pt'>Java </span></b><a name="_GoBack"></a><b><span
-style='font-size:18.0pt;font-family:瀹�浣�'>灏�绋�搴�����璁颁���</span></b></p>
+style='font-size:18.0pt;font-family:宋体'>小程序——记事本</span></b></p>
 
 <p class=MsoNormal align=left style='text-align:left'><b><span
-style='font-size:18.0pt;font-family:瀹�浣�'>璁颁���绋�搴���浠ユ��渚�涓�绉�绠�����������瀹圭�杈���澧�锛����跺��璁稿��绉�甯歌�����浠惰�诲�������ユ��浣�������渚�婕�绀轰�涓�绉�绠�����璁颁���绋�搴�锛����硅�锋敞��璁颁���绋�搴�涓���绉�甯歌����界��瀹��版�规���</span></b></p>
+style='font-size:18.0pt;font-family:宋体'>记事本程序可以提供一种简单的文本内容编辑环境，同时允许各种常见的文件读取和写入操作。本范例演示了一种简单的记事本程序，重点请注意记事本程序中各种常见功能的实现方法。</span></b></p>
 
 <p class=MsoNormal align=left style='margin-left:0cm;text-align:left;
-text-indent:0cm'><b><span lang=EN-US style='font-size:18.0pt'>涓�锛�</span></b><b><span
-style='font-size:18.0pt;font-family:瀹�浣�'>��寤哄�烘��绐�浣���������</span></b></p>
+text-indent:0cm'><b><span lang=EN-US style='font-size:18.0pt'>一．</span></b><b><span
+style='font-size:18.0pt;font-family:宋体'>构建基本窗体和菜单栏</span></b></p>
 
 <p class=MsoNormal align=left style='text-align:left'><b><span
-style='font-size:18.0pt;font-family:瀹�浣�'>杩�琛�缁���濡�涓�</span></b></p>
+style='font-size:18.0pt;font-family:宋体'>运行结果如下</span></b></p>
 
 <p class=MsoNormal align=left style='text-align:left;line-height:12.0pt'><span
-lang=EN-US><img width=455 height=256 id="�剧��妗� 1025"
+lang=EN-US><img width=455 height=256 id="图片框 1025"
 src="practice_06.files/image001.jpg"></span></p>
 
 <p class=MsoNormal align=left style='text-align:left'><b><span
-style='font-size:16.0pt;font-family:瀹�浣�'>�瑰�绘��浠�</span></b></p>
+style='font-size:16.0pt;font-family:宋体'>点击文件</span></b></p>
 
 <p class=MsoNormal align=left style='text-align:left;line-height:12.0pt'><span
-lang=EN-US><img width=455 height=256 id="�剧��妗� 1026"
+lang=EN-US><img width=455 height=256 id="图片框 1026"
 src="practice_06.files/image002.jpg"></span></p>
 
 <p class=MsoNormal align=left style='text-align:left'><b><span
-style='font-size:16.0pt;font-family:瀹�浣�'>�瑰�荤�杈�</span></b></p>
+style='font-size:16.0pt;font-family:宋体'>点击编辑</span></b></p>
 
 <p class=MsoNormal align=left style='text-align:left;line-height:12.0pt'><span
-lang=EN-US><img width=455 height=256 id="�剧��妗� 1027"
+lang=EN-US><img width=455 height=256 id="图片框 1027"
 src="practice_06.files/image003.jpg"></span></p>
 
 <p class=MsoNormal align=left style='text-align:left;line-height:12.0pt'><span
@@ -103,7 +103,7 @@ lang=EN-US>&nbsp;</span></p>
 
 <p class=MsoNormal style='text-autospace:none'><span lang=EN-US
 style='font-size:12.0pt;font-family:Consolas;color:#3F7F5F'>//</span><span
-style='font-size:12.0pt;font-family:Consolas;color:#3F7F5F'>娴�璇�绫�</span></p>
+style='font-size:12.0pt;font-family:Consolas;color:#3F7F5F'>测试类</span></p>
 
 <p class=MsoNormal style='text-autospace:none'><b><span lang=EN-US
 style='font-size:12.0pt;font-family:Consolas;color:#7F0055'>publicclass</span></b><span
@@ -118,7 +118,7 @@ main(String[] args) {</span></p>
 <p class=MsoNormal style='text-autospace:none'><span lang=EN-US
 style='font-size:12.0pt;font-family:Consolas;color:black'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span
 lang=EN-US style='font-size:12.0pt;font-family:Consolas;color:#3F7F5F'>// </span><span
-style='font-size:12.0pt;font-family:Consolas;color:#3F7F5F'>��寤虹��浣�绫诲����</span></p>
+style='font-size:12.0pt;font-family:Consolas;color:#3F7F5F'>创建窗体类变量</span></p>
 
 <p class=MsoNormal style='text-autospace:none'><span lang=EN-US
 style='font-size:12.0pt;font-family:Consolas;color:black'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; DemoWindow
@@ -126,7 +126,7 @@ dw = </span><b><span lang=EN-US style='font-size:12.0pt;font-family:Consolas;
 color:#7F0055'>new</span></b><span lang=EN-US style='font-size:12.0pt;
 font-family:Consolas;color:black'> DemoWindow(</span><span lang=EN-US
 style='font-size:12.0pt;font-family:Consolas;color:#2A00FF'>&quot;</span><span
-style='font-size:12.0pt;font-family:Consolas;color:#2A00FF'>璁颁���<span
+style='font-size:12.0pt;font-family:Consolas;color:#2A00FF'>记事本<span
 lang=EN-US>&quot;</span></span><span lang=EN-US style='font-size:12.0pt;
 font-family:Consolas;color:black'>);</span></p>
 
@@ -136,8 +136,8 @@ style='font-size:12.0pt;font-family:Consolas'>&nbsp;</span></p>
 <p class=MsoNormal style='text-autospace:none'><span lang=EN-US
 style='font-size:12.0pt;font-family:Consolas;color:black'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span
 lang=EN-US style='font-size:12.0pt;font-family:Consolas;color:#3F7F5F'>// </span><span
-style='font-size:12.0pt;font-family:Consolas;color:#3F7F5F'>灏�绐�浣���瀹藉害��楂�搴�����璁剧疆涓哄�骞�瀹藉害��灞�骞�楂�搴���<span
-lang=EN-US>1/3</span>锛�宸�涓�瑙�浣�缃�涔�璁剧疆涓哄�骞�瀹藉害��灞�骞�楂�搴���<span lang=EN-US>1/3</span>澶�</span></p>
+style='font-size:12.0pt;font-family:Consolas;color:#3F7F5F'>将窗体的宽度和高度分别设置为屏幕宽度和屏幕高度的<span
+lang=EN-US>1/3</span>，左上角位置也设置为屏幕宽度和屏幕高度的<span lang=EN-US>1/3</span>处</span></p>
 
 <p class=MsoNormal style='text-autospace:none'><span lang=EN-US
 style='font-size:12.0pt;font-family:Consolas;color:black'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Toolkit
@@ -168,7 +168,7 @@ style='font-size:12.0pt;font-family:Consolas'>&nbsp;</span></p>
 <p class=MsoNormal style='text-autospace:none'><span lang=EN-US
 style='font-size:12.0pt;font-family:Consolas;color:black'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span
 lang=EN-US style='font-size:12.0pt;font-family:Consolas;color:#3F7F5F'>// </span><span
-style='font-size:12.0pt;font-family:Consolas;color:#3F7F5F'>�瑰�诲�抽��������浠ラ���虹�搴�</span></p>
+style='font-size:12.0pt;font-family:Consolas;color:#3F7F5F'>点击关闭按钮可以退出程序</span></p>
 
 <p class=MsoNormal style='text-autospace:none'><span lang=EN-US
 style='font-size:12.0pt;font-family:Consolas;color:black'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; dw.setDefaultCloseOperation(JFrame.</span><i><span
@@ -181,7 +181,7 @@ style='font-size:12.0pt;font-family:Consolas'>&nbsp;</span></p>
 <p class=MsoNormal style='text-autospace:none'><span lang=EN-US
 style='font-size:12.0pt;font-family:Consolas;color:black'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span
 lang=EN-US style='font-size:12.0pt;font-family:Consolas;color:#3F7F5F'>// </span><span
-style='font-size:12.0pt;font-family:Consolas;color:#3F7F5F'>璁剧疆绐�浣�涓哄��瑙�</span></p>
+style='font-size:12.0pt;font-family:Consolas;color:#3F7F5F'>设置窗体为可见</span></p>
 
 <p class=MsoNormal style='text-autospace:none'><span lang=EN-US
 style='font-size:12.0pt;font-family:Consolas;color:black'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; dw.setVisible(</span><b><span
@@ -199,7 +199,7 @@ style='font-size:12.0pt;font-family:Consolas'>&nbsp;</span></p>
 
 <p class=MsoNormal style='text-autospace:none'><span lang=EN-US
 style='font-size:12.0pt;font-family:Consolas;color:#3F7F5F'>// </span><span
-style='font-size:12.0pt;font-family:Consolas;color:#3F7F5F'>璁颁���绐�浣�</span></p>
+style='font-size:12.0pt;font-family:Consolas;color:#3F7F5F'>记事本窗体</span></p>
 
 <p class=MsoNormal style='text-autospace:none'><b><span lang=EN-US
 style='font-size:12.0pt;font-family:Consolas;color:#7F0055'>class</span></b><u><span
@@ -213,7 +213,7 @@ ActionListener {</span></p>
 <p class=MsoNormal style='text-autospace:none'><span lang=EN-US
 style='font-size:12.0pt;font-family:Consolas;color:black'>&nbsp;&nbsp; </span><span
 lang=EN-US style='font-size:12.0pt;font-family:Consolas;color:#3F7F5F'>// </span><span
-style='font-size:12.0pt;font-family:Consolas;color:#3F7F5F'>�剧ず������浠跺��瀹圭��������</span></p>
+style='font-size:12.0pt;font-family:Consolas;color:#3F7F5F'>显示文本文件内容的文本区</span></p>
 
 <p class=MsoNormal style='text-autospace:none'><span lang=EN-US
 style='font-size:12.0pt;font-family:Consolas;color:black'>&nbsp;&nbsp; JTextArea
@@ -230,7 +230,7 @@ style='font-size:12.0pt;font-family:Consolas'>&nbsp;</span></p>
 <p class=MsoNormal style='text-autospace:none'><span lang=EN-US
 style='font-size:12.0pt;font-family:Consolas;color:black'>&nbsp;&nbsp; </span><span
 lang=EN-US style='font-size:12.0pt;font-family:Consolas;color:#3F7F5F'>// </span><span
-style='font-size:12.0pt;font-family:Consolas;color:#3F7F5F'>璁剧疆�����虹��婊��ㄦ��</span></p>
+style='font-size:12.0pt;font-family:Consolas;color:#3F7F5F'>设置文本区的滚动条</span></p>
 
 <p class=MsoNormal style='text-autospace:none'><span lang=EN-US
 style='font-size:12.0pt;font-family:Consolas;color:black'>&nbsp;&nbsp; </span><b><span
@@ -270,7 +270,7 @@ style='font-size:12.0pt;font-family:Consolas'>&nbsp;</span></p>
 <p class=MsoNormal style='text-autospace:none'><span lang=EN-US
 style='font-size:12.0pt;font-family:Consolas;color:black'>&nbsp;&nbsp; </span><span
 lang=EN-US style='font-size:12.0pt;font-family:Consolas;color:#3F7F5F'>// </span><span
-style='font-size:12.0pt;font-family:Consolas;color:#3F7F5F'>����</span></p>
+style='font-size:12.0pt;font-family:Consolas;color:#3F7F5F'>菜单</span></p>
 
 <p class=MsoNormal style='text-autospace:none'><span lang=EN-US
 style='font-size:12.0pt;font-family:Consolas;color:black'>&nbsp;&nbsp; JMenuBar
@@ -288,7 +288,7 @@ lang=EN-US style='font-size:12.0pt;font-family:Consolas;color:black'> = </span><
 lang=EN-US style='font-size:12.0pt;font-family:Consolas;color:#7F0055'>new</span></b><span
 lang=EN-US style='font-size:12.0pt;font-family:Consolas;color:black'> JMenu(</span><span
 lang=EN-US style='font-size:12.0pt;font-family:Consolas;color:#2A00FF'>&quot;</span><span
-style='font-size:12.0pt;font-family:Consolas;color:#2A00FF'>��浠�<span lang=EN-US>&quot;</span></span><span
+style='font-size:12.0pt;font-family:Consolas;color:#2A00FF'>文件<span lang=EN-US>&quot;</span></span><span
 lang=EN-US style='font-size:12.0pt;font-family:Consolas;color:black'>);</span></p>
 
 <p class=MsoNormal style='text-autospace:none'><span lang=EN-US
@@ -299,7 +299,7 @@ font-family:Consolas;color:black'> = </span><b><span lang=EN-US
 style='font-size:12.0pt;font-family:Consolas;color:#7F0055'>new</span></b><span
 lang=EN-US style='font-size:12.0pt;font-family:Consolas;color:black'> JMenuItem(</span><span
 lang=EN-US style='font-size:12.0pt;font-family:Consolas;color:#2A00FF'>&quot;</span><span
-style='font-size:12.0pt;font-family:Consolas;color:#2A00FF'>�板缓<span lang=EN-US>&quot;</span></span><span
+style='font-size:12.0pt;font-family:Consolas;color:#2A00FF'>新建<span lang=EN-US>&quot;</span></span><span
 lang=EN-US style='font-size:12.0pt;font-family:Consolas;color:black'>);</span></p>
 
 <p class=MsoNormal style='text-autospace:none'><span lang=EN-US
@@ -311,7 +311,7 @@ style='font-size:12.0pt;font-family:Consolas;color:#7F0055'>new</span></b><span
 lang=EN-US style='font-size:12.0pt;font-family:Consolas;color:black'>
 JMenuItem(</span><span lang=EN-US style='font-size:12.0pt;font-family:Consolas;
 color:#2A00FF'>&quot;</span><span style='font-size:12.0pt;font-family:Consolas;
-color:#2A00FF'>��寮�<span lang=EN-US>&quot;</span></span><span lang=EN-US
+color:#2A00FF'>打开<span lang=EN-US>&quot;</span></span><span lang=EN-US
 style='font-size:12.0pt;font-family:Consolas;color:black'>);</span></p>
 
 <p class=MsoNormal style='text-autospace:none'><span lang=EN-US
@@ -323,7 +323,7 @@ style='font-size:12.0pt;font-family:Consolas;color:#7F0055'>new</span></b><span
 lang=EN-US style='font-size:12.0pt;font-family:Consolas;color:black'>
 JMenuItem(</span><span lang=EN-US style='font-size:12.0pt;font-family:Consolas;
 color:#2A00FF'>&quot;</span><span style='font-size:12.0pt;font-family:Consolas;
-color:#2A00FF'>淇�瀛�<span lang=EN-US>&quot;</span></span><span lang=EN-US
+color:#2A00FF'>保存<span lang=EN-US>&quot;</span></span><span lang=EN-US
 style='font-size:12.0pt;font-family:Consolas;color:black'>);</span></p>
 
 <p class=MsoNormal style='text-autospace:none'><span lang=EN-US
@@ -335,7 +335,7 @@ style='font-size:12.0pt;font-family:Consolas;color:#7F0055'>new</span></b><span
 lang=EN-US style='font-size:12.0pt;font-family:Consolas;color:black'>
 JMenuItem(</span><span lang=EN-US style='font-size:12.0pt;font-family:Consolas;
 color:#2A00FF'>&quot;</span><span style='font-size:12.0pt;font-family:Consolas;
-color:#2A00FF'>��瀛�涓�<span lang=EN-US>&quot;</span></span><span lang=EN-US
+color:#2A00FF'>另存为<span lang=EN-US>&quot;</span></span><span lang=EN-US
 style='font-size:12.0pt;font-family:Consolas;color:black'>);</span></p>
 
 <p class=MsoNormal style='text-autospace:none'><span lang=EN-US
@@ -347,7 +347,7 @@ style='font-size:12.0pt;font-family:Consolas;color:#7F0055'>new</span></b><span
 lang=EN-US style='font-size:12.0pt;font-family:Consolas;color:black'>
 JMenuItem(</span><span lang=EN-US style='font-size:12.0pt;font-family:Consolas;
 color:#2A00FF'>&quot;</span><span style='font-size:12.0pt;font-family:Consolas;
-color:#2A00FF'>����<span lang=EN-US>&quot;</span></span><span lang=EN-US
+color:#2A00FF'>退出<span lang=EN-US>&quot;</span></span><span lang=EN-US
 style='font-size:12.0pt;font-family:Consolas;color:black'>);</span></p>
 
 <p class=MsoNormal style='text-autospace:none'><span lang=EN-US
@@ -357,7 +357,7 @@ lang=EN-US style='font-size:12.0pt;font-family:Consolas;color:black'> = </span><
 lang=EN-US style='font-size:12.0pt;font-family:Consolas;color:#7F0055'>new</span></b><span
 lang=EN-US style='font-size:12.0pt;font-family:Consolas;color:black'> JMenu(</span><span
 lang=EN-US style='font-size:12.0pt;font-family:Consolas;color:#2A00FF'>&quot;</span><span
-style='font-size:12.0pt;font-family:Consolas;color:#2A00FF'>缂�杈�<span lang=EN-US>&quot;</span></span><span
+style='font-size:12.0pt;font-family:Consolas;color:#2A00FF'>编辑<span lang=EN-US>&quot;</span></span><span
 lang=EN-US style='font-size:12.0pt;font-family:Consolas;color:black'>);</span></p>
 
 <p class=MsoNormal style='text-autospace:none'><span lang=EN-US
@@ -368,7 +368,7 @@ font-family:Consolas;color:black'> = </span><b><span lang=EN-US
 style='font-size:12.0pt;font-family:Consolas;color:#7F0055'>new</span></b><span
 lang=EN-US style='font-size:12.0pt;font-family:Consolas;color:black'> JMenuItem(</span><span
 lang=EN-US style='font-size:12.0pt;font-family:Consolas;color:#2A00FF'>&quot;</span><span
-style='font-size:12.0pt;font-family:Consolas;color:#2A00FF'>�ㄩ��<span lang=EN-US>&quot;</span></span><span
+style='font-size:12.0pt;font-family:Consolas;color:#2A00FF'>全选<span lang=EN-US>&quot;</span></span><span
 lang=EN-US style='font-size:12.0pt;font-family:Consolas;color:black'>);</span></p>
 
 <p class=MsoNormal style='text-autospace:none'><span lang=EN-US
@@ -380,7 +380,7 @@ style='font-size:12.0pt;font-family:Consolas;color:#7F0055'>new</span></b><span
 lang=EN-US style='font-size:12.0pt;font-family:Consolas;color:black'>
 JMenuItem(</span><span lang=EN-US style='font-size:12.0pt;font-family:Consolas;
 color:#2A00FF'>&quot;</span><span style='font-size:12.0pt;font-family:Consolas;
-color:#2A00FF'>������<span lang=EN-US>&quot;</span></span><span lang=EN-US
+color:#2A00FF'>前景色<span lang=EN-US>&quot;</span></span><span lang=EN-US
 style='font-size:12.0pt;font-family:Consolas;color:black'>);</span></p>
 
 <p class=MsoNormal style='text-autospace:none'><span lang=EN-US
@@ -392,7 +392,7 @@ style='font-size:12.0pt;font-family:Consolas;color:#7F0055'>new</span></b><span
 lang=EN-US style='font-size:12.0pt;font-family:Consolas;color:black'>
 JMenuItem(</span><span lang=EN-US style='font-size:12.0pt;font-family:Consolas;
 color:#2A00FF'>&quot;</span><span style='font-size:12.0pt;font-family:Consolas;
-color:#2A00FF'>������<span lang=EN-US>&quot;</span></span><span lang=EN-US
+color:#2A00FF'>背景色<span lang=EN-US>&quot;</span></span><span lang=EN-US
 style='font-size:12.0pt;font-family:Consolas;color:black'>);</span></p>
 
 <p class=MsoNormal style='text-autospace:none'><span lang=EN-US
@@ -401,7 +401,7 @@ style='font-size:12.0pt;font-family:Consolas'>&nbsp;</span></p>
 <p class=MsoNormal style='text-autospace:none'><span lang=EN-US
 style='font-size:12.0pt;font-family:Consolas;color:black'>&nbsp;&nbsp; </span><span
 lang=EN-US style='font-size:12.0pt;font-family:Consolas;color:#3F7F5F'>// </span><span
-style='font-size:12.0pt;font-family:Consolas;color:#3F7F5F'>褰�����寮�����浠跺��绉�</span></p>
+style='font-size:12.0pt;font-family:Consolas;color:#3F7F5F'>当前打开的文件名称</span></p>
 
 <p class=MsoNormal style='text-autospace:none'><span lang=EN-US
 style='font-size:12.0pt;font-family:Consolas;color:black'>&nbsp;&nbsp; String </span><span
@@ -416,7 +416,7 @@ style='font-size:12.0pt;font-family:Consolas'>&nbsp;</span></p>
 <p class=MsoNormal style='text-autospace:none'><span lang=EN-US
 style='font-size:12.0pt;font-family:Consolas;color:black'>&nbsp;&nbsp; </span><span
 lang=EN-US style='font-size:12.0pt;font-family:Consolas;color:#3F7F5F'>// </span><span
-style='font-size:12.0pt;font-family:Consolas;color:#3F7F5F'>�����芥��</span></p>
+style='font-size:12.0pt;font-family:Consolas;color:#3F7F5F'>构造函数</span></p>
 
 <p class=MsoNormal style='text-autospace:none'><span lang=EN-US
 style='font-size:12.0pt;font-family:Consolas;color:black'>&nbsp;&nbsp; </span><b><span
@@ -435,7 +435,7 @@ style='font-size:12.0pt;font-family:Consolas;color:black'>&nbsp;&nbsp;&nbsp;&nbs
 <p class=MsoNormal style='text-autospace:none'><span lang=EN-US
 style='font-size:12.0pt;font-family:Consolas;color:black'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span
 lang=EN-US style='font-size:12.0pt;font-family:Consolas;color:#3F7F5F'>// </span><span
-style='font-size:12.0pt;font-family:Consolas;color:#3F7F5F'>娣诲������</span></p>
+style='font-size:12.0pt;font-family:Consolas;color:#3F7F5F'>添加菜单</span></p>
 
 <p class=MsoNormal style='text-autospace:none'><span lang=EN-US
 style='font-size:12.0pt;font-family:Consolas;color:black'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span
@@ -533,7 +533,7 @@ style='font-size:12.0pt;font-family:Consolas'>&nbsp;</span></p>
 <p class=MsoNormal style='text-autospace:none'><span lang=EN-US
 style='font-size:12.0pt;font-family:Consolas;color:black'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span
 lang=EN-US style='font-size:12.0pt;font-family:Consolas;color:#3F7F5F'>// </span><span
-style='font-size:12.0pt;font-family:Consolas;color:#3F7F5F'>娣诲��������</span></p>
+style='font-size:12.0pt;font-family:Consolas;color:#3F7F5F'>添加文本区</span></p>
 
 <p class=MsoNormal style='text-autospace:none'><span lang=EN-US
 style='font-size:12.0pt;font-family:Consolas;color:black'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; add(</span><span
@@ -553,53 +553,53 @@ style='font-size:12.0pt;font-family:Consolas;color:black'>&nbsp;&nbsp; }</span><
 lang=EN-US style='font-size:12.0pt'>&nbsp;</span></p>
 
 <p class=MsoNormal align=left style='margin-left:0cm;text-align:left;
-text-indent:0cm'><b><span lang=EN-US style='font-size:16.0pt'>浜�锛�</span></b><b><span
-style='font-size:16.0pt;font-family:瀹�浣�'>娣诲�����讳�浠�</span></b></p>
+text-indent:0cm'><b><span lang=EN-US style='font-size:16.0pt'>二．</span></b><b><span
+style='font-size:16.0pt;font-family:宋体'>添加单击事件</span></b></p>
 
 <p class=MsoNormal align=left style='text-align:left'><b><span
-style='font-size:16.0pt;font-family:瀹�浣�'>杩�琛�����濡�涓�</span></b></p>
+style='font-size:16.0pt;font-family:宋体'>运行效果如下</span></b></p>
 
 <p class=MsoNormal align=left style='text-align:left'><b><span
-style='font-size:16.0pt;font-family:瀹�浣�'>�瑰�绘��寮�</span></b></p>
+style='font-size:16.0pt;font-family:宋体'>点击打开</span></b></p>
 
 <p class=MsoNormal align=left style='text-align:left;line-height:12.0pt'><span
-lang=EN-US style='font-size:12.0pt'><img width=516 height=364 id="�剧��妗� 1028"
+lang=EN-US style='font-size:12.0pt'><img width=516 height=364 id="图片框 1028"
 src="practice_06.files/image004.jpg"></span></p>
 
 <p class=MsoNormal align=left style='text-align:left'><b><span
-style='font-size:16.0pt;font-family:瀹�浣�'>�瑰�讳�瀛�</span></b></p>
+style='font-size:16.0pt;font-family:宋体'>点击保存</span></b></p>
 
 <p class=MsoNormal align=left style='text-align:left;line-height:12.0pt'><span
-lang=EN-US style='font-size:12.0pt'><img width=516 height=364 id="�剧��妗� 1029"
+lang=EN-US style='font-size:12.0pt'><img width=516 height=364 id="图片框 1029"
 src="practice_06.files/image005.jpg"></span></p>
 
 <p class=MsoNormal align=left style='text-align:left'><b><span
-style='font-size:16.0pt;font-family:瀹�浣�'>�瑰�诲��瀛�涓�</span></b></p>
+style='font-size:16.0pt;font-family:宋体'>点击另存为</span></b></p>
 
 <p class=MsoNormal align=left style='text-align:left;line-height:12.0pt'><span
-lang=EN-US style='font-size:12.0pt'><img width=516 height=364 id="�剧��妗� 1030"
+lang=EN-US style='font-size:12.0pt'><img width=516 height=364 id="图片框 1030"
 src="practice_06.files/image006.jpg"></span></p>
 
 <p class=MsoNormal align=left style='text-align:left'><b><span
-style='font-size:16.0pt;font-family:瀹�浣�'>�瑰�诲������</span></b></p>
+style='font-size:16.0pt;font-family:宋体'>点击前景色</span></b></p>
 
 <p class=MsoNormal align=left style='text-align:left;line-height:12.0pt'><span
-lang=EN-US style='font-size:12.0pt'><img width=554 height=377 id="�剧��妗� 1031"
+lang=EN-US style='font-size:12.0pt'><img width=554 height=377 id="图片框 1031"
 src="practice_06.files/image007.jpg"></span></p>
 
 <p class=MsoNormal align=left style='text-align:left'><b><span
-style='font-size:16.0pt;font-family:瀹�浣�'>�瑰�昏������</span></b></p>
+style='font-size:16.0pt;font-family:宋体'>点击背景色</span></b></p>
 
 <p class=MsoNormal align=left style='text-align:left;line-height:12.0pt'><span
-lang=EN-US style='font-size:12.0pt'><img width=554 height=377 id="�剧��妗� 1032"
+lang=EN-US style='font-size:12.0pt'><img width=554 height=377 id="图片框 1032"
 src="practice_06.files/image008.jpg"></span></p>
 
 <p class=MsoNormal align=left style='text-align:left'><b><u><span
-style='font-size:16.0pt;font-family:瀹�浣�'>�ㄦ�����芥�颁腑娣诲��</span></u></b></p>
+style='font-size:16.0pt;font-family:宋体'>在构造函数中添加</span></u></b></p>
 
 <p class=MsoNormal style='text-autospace:none'><span lang=EN-US
 style='font-size:12.0pt;font-family:Consolas;color:#3F7F5F'>// </span><span
-style='font-size:12.0pt;font-family:Consolas;color:#3F7F5F'>娣诲��浜�浠剁������</span></p>
+style='font-size:12.0pt;font-family:Consolas;color:#3F7F5F'>添加事件监听器</span></p>
 
 <p class=MsoNormal style='text-autospace:none'><span lang=EN-US
 style='font-size:12.0pt;font-family:Consolas;color:black'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span
@@ -661,11 +661,11 @@ lang=EN-US style='font-size:12.0pt;font-family:Consolas;color:black'>);</span></
 lang=EN-US style='font-size:12.0pt;font-family:Consolas;color:black'>&nbsp;</span></p>
 
 <p class=MsoNormal align=left style='text-align:left'><b><u><span
-style='font-size:16.0pt;font-family:瀹�浣�;color:black'>骞舵坊��</span></u></b></p>
+style='font-size:16.0pt;font-family:宋体;color:black'>并添加</span></u></b></p>
 
 <p class=MsoNormal style='text-autospace:none'><span lang=EN-US
 style='font-size:12.0pt;font-family:Consolas;color:#3F7F5F'>// </span><span
-style='font-size:12.0pt;font-family:Consolas;color:#3F7F5F'>��搴����昏����</span></p>
+style='font-size:12.0pt;font-family:Consolas;color:#3F7F5F'>响应单击菜单</span></p>
 
 <p class=MsoNormal style='text-autospace:none'><span lang=EN-US
 style='font-size:12.0pt;font-family:Consolas;color:black'>&nbsp;&nbsp; </span><b><span
@@ -680,7 +680,7 @@ eventSource = (JMenuItem) e.getSource();</span></p>
 <p class=MsoNormal style='text-autospace:none'><span lang=EN-US
 style='font-size:12.0pt;font-family:Consolas;color:black'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span
 lang=EN-US style='font-size:12.0pt;font-family:Consolas;color:#3F7F5F'>// </span><span
-style='font-size:12.0pt;font-family:Consolas;color:#3F7F5F'>澶����板缓��浠�</span></p>
+style='font-size:12.0pt;font-family:Consolas;color:#3F7F5F'>处理新建文件</span></p>
 
 <p class=MsoNormal style='text-autospace:none'><span lang=EN-US
 style='font-size:12.0pt;font-family:Consolas;color:black'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><b><span
@@ -703,7 +703,7 @@ style='font-size:12.0pt;font-family:Consolas;color:black'>&nbsp;&nbsp;&nbsp;&nbs
 <p class=MsoNormal style='text-autospace:none'><span lang=EN-US
 style='font-size:12.0pt;font-family:Consolas;color:black'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span
 lang=EN-US style='font-size:12.0pt;font-family:Consolas;color:#3F7F5F'>// </span><span
-style='font-size:12.0pt;font-family:Consolas;color:#3F7F5F'>澶�����寮���浠�</span></p>
+style='font-size:12.0pt;font-family:Consolas;color:#3F7F5F'>处理打开文件</span></p>
 
 <p class=MsoNormal style='text-autospace:none'><span lang=EN-US
 style='font-size:12.0pt;font-family:Consolas;color:black'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><b><span
@@ -722,7 +722,7 @@ style='font-size:12.0pt;font-family:Consolas;color:black'>&nbsp;&nbsp;&nbsp;&nbs
 <p class=MsoNormal style='text-autospace:none'><span lang=EN-US
 style='font-size:12.0pt;font-family:Consolas;color:black'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span
 lang=EN-US style='font-size:12.0pt;font-family:Consolas;color:#3F7F5F'>// </span><span
-style='font-size:12.0pt;font-family:Consolas;color:#3F7F5F'>澶���淇�瀛���浠�</span></p>
+style='font-size:12.0pt;font-family:Consolas;color:#3F7F5F'>处理保存文件</span></p>
 
 <p class=MsoNormal style='text-autospace:none'><span lang=EN-US
 style='font-size:12.0pt;font-family:Consolas;color:black'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><b><span
@@ -743,7 +743,7 @@ style='font-size:12.0pt;font-family:Consolas;color:black'>&nbsp;&nbsp;&nbsp;&nbs
 <p class=MsoNormal style='text-autospace:none'><span lang=EN-US
 style='font-size:12.0pt;font-family:Consolas;color:black'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span
 lang=EN-US style='font-size:12.0pt;font-family:Consolas;color:#3F7F5F'>// </span><span
-style='font-size:12.0pt;font-family:Consolas;color:#3F7F5F'>澶�����瀛�涓烘��浠�</span></p>
+style='font-size:12.0pt;font-family:Consolas;color:#3F7F5F'>处理另存为文件</span></p>
 
 <p class=MsoNormal style='text-autospace:none'><span lang=EN-US
 style='font-size:12.0pt;font-family:Consolas;color:black'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><b><span
@@ -764,7 +764,7 @@ style='font-size:12.0pt;font-family:Consolas;color:black'>&nbsp;&nbsp;&nbsp;&nbs
 <p class=MsoNormal style='text-autospace:none'><span lang=EN-US
 style='font-size:12.0pt;font-family:Consolas;color:black'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span
 lang=EN-US style='font-size:12.0pt;font-family:Consolas;color:#3F7F5F'>// </span><span
-style='font-size:12.0pt;font-family:Consolas;color:#3F7F5F'>澶������虹�搴�</span></p>
+style='font-size:12.0pt;font-family:Consolas;color:#3F7F5F'>处理退出程序</span></p>
 
 <p class=MsoNormal style='text-autospace:none'><span lang=EN-US
 style='font-size:12.0pt;font-family:Consolas;color:black'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><b><span
@@ -783,7 +783,7 @@ style='font-size:12.0pt;font-family:Consolas;color:black'>&nbsp;&nbsp;&nbsp;&nbs
 <p class=MsoNormal style='text-autospace:none'><span lang=EN-US
 style='font-size:12.0pt;font-family:Consolas;color:black'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span
 lang=EN-US style='font-size:12.0pt;font-family:Consolas;color:#3F7F5F'>// </span><span
-style='font-size:12.0pt;font-family:Consolas;color:#3F7F5F'>澶��������ㄩ��</span></p>
+style='font-size:12.0pt;font-family:Consolas;color:#3F7F5F'>处理文本全选</span></p>
 
 <p class=MsoNormal style='text-autospace:none'><span lang=EN-US
 style='font-size:12.0pt;font-family:Consolas;color:black'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><b><span
@@ -804,7 +804,7 @@ style='font-size:12.0pt;font-family:Consolas;color:black'>&nbsp;&nbsp;&nbsp;&nbs
 <p class=MsoNormal style='text-autospace:none'><span lang=EN-US
 style='font-size:12.0pt;font-family:Consolas;color:black'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span
 lang=EN-US style='font-size:12.0pt;font-family:Consolas;color:#3F7F5F'>// </span><span
-style='font-size:12.0pt;font-family:Consolas;color:#3F7F5F'>澶���璁剧疆������</span></p>
+style='font-size:12.0pt;font-family:Consolas;color:#3F7F5F'>处理设置前景色</span></p>
 
 <p class=MsoNormal style='text-autospace:none'><span lang=EN-US
 style='font-size:12.0pt;font-family:Consolas;color:black'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><b><span
@@ -820,7 +820,7 @@ color = JColorChooser.<i>showDialog</i>(</span><b><span lang=EN-US
 style='font-size:12.0pt;font-family:Consolas;color:#7F0055'>this</span></b><span
 lang=EN-US style='font-size:12.0pt;font-family:Consolas;color:black'>, </span><span
 lang=EN-US style='font-size:12.0pt;font-family:Consolas;color:#2A00FF'>&quot;</span><span
-style='font-size:12.0pt;font-family:Consolas;color:#2A00FF'>������<span
+style='font-size:12.0pt;font-family:Consolas;color:#2A00FF'>前景色<span
 lang=EN-US>&quot;</span></span><span lang=EN-US style='font-size:12.0pt;
 font-family:Consolas;color:black'>, </span><span lang=EN-US style='font-size:
 12.0pt;font-family:Consolas;color:#0000C0'>textArea</span></p>
@@ -850,7 +850,7 @@ style='font-size:12.0pt;font-family:Consolas;color:black'>&nbsp;&nbsp;&nbsp;&nbs
 <p class=MsoNormal style='text-autospace:none'><span lang=EN-US
 style='font-size:12.0pt;font-family:Consolas;color:black'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span
 lang=EN-US style='font-size:12.0pt;font-family:Consolas;color:#3F7F5F'>// </span><span
-style='font-size:12.0pt;font-family:Consolas;color:#3F7F5F'>澶���璁剧疆������</span></p>
+style='font-size:12.0pt;font-family:Consolas;color:#3F7F5F'>处理设置背景色</span></p>
 
 <p class=MsoNormal style='text-autospace:none'><span lang=EN-US
 style='font-size:12.0pt;font-family:Consolas;color:black'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><b><span
@@ -866,7 +866,7 @@ color = JColorChooser.<i>showDialog</i>(</span><b><span lang=EN-US
 style='font-size:12.0pt;font-family:Consolas;color:#7F0055'>this</span></b><span
 lang=EN-US style='font-size:12.0pt;font-family:Consolas;color:black'>, </span><span
 lang=EN-US style='font-size:12.0pt;font-family:Consolas;color:#2A00FF'>&quot;</span><span
-style='font-size:12.0pt;font-family:Consolas;color:#2A00FF'>������<span
+style='font-size:12.0pt;font-family:Consolas;color:#2A00FF'>背景色<span
 lang=EN-US>&quot;</span></span><span lang=EN-US style='font-size:12.0pt;
 font-family:Consolas;color:black'>, </span><span lang=EN-US style='font-size:
 12.0pt;font-family:Consolas;color:#0000C0'>textArea</span></p>
@@ -902,7 +902,7 @@ style='font-size:12.0pt;font-family:Consolas'>&nbsp;</span></p>
 <p class=MsoNormal style='text-autospace:none'><span lang=EN-US
 style='font-size:12.0pt;font-family:Consolas;color:black'>&nbsp;&nbsp; </span><span
 lang=EN-US style='font-size:12.0pt;font-family:Consolas;color:#3F7F5F'>// </span><span
-style='font-size:12.0pt;font-family:Consolas;color:#3F7F5F'>淇�瀛���浠剁���芥��</span></p>
+style='font-size:12.0pt;font-family:Consolas;color:#3F7F5F'>保存文件的函数</span></p>
 
 <p class=MsoNormal style='text-autospace:none'><span lang=EN-US
 style='font-size:12.0pt;font-family:Consolas;color:black'>&nbsp;&nbsp; </span><b><span
@@ -913,7 +913,7 @@ writeToFile(String file) {</span></p>
 <p class=MsoNormal style='text-autospace:none'><span lang=EN-US
 style='font-size:12.0pt;font-family:Consolas;color:black'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span
 lang=EN-US style='font-size:12.0pt;font-family:Consolas;color:#3F7F5F'>// </span><span
-style='font-size:12.0pt;font-family:Consolas;color:#3F7F5F'>濡���娌℃����浠跺��绉帮���寮�瀵硅��妗�瑕�姹����╂��浠跺��</span></p>
+style='font-size:12.0pt;font-family:Consolas;color:#3F7F5F'>如果没有文件名称，打开对话框要求选择文件名</span></p>
 
 <p class=MsoNormal style='text-autospace:none'><span lang=EN-US
 style='font-size:12.0pt;font-family:Consolas;color:black'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><b><span
@@ -926,7 +926,7 @@ lang=EN-US style='font-size:12.0pt;font-family:Consolas;color:black'>) {</span><
 style='font-size:12.0pt;font-family:Consolas;color:black'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span
 lang=EN-US style='font-size:12.0pt;font-family:Consolas;color:#3F7F5F'>//
 getFileName</span><span style='font-size:12.0pt;font-family:Consolas;
-color:#3F7F5F'>���颁负<span lang=EN-US>true</span>�剧ず淇�瀛�瀵硅��妗�</span></p>
+color:#3F7F5F'>参数为<span lang=EN-US>true</span>显示保存对话框</span></p>
 
 <p class=MsoNormal style='text-autospace:none'><span lang=EN-US
 style='font-size:12.0pt;font-family:Consolas;color:black'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span
@@ -959,7 +959,7 @@ lang=EN-US style='font-size:12.0pt;font-family:Consolas;color:black'> {</span></
 <p class=MsoNormal style='text-autospace:none'><span lang=EN-US
 style='font-size:12.0pt;font-family:Consolas;color:black'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span
 lang=EN-US style='font-size:12.0pt;font-family:Consolas;color:#3F7F5F'>// </span><span
-style='font-size:12.0pt;font-family:Consolas;color:#3F7F5F'>���ユ��浠�</span></p>
+style='font-size:12.0pt;font-family:Consolas;color:#3F7F5F'>写入文件</span></p>
 
 <p class=MsoNormal style='text-autospace:none'><span lang=EN-US
 style='font-size:12.0pt;font-family:Consolas;color:black'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; File
@@ -1009,7 +1009,7 @@ style='font-size:12.0pt;font-family:Consolas'>&nbsp;</span></p>
 <p class=MsoNormal style='text-autospace:none'><span lang=EN-US
 style='font-size:12.0pt;font-family:Consolas;color:black'>&nbsp;&nbsp; </span><span
 lang=EN-US style='font-size:12.0pt;font-family:Consolas;color:#3F7F5F'>// </span><span
-style='font-size:12.0pt;font-family:Consolas;color:#3F7F5F'>璇诲����浠剁���芥��</span></p>
+style='font-size:12.0pt;font-family:Consolas;color:#3F7F5F'>读取文件的函数</span></p>
 
 <p class=MsoNormal style='text-autospace:none'><span lang=EN-US
 style='font-size:12.0pt;font-family:Consolas;color:black'>&nbsp;&nbsp; </span><b><span
@@ -1020,13 +1020,13 @@ readFromFile() {</span></p>
 <p class=MsoNormal style='text-autospace:none'><span lang=EN-US
 style='font-size:12.0pt;font-family:Consolas;color:black'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span
 lang=EN-US style='font-size:12.0pt;font-family:Consolas;color:#3F7F5F'>// </span><span
-style='font-size:12.0pt;font-family:Consolas;color:#3F7F5F'>��寮�瀵硅��妗�瑕�姹����╂��浠�</span></p>
+style='font-size:12.0pt;font-family:Consolas;color:#3F7F5F'>打开对话框要求选择文件</span></p>
 
 <p class=MsoNormal style='text-autospace:none'><span lang=EN-US
 style='font-size:12.0pt;font-family:Consolas;color:black'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span
 lang=EN-US style='font-size:12.0pt;font-family:Consolas;color:#3F7F5F'>//
 getFileName</span><span style='font-size:12.0pt;font-family:Consolas;
-color:#3F7F5F'>���颁负<span lang=EN-US>false</span>�剧ず��寮�瀵硅��妗�</span></p>
+color:#3F7F5F'>参数为<span lang=EN-US>false</span>显示打开对话框</span></p>
 
 <p class=MsoNormal style='text-autospace:none'><span lang=EN-US
 style='font-size:12.0pt;font-family:Consolas;color:black'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span
@@ -1056,7 +1056,7 @@ lang=EN-US style='font-size:12.0pt;font-family:Consolas;color:black'> {</span></
 <p class=MsoNormal style='text-autospace:none'><span lang=EN-US
 style='font-size:12.0pt;font-family:Consolas;color:black'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span
 lang=EN-US style='font-size:12.0pt;font-family:Consolas;color:#3F7F5F'>// </span><span
-style='font-size:12.0pt;font-family:Consolas;color:#3F7F5F'>璇诲����浠�</span></p>
+style='font-size:12.0pt;font-family:Consolas;color:#3F7F5F'>读取文件</span></p>
 
 <p class=MsoNormal style='text-autospace:none'><span lang=EN-US
 style='font-size:12.0pt;font-family:Consolas;color:black'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; File
@@ -1145,8 +1145,8 @@ style='font-size:14.0pt;font-family:Consolas'>&nbsp;</span></p>
 <p class=MsoNormal style='text-autospace:none'><span lang=EN-US
 style='font-size:14.0pt;font-family:Consolas;color:black'>&nbsp;&nbsp; </span><span
 lang=EN-US style='font-size:14.0pt;font-family:Consolas;color:#3F7F5F'>// </span><span
-style='font-size:14.0pt;font-family:Consolas;color:#3F7F5F'>�剧ず��浠堕���╁�硅��妗�锛����颁负<span
-lang=EN-US>true</span>锛��剧ず淇�瀛���浠跺�硅��妗�锛����颁负<span lang=EN-US>false</span>锛��剧ず��寮���浠跺�硅��妗�</span></p>
+style='font-size:14.0pt;font-family:Consolas;color:#3F7F5F'>显示文件选择对话框，参数为<span
+lang=EN-US>true</span>，显示保存文件对话框，参数为<span lang=EN-US>false</span>，显示打开文件对话框</span></p>
 
 <p class=MsoNormal style='text-autospace:none'><span lang=EN-US
 style='font-size:14.0pt;font-family:Consolas;color:black'>&nbsp;&nbsp; </span><b><span
@@ -1214,7 +1214,7 @@ style='font-size:14.0pt;font-family:Consolas;color:black'>&nbsp;&nbsp;&nbsp;&nbs
 <p class=MsoNormal style='text-autospace:none'><span lang=EN-US
 style='font-size:14.0pt;font-family:Consolas;color:black'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span
 lang=EN-US style='font-size:14.0pt;font-family:Consolas;color:#3F7F5F'>// </span><span
-style='font-size:14.0pt;font-family:Consolas;color:#3F7F5F'>杩������╃����浠跺��</span></p>
+style='font-size:14.0pt;font-family:Consolas;color:#3F7F5F'>返回选择的文件名</span></p>
 
 <p class=MsoNormal style='text-autospace:none'><span lang=EN-US
 style='font-size:14.0pt;font-family:Consolas;color:black'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><b><span
