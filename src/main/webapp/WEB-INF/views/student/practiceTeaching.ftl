@@ -198,7 +198,7 @@
             var link_url = Data[i].linkUrl;
             var uploadTime = Data[i].uploadTime;
             htmlStr += "<li>"
-                    + "<div class='li-up'><a href=" + link_url + "'/resource/practice' target='_blank'><img src='/resource/practice/" + img_url + "' ><div class='uinfo'><strong>" + title + "</strong><br><span class='gray'>上传时间</span>" + uploadTime + "</div></a></div>"
+                    + "<div class='li-up'><a href='/resource/practice/" + link_url + "' target='_blank'><img src='/resource/practice/" + img_url + "' ><div class='uinfo'><strong>" + title + "</strong><br><span class='gray'>上传时间</span>" + uploadTime + "</div></a></div>"
                     + "<div class='li-down'>" + description + "</div>" +
                     "</li>";
         }
