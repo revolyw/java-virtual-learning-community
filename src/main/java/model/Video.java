@@ -11,8 +11,7 @@ import java.io.Serializable;
  */
 @Entity
 @Table(name = "video")
-public class Video extends BaseModel implements Serializable {
-    private static final long serialVersionUID = 3177968283115895208L;
+public class Video extends BaseModel {
     @Id
     private int id;
     private String level;

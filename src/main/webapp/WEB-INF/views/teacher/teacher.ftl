@@ -3,13 +3,13 @@
 <head>
     <title>教师管理界面</title>
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <script src="dist/jquery.min.js"></script>
+    <script src="../../../dist/jquery.min.js"></script>
 
-    <link rel="Stylesheet" href="dist/css/bootstrap.min.css"/>
-    <link rel="Stylesheet" href="dist/css/bootstrap.min.css"/>
-    <link rel="Stylesheet" href="css/teacher.css"/>
+    <link rel="Stylesheet" href="../../../dist/css/bootstrap.min.css"/>
+    <link rel="Stylesheet" href="../../../dist/css/bootstrap.min.css"/>
+    <link rel="Stylesheet" href="../../../css/teacher.css"/>
 
-    <script type="text/javascript" src="js/pageTool.js"></script>
+    <script type="text/javascript" src="../../../js/pageTool.js"></script>
 </head>
 <body>
 <div id="container" class="container">
@@ -27,7 +27,7 @@
                         学生留言
                     </button>
                 </div>
-                <img src="img/javaVirtual_head1.fw.png" class="bg_img img-responsive"/>
+                <img src="../../../img/javaVirtual_head1.fw.png" class="bg_img img-responsive"/>
                 <a class="btn btn-sm btn-success col-md-offset-10 col-md-2" href="home.ftl" style="">学生端主页</a>
             </div>
         </div>

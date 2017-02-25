@@ -17,22 +17,97 @@
     <!-- 自己定制的样式 -->
     <link rel="stylesheet" href="css/public.css"/>
     <style>
-        *{font-size: 12px; color:#000;}
+        * {
+            font-size: 12px;
+            color: #000;
+        }
+
         .row
-        #sub_bright{padding :0 0 30px 5px; min-height: 960px; width: 750px; float: left; height: 960px;}
-        #LastContent1{width:1024px;min-height:100%;padding:20px 5%;background:#eee; color:#09935F;background-size:1024px 100%;}
-        ul{padding:0px; margin:0px; list-style-type: none;}
-        #big_ulist{width:100%;min-height:350px; margin:0 auto;}
-        #big_ulist li{list-style-type: none; width: 295px; height: 160px; padding: 5px 0 0 5px;  background:#fff; border-radius:20px; box-shadow:5px 5px 5px #ccc;margin:0 10px 10px 0; float: left; list-style-image: none;}
-        #big_ulist li:hover{color:#000!important; background:#00C671!important;}
-        #big_ulist li .li-up{width:100%;height:45%;padding:5px 4% 5px 5px;}
-        #big_ulist li .li-up a:hover{color:#2f4154!important;}
-        #big_ulist .li-up img{width:33%;height:100%;}
-        #big_ulist li .li-down{width:100%;height:45%;padding:5px 4% 5px 5px;}
-        #big_ulist .uinfo{line-height: 150%;max-width:60%;width:auto;height:100%; float: right;}
+        #sub_bright {
+            padding: 0 0 30px 5px;
+            min-height: 960px;
+            width: 750px;
+            float: left;
+            height: 960px;
+        }
+
+        #LastContent1 {
+            width: 1024px;
+            min-height: 100%;
+            padding: 20px 5%;
+            background: #eee;
+            color: #09935F;
+            background-size: 1024px 100%;
+        }
+
+        ul {
+            padding: 0px;
+            margin: 0px;
+            list-style-type: none;
+        }
+
+        #big_ulist {
+            width: 100%;
+            min-height: 350px;
+            margin: 0 auto;
+        }
+
+        #big_ulist li {
+            list-style-type: none;
+            width: 295px;
+            height: 160px;
+            padding: 5px 0 0 5px;
+            background: #fff;
+            border-radius: 20px;
+            box-shadow: 5px 5px 5px #ccc;
+            margin: 0 10px 10px 0;
+            float: left;
+            list-style-image: none;
+        }
+
+        #big_ulist li:hover {
+            color: #000 !important;
+            background: #00C671 !important;
+        }
+
+        #big_ulist li .li-up {
+            width: 100%;
+            height: 45%;
+            padding: 5px 4% 5px 5px;
+        }
+
+        #big_ulist li .li-up a:hover {
+            color: #2f4154 !important;
+        }
+
+        #big_ulist .li-up img {
+            width: 33%;
+            height: 100%;
+        }
+
+        #big_ulist li .li-down {
+            width: 100%;
+            height: 45%;
+            padding: 5px 4% 5px 5px;
+        }
+
+        #big_ulist .uinfo {
+            line-height: 150%;
+            max-width: 60%;
+            width: auto;
+            height: 100%;
+            float: right;
+        }
+
         /*分页样式调整*/
-        .pagingArea{width:1024px; min-height:100%;}
-        .pagingArea .pagingArea_index{right:14%;}
+        .pagingArea {
+            width: 1024px;
+            min-height: 100%;
+        }
+
+        .pagingArea .pagingArea_index {
+            right: 14%;
+        }
     </style>
 
     <script src="dist/js/bootstrap.min.js"></script>
@@ -47,7 +122,7 @@
 <body>
 <!--头部-->
 <#assign page="practice">
-<#include "common/header.ftl">
+<#include "${view_path!}/common/header.ftl">
 <!-- 页面主体部分  -->
 <div id="wrap">
     <div class="container bodySize">
@@ -84,7 +159,7 @@
 </div>
 <!-- 页面主体部分  -->
 <#-- 页脚 -->
-<#include "common/footer.ftl">
+<#include "${view_path!}/common/footer.ftl">
 </body>
 <script>
     var host = "${host}";
@@ -123,7 +198,7 @@
             var link_url = Data[i].linkUrl;
             var uploadTime = Data[i].uploadTime;
             htmlStr += "<li>"
-                    + "<div class='li-up'><a href='resource/practice/" + link_url + "' target='_blank'><img src='resource/practice/" + img_url + "'><div class='uinfo'><strong>" + title + "</strong><br><span class='gray'>上传时间</span>" + uploadTime + "</div></a></div>"
+                    + "<div class='li-up'><a href=" + link_url + "'/resource/practice' target='_blank'><img src='/resource/practice/" + img_url + "' ><div class='uinfo'><strong>" + title + "</strong><br><span class='gray'>上传时间</span>" + uploadTime + "</div></a></div>"
                     + "<div class='li-down'>" + description + "</div>" +
                     "</li>";
         }

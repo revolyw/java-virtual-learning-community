@@ -12,8 +12,7 @@ import java.util.Date;
  */
 @Entity
 @Table(name = "theme")
-public class Theme extends BaseModel implements Serializable {
-    private static final long serialVersionUID = -561607639011109640L;
+public class Theme extends BaseModel {
     @Id
     private int id;
     private String title;

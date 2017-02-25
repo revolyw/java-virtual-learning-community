@@ -30,20 +30,20 @@
                 <div class="container">
                     <div class="navbar-collapse collapse">
                         <ul class="nav navbar-nav">
-                            <li class="<#if (page=="home")>active</#if>"><a href="home.ftl">首页</a></li>
+                            <li class="<#if (page=="home")>active</#if>"><a href="${host!}/home">首页</a></li>
                             <li class="span">&nbsp;</li>
-                            <li class="<#if (page=="course")>active</#if>"><a href="courseIntrod.ftl">课程概述</a></li>
+                            <li class="<#if (page=="course")>active</#if>"><a href="${host!}/courseIntrod">课程概述</a></li>
                             <li class="span">&nbsp;</li>
-                            <li class="<#if (page=="knowledge")>active</#if>"><a href="knowledge.ftl">知识管理</a></li>
+                            <li class="<#if (page=="knowledge")>active</#if>"><a href="${host!}/knowledge">知识管理</a></li>
                             <li class="span">&nbsp;</li>
-                            <li class="<#if (page=="demand")>active</#if>"><a href="onDemand.ftl">微课点播</a></li>
+                            <li class="<#if (page=="demand")>active</#if>"><a href="${host!}/onDemand">微课点播</a></li>
                             <li class="span">&nbsp;</li>
-                            <li class="<#if (page=="evaluation")>active</#if>"><a href="evaluation.ftl">学习评价</a></li>
+                            <li class="<#if (page=="evaluation")>active</#if>"><a href="${host!}/evaluation">学习评价</a></li>
                             <li class="span">&nbsp;</li>
-                            <li class="<#if (page=="practice")>active</#if>"><a href="practiceTeaching.ftl">实例教学</a>
+                            <li class="<#if (page=="practice")>active</#if>"><a href="${host!}/practiceTeaching">实例教学</a>
                             </li>
                             <li class="span">&nbsp;</li>
-                            <li class="<#if (page=="community")>active</#if>"><a href="community.ftl" target="_blank">社区交流</a>
+                            <li class="<#if (page=="community")>active</#if>"><a href="${host!}/community" target="_blank">社区交流</a>
                             </li>
                         </ul>
                     </div>

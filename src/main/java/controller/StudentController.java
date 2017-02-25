@@ -1,9 +1,7 @@
 package controller;
 
-import dao.base.BaseDao;
 import framework.HTTP;
 import framework.SysConfig;
-import model.Students;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
@@ -16,8 +14,8 @@ import org.springframework.web.bind.annotation.RequestMethod;
  */
 @Controller
 @Configuration
-public class PageController {
-    private BaseDao<Students> studentsDao;
+public class StudentController {
+    private static final String TEMPLATE_PREFIX = "student";
 
     @RequestMapping(value = {"", "/"}, method = RequestMethod.GET)
     public String goIndex(HTTP http, ModelMap context) {
@@ -27,69 +25,57 @@ public class PageController {
     @RequestMapping("/community")
     public String goCommunity(HTTP http, ModelMap context) {
         context.put("host", SysConfig.HOST);
-        return "community";
+        return TEMPLATE_PREFIX+"/community";
     }
 
     @RequestMapping("/home")
     public String goHome(HTTP http, ModelMap context) {
         context.put("host", SysConfig.HOST);
-        return "home";
+        return TEMPLATE_PREFIX+"/home";
     }
 
     @RequestMapping("/courseIntrod")
     public String goCourseIntrod(HTTP http, ModelMap context) {
         context.put("host", SysConfig.HOST);
-        return "courseIntrod";
+        return TEMPLATE_PREFIX+"/courseIntrod";
     }
 
     @RequestMapping("/evaluation")
     public String goEvaluation(HTTP http, ModelMap context) {
         context.put("host", SysConfig.HOST);
-        return "evaluation";
+        return TEMPLATE_PREFIX+"/evaluation";
     }
 
     //知识管理
     @RequestMapping("/knowledge")
     public String goKnowledge(HTTP http, ModelMap context) {
         context.put("host", SysConfig.HOST);
-        return "knowledge";
-    }
-
-    @RequestMapping("/login")
-    public String goLogin(HTTP http, ModelMap context) {
-        context.put("host", SysConfig.HOST);
-        return "login";
+        return TEMPLATE_PREFIX+"/knowledge";
     }
 
     //微课点播
     @RequestMapping("/onDemand")
     public String goOnDemand(HTTP http, ModelMap context) {
         context.put("host", SysConfig.HOST);
-        return "onDemand";
+        return TEMPLATE_PREFIX+"/onDemand";
     }
 
+    //实验教学
     @RequestMapping("/practiceTeaching")
     public String goPracticeTeaching(HTTP http, ModelMap context) {
         context.put("host", SysConfig.HOST);
-        return "practiceTeaching";
+        return TEMPLATE_PREFIX+"/practiceTeaching";
     }
 
     @RequestMapping("/reg")
     public String goReg(HTTP http, ModelMap context) {
         context.put("host", SysConfig.HOST);
-        return "reg";
+        return TEMPLATE_PREFIX+"/reg";
     }
 
-    @RequestMapping("/teacher")
-    public String goTeacher(HTTP http, ModelMap context) {
+    @RequestMapping("/login")
+    public String goLogin(HTTP http, ModelMap context) {
         context.put("host", SysConfig.HOST);
-        return "teacher";
+        return TEMPLATE_PREFIX+"/login";
     }
-
-    @RequestMapping("/teacLogin")
-    public String goTeacLogin(HTTP http, ModelMap context) {
-        context.put("host", SysConfig.HOST);
-        return "teacLogin";
-    }
-
 }

@@ -6,8 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <title>Reg</title>
     <!-- Bootstrap core CSS -->
-    <link href="../../../dist/css/bootstrap.css" rel="stylesheet"/>
-    <link href="../../../css/signin.css" rel="stylesheet"/>
+    <link href="/dist/css/bootstrap.css" rel="stylesheet"/>
+    <link href="/css/signin.css" rel="stylesheet"/>
 </head>
 <body>
 <div class="container" style="font-family:幼圆;">

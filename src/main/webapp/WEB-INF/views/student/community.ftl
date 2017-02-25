@@ -164,33 +164,8 @@
     <div class="view_tiezi displayNone">
     </div>
 </div>
-<!--页头logo--><!--
-    <div class="container bodySize">
-        <div class="demo-headline header">
-            <label id="display_lg_off" class="show-off" >
-	                    <ul class="sign-in">
-		                    <li><a data-toggle="modal" data-target="#LoginModal" href="#">
-			                	登录
-		                        </a></li>
-	                    	<li><a data-toggle="modal" data-target="#RegModal" href="#">
-			                	注册
-		                        </a></li>
-	                    </ul>
-            </label>
-            <label id="display_lg_on" class="show-off" >
-                <ul class="sign-in">
-                    <li>
-                        <label id="s_u_name"  Text="" Style="color: WindowText"></label>
-                    </li>
-                    <li>
-                        <button id="loginOff" >注销</button>
-                    </li>
-                </ul>
-            </label>
-        </div>
 <!-- 页面主体部分  -->
 <div id="wrap">
-
     <div class="bg container bodySize">
         <div class="top_bg"></div>
         <div id="top" class="col-md-12">
@@ -205,37 +180,14 @@
                 <a href="javascript:void(0);" class="search_img"></a>
             </div>
             <div class="top_logo">
-                <a href="home.ftl"><img src="img/communityLogo.png" style="border:1px solid #e8e8e8;"/></a>
+                <a href="home.ftl"><img src="/img/communityLogo.png" style="border:1px solid #e8e8e8;"/></a>
             </div>
             <div class="top_btn"><a href="home.ftl">去社区学习</a></div>
         </div>
         <div id="bottom" class="col-md-12">
             <ul>
-                <!--<li>
-                    <div class="tie_left">
-                        <div class="hot">
-                            <span class="hot_txt">2048</span>
-                        </div>
-                    </div>
-                    <div class="tie_center">
-                        <div class="tie_center_top">
-                            <span id="title_txt">J2EE中过滤器的用法</span>
-                        </div>
-                        <div class="tie_center_bottom">
-                            <span id="tie_main">J2EE中的过滤器到底该如何使用呢？ 今天我们就来探讨一下，这里是这片帖子的摘要</span>
-                        </div>
-                    </div>
-                    <div class="tie_right">
-                        <div class="tie_right_top">
-                            <span id="user_txt">骑大象抢内衣</span>
-                        </div>
-                        <div class="tie_right_bottom">
-                            <span id="time_txt">2015-04-08 14:00</span>
-                        </div>
-                    </div>
-                </li>-->
                 <li style="line-height:100px; text-align:center;">
-                    <img src="img/loading1.gif"/>
+                    <img src="/img/loading1.gif"/>
                 </li>
             </ul>
         </div>
@@ -243,7 +195,7 @@
 </div>
 <!-- 页面主体部分  -->
 <#-- 页脚 -->
-<#include "common/footer.ftl">
+<#include "${view_path!}/common/footer.ftl">
 </body>
 <script>
     var host = "${host}";
@@ -395,7 +347,7 @@
                 var htmlStr = "";
                 htmlStr += "<ul>";
                 htmlStr += "<li class=\"view_tiezi_head\"><span class=\"view_tiezi_head_title\" theme_id=\"" + json[0].id + "\">" + json[0].title + "</span><div class=\"close\"></div></li>";
-                htmlStr += "<li><div class=\"view_tiezi_content\">" + json[0].content + "</div><a><img src=\"img/big_touxiang.jpg\"/><span class=\"view_tiezi_uname\">" + json[0].uName + "</span></a><div class=\"view_tiezi_contentBottom\"><span class=\"view_tiezi_loushu\">1楼</span><span class=\"view_tiezi_time\">" + json[0].time + "</span></li>";
+                htmlStr += "<li><div class=\"view_tiezi_content\">" + json[0].content + "</div><a><img src=\"../../../img/big_touxiang.jpg\"/><span class=\"view_tiezi_uname\">" + json[0].uName + "</span></a><div class=\"view_tiezi_contentBottom\"><span class=\"view_tiezi_loushu\">1楼</span><span class=\"view_tiezi_time\">" + json[0].time + "</span></li>";
                 htmlStr += "</ul>";
                 htmlStr += "<div class=\"view_tiezi_comments\"></div>"
                 htmlStr += "<textarea class=\"viwe_tiezi_commentarea\" placeholder=\"评论\"></textarea><div class=\"btn btn-info btn_comment_submit\" style=\"width:100%\">提交</div>";
@@ -465,7 +417,7 @@
         for (var i = 0; i < Data.length; i++, j++) {
             htmlStr += "<li comid=\"" + Data[i].id + "\">";
             htmlStr += "<div class=\"view_tiezi_content\">" + Data[i].content + "</div>";
-            htmlStr += "<a><img src=\"img/big_touxiang.jpg\"/><span class=\"view_tiezi_uname\">" + Data[i].fromUId + "</span></a>";
+            htmlStr += "<a><img src=\"../../../img/big_touxiang.jpg\"/><span class=\"view_tiezi_uname\">" + Data[i].fromUId + "</span></a>";
             htmlStr += "<div class=\"view_tiezi_contentBottom\">";
             htmlStr += "<span class=\"view_tiezi_loushu\">" + (j + 2) + "楼</span><span class=\"view_tiezi_time\">" + Data[i].time + "</span><a class=\"view_tiezi_reply\">回复<span>(" + Data[i].replyNum + ")</span></a>";
             htmlStr += "<div style=\"display:none\" class=\"replys\">";
@@ -515,7 +467,7 @@
         var htmlStr = "";
         htmlStr += "<ul>";
         for (var i = 0; i < Data.length; i++) {
-            htmlStr += "<li><a><img src=\"img/small_touxiang.jpg\"/><span>" + Data[i].fromName + "</span></a><code>回复 " + Data[i].toName + "：</code><span>" + Data[i].content + "</span><span class=\"reply_tail_time\">" + Data[i].time + "</span><span class=\"reply_tail_btn\" to=\"" + Data[i].fromUId + "\">回复</span></li>";
+            htmlStr += "<li><a><img src=\"../../../img/small_touxiang.jpg\"/><span>" + Data[i].fromName + "</span></a><code>回复 " + Data[i].toName + "：</code><span>" + Data[i].content + "</span><span class=\"reply_tail_time\">" + Data[i].time + "</span><span class=\"reply_tail_btn\" to=\"" + Data[i].fromUId + "\">回复</span></li>";
         }
         htmlStr += "</ul>";
         return htmlStr;

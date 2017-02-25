@@ -53,7 +53,7 @@
 <body>
 <!--头部-->
 <#assign page="demand">
-<#include "common/header.ftl">
+<#include "${view_path!}/common/header.ftl">
 <!-- 页面主体部分  -->
 <div id="wrap">
     <div class="container bodySize">
@@ -113,7 +113,7 @@
                                    type="application/x-shockwave-flash"
                                    width="700" height="500"></embed>
                         </object>
-                        </br>
+                        <br/>
                     </div>
                     <div id="teacher_info">
                     </div>
@@ -124,7 +124,7 @@
 </div>
 <!-- 页面主体部分  -->
 <#-- 页脚 -->
-<#include "common/footer.ftl">
+<#include "${view_path!}/common/footer.ftl">
 </body>
 <script>
     var host = "${host}";
@@ -209,7 +209,7 @@
             var link_url = $(this).children("div.hideData").html();
             var video_name = $(this).children("a").html();
             var video_object = "<div class=\"dividing\"><h2><label class=\"skew\" id=\"\"><i>" + video_name + "</i></label></h2></div>";
-            video_object += "<object classid='clsid:D27CDB6E-AE6D-11cf-96B8-444553540000' codebase='http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=7,0,19,0' width='700' height='500'><param name='movie' value='flvplayer.swf'><param name='quality' value='high'><param name='AutoStart' value='true'><param name='auto' value='true'><param name='allowFullScreen' value='true'><param name='FlashVars' value='vcastr_file=demo.flv&amp;LogoText=iopen.com.cn&amp;BufferTime=3'><embed id='video_object' src='resource/video/flvplayer.swf' allowfullscreen='true' flashvars='vcastr_file="
+            video_object += "<object classid='clsid:D27CDB6E-AE6D-11cf-96B8-444553540000' codebase='http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=7,0,19,0' width='700' height='500'><param name='movie' value='flvplayer.swf'><param name='quality' value='high'><param name='AutoStart' value='true'><param name='auto' value='true'><param name='allowFullScreen' value='true'><param name='FlashVars' value='vcastr_file=demo.flv&amp;LogoText=iopen.com.cn&amp;BufferTime=3'><embed id='video_object' src='../../../resource/video/flvplayer.swf' allowfullscreen='true' flashvars='vcastr_file="
                     + link_url + "' quality='high' pluginspage='http://www.macromedia.com/go/getflashplayer' type='application/x-shockwave-flash' width='700' height='500'></object></br>"
             $("#video_object").html(video_object);
             $.ajax({
@@ -218,11 +218,11 @@
                 contentType: "application/json; charset=utf-8",
                 dataType: "json",
                 success: function (data) {
-                    var json = eval("(" + data.d + ")"); //将json字符串转换成json对象
+                    var json = data; //将json字符串转换成json对象
                     if (json == "" || null == json || undefined == json) {
                         return;
                     }
-                    $("#video_object").append("<img style='width:30px; height:30px;' src='img/interact1.jpg' /><h5 style=\"display:inline-block; font-size:20px; color:#0F7463; font-family:'幼圆';\">与老师交流</h5>");
+                    $("#video_object").append("<img style='width:30px; height:30px;' src='/img/interact1.jpg' /><h5 style=\"display:inline-block; font-size:20px; color:#0F7463; font-family:'幼圆';\">与老师交流</h5>");
                     teacherList(json);
                 },
                 error: function (err) {
@@ -238,8 +238,8 @@
     function teacherList(json) {
         var rsString = "";
         for (var i = 0; i < json.length; i++) {
-            var id = json[i].Id
-            var teacherName = json[i].Name;
+            var id = json[i].id
+            var teacherName = json[i].name;
             rsString += "<div class='docs-section'>" +
                     "<a class='tn' href='javascript:void(0);' id='" + id + "'><blockquote>" +
                     "<p style='font-size:15px;'>" + teacherName + "</p>" +
@@ -266,16 +266,15 @@
             var messageSection = $(this);
             var teachId = $(this).parents(".docs-section").find("a.tn").attr("id");
             var pageSize = 5;
-            var submitParam = "{teachId:\"" + teachId + "\",pageSize:\"" + pageSize + "\"}";
+            var submitParam = "teachId=" + teachId + "&pageSize=" + pageSize;
             $.ajax({
                 type: "post",
                 async: false,
                 url: host + "/getMessages",
-                contentType: "application/json; charset=utf-8",
                 dataType: "json",
                 data: submitParam
             }).done(function (data) {
-                var json = eval("(" + data.d + ")");
+                var json = data;
                 //构造分页对象
                 var msgPageTool = new pageTool(json, pageSize, 5);
                 //初始化
@@ -297,7 +296,6 @@
                         type: "post",
                         async: false,
                         url: "onDemand.ftl/submitMessage",
-                        contentType: "application/json; charset=utf-8",
                         dataType: "json",
                         data: submitParam,
                         success: function (data) {
@@ -327,9 +325,9 @@
         var htmlStr = "";
         for (var i = 0; i < Data.length; i++) {
             htmlStr += "<div class=\"messageList\">" +
-                    "<img class=\"messageList_img " + (Data[i][1].Type == "to_tec" ? "blue_border" : "red_border") + "\" src=\"" + (Data[i][1].Type == "to_tec" ? "img/student_head.png" : "img/teacher_head.png") + "\" /><span class=\"messageList_uname\">" + (Data[i][1].Type == "to_tec" ? Data[i][0] : Data[i][2]) + "</span>" +
-                    "<span messageList_content>" + (Data[i][1].Type == "to_tec" ? "" : "<code>回复你：</code>") + Data[i][1].Content + "</span>" +
-                    "<span class=\"messageList_time\">" + Data[i][1].Time + "</span></div>";
+                    "<img class=\"messageList_img " + (Data[i].type == "to_tec" ? "blue_border" : "red_border") + "\" src=\"" + (Data[i].type == "to_tec" ? "img/student_head.png" : "img/teacher_head.png") + "\" /><span class=\"messageList_uname\">" + (Data[i].type == "to_tec" ? Data[i] : Data[i]) + "</span>" +
+                    "<span messageList_content>" + (Data[i].type == "to_tec" ? "" : "<code>回复你：</code>") + Data[i].content + "</span>" +
+                    "<span class=\"messageList_time\">" + Data[i].time + "</span></div>";
         }
         return htmlStr;
     }
@@ -355,7 +353,6 @@
                 type: "post",
                 async: false,
                 url: host + "/submitMessage",
-                contentType: "application/json; charset=utf-8",
                 dataType: "json",
                 data: submitParam,
                 success: function (data) {

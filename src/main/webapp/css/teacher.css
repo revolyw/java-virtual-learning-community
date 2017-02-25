@@ -48,7 +48,7 @@ input:-webkit-autofill { -webkit-box-shadow: 0 0 0px 1000px #fff inset; }
 #login #btnSubmit{position:absolute; top:72%;left:65%;display:block; color:#fff; font-weight:bold;}
 #login #btnSubmit:hover{ cursor:pointer; }
 /*页脚*/
-#footer{position: fixed; bottom: 30px; width: 1350px; color:#fff;}
+#footer{margin-bottom:50px; color:#fff;}
 /*Excel表格*/
 #dataTable tr td{ text-align:center; font-weight:bold; font-family:Microsoft YaHei; font-size:18px; color:#009966;}
 
@@ -65,7 +65,7 @@ input:-webkit-autofill { -webkit-box-shadow: 0 0 0px 1000px #fff inset; }
 .messageList .replyContainer{position:relative; bottom:0px; right:0px;width:100%; min-height:10px; padding-top:20px;}
 .messageList .replyContainer .messageList_time{position:absolute; top:0px; right:35px;}
 .messageList .replyContainer .messageList_reply{position:absolute; top:0px; right:5px;}
-.messageList .replyContainer .div_reply{width:50;}
+.messageList .replyContainer .div_reply{width:50px;}
 .bkg_deep { background:#E0FFFF;}
 
 /*分页按钮样式*/

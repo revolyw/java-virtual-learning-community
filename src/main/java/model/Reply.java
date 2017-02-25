@@ -12,8 +12,7 @@ import java.util.Date;
  */
 @Entity
 @Table(name = "reply")
-public class Reply extends BaseModel implements Serializable {
-    private static final long serialVersionUID = -2869095790714399508L;
+public class Reply extends BaseModel {
     @Id
     private int id;
     @Column(name = "comment_id")

@@ -9,7 +9,7 @@ import java.io.Serializable;
  * 作用域仅限model包
  * Created by Willow on 12/4/16.
  */
-abstract class BaseModel implements Serializable, Cloneable {
+abstract class BaseModel implements Serializable {
 
     private static final long serialVersionUID = 765461054764759834L;
 

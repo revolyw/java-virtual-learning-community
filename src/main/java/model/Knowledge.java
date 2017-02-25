@@ -11,8 +11,7 @@ import java.io.Serializable;
  */
 @Entity
 @Table(name = "knowledge")
-public class Knowledge implements Serializable {
-    private static final long serialVersionUID = 6410906872525025722L;
+public class Knowledge extends BaseModel {
     @Id
     private int id;
     private String level;

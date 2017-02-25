@@ -45,7 +45,7 @@
 <body>
 <!--头部-->
 <#assign page="course">
-<#include "common/header.ftl">
+<#include "${view_path!}/common/header.ftl">
 
 <!-- 页面主体部分  -->
 <div id="wrap">
@@ -151,6 +151,6 @@
     </div>
     <!-- 页面主体部分  -->
 <#-- 页脚 -->
-<#include "common/footer.ftl">
+<#include "${view_path!}/common/footer.ftl">
 </body>
 </html>

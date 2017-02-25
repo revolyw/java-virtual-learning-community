@@ -9,13 +9,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) 调用jquery引擎 -->
 
-    <script type="text/javascript" src="dist/jquery.min.js"></script>
+    <script type="text/javascript" src="../../../dist/jquery.min.js"></script>
 
     <!-- bootstrap开源库-->
-    <link rel="stylesheet" href="dist/css/bootstrap.min.css"/>
-    <link rel="stylesheet" href="css/flat-ui.css"/>
+    <link rel="stylesheet" href="../../../dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="../../../css/flat-ui.css"/>
     <!-- 自己定制的样式 -->
-    <link rel="stylesheet" href="css/public.css"/>
+    <link rel="stylesheet" href="../../../css/public.css"/>
     <style>
         /* CSS Document */
         * {
@@ -255,24 +255,24 @@
         }
     </style>
 
-    <script type="text/javascript" src="dist/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../../../dist/js/bootstrap.min.js"></script>
 
     <!--
     <script type="text/javascript" src="js/stickUp.min.js"></script>-->
     <!--钉住导航-->
 
-    <script type="text/javascript" src="js/tile-slider.js"></script>
+    <script type="text/javascript" src="../../../js/tile-slider.js"></script>
 
     <!--metro图片展示-->
 
-    <script type="text/javascript" src="js/unslider.min.js"></script>
+    <script type="text/javascript" src="../../../js/unslider.min.js"></script>
 
     <!--轮播-->
 
-    <script type="text/javascript" src="js/jquery.movingboxes.js"></script>
+    <script type="text/javascript" src="../../../js/jquery.movingboxes.js"></script>
 
     <!--公用js-->
-    <script src="js/public.js"></script>
+    <script src="../../../js/public.js"></script>
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -284,7 +284,7 @@
 <body>
 <!--头部-->
 <#assign page="home">
-<#include "common/header.ftl">
+<#include "${view_path!}/common/header.ftl">
 <!-- 页面主体部分  -->
 <div id="wrap">
     <div class="container bodySize">
@@ -293,9 +293,9 @@
                 <div class="banner1">
                     <ul>
                         <li>
-                            <img alt="bannerImg" src="img/homeBigPic/mainPic1.jpg"/></li>
+                            <img alt="bannerImg" src="../../../img/homeBigPic/mainPic1.jpg"/></li>
                         <li>
-                            <img alt="bannerImg" src="img/homeBigPic/mainPic2.jpg"/></li>
+                            <img alt="bannerImg" src="../../../img/homeBigPic/mainPic2.jpg"/></li>
                     </ul>
                 </div>
                 <a href="javascript:void(0);" class="unslider-arrow1 prev"></a> <a href="javascript:void(0);"
@@ -325,14 +325,14 @@
                     Java
                     语言诞生于1995年，Java的名字来源于印度尼西亚爪哇岛的英文名称，因盛产咖啡而闻名，Java的标志正是一杯冒着热气的咖啡。Java是一种可以撰写跨平台应用软件的面向对象的程序设计语言，也是目前编程的主流语言。
                 </div>
-                <a class="more" href="courseIntrod.ftl"><img src="img/little2.jpg"/></a>
+                <a class="more" href="courseIntrod.ftl"><img src="../../../img/little2.jpg"/></a>
             </div>
             <div class="communityMessage floatLeft panel panel-default col-md-4">
                 <a class="cmsg_1" href="onDemand.ftl">【视频】最新视频上线，可以点播</a>
                 <a class="cmsg_2" href="onDemand.ftl">【通知】交流社区开通，欢迎大家参与交流分享</a>
                 <a class="cmsg_3" href="onDemand.ftl">【案例】最新程序设计案例：计算器</a>
                 <a class="cmsg_4" href="onDemand.ftl">【通知】学习评价系统，可以在线测验，欢迎点击测试</a>
-                <a class="more" href="community.ftl"><img src="img/little2.jpg"/></a>
+                <a class="more" href="community.ftl"><img src="../../../img/little2.jpg"/></a>
             </div>
             <div class="three floatLeft panel panel-default col-md-4">
                 <div class="panel-heading">
@@ -384,7 +384,7 @@
 </div>
 <!-- 页面主体部分  -->
 <#-- 页脚 -->
-<#include "common/footer.ftl">
+<#include "${view_path!}/common/footer.ftl">
 
 <script type="text/javascript">
     var unslider1 = $('.banner1').unslider({

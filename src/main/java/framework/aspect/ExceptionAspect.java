@@ -23,7 +23,7 @@ public class ExceptionAspect {
     public void aspect() {
     }
 
-    @Pointcut("execution(* controller.PageController.*(..))")
+    @Pointcut("execution(* controller.StudentController.*(..))||execution(* controller.TeacherController.*(..))")
     public void layout() {
     }
 
@@ -33,6 +33,7 @@ public class ExceptionAspect {
             ModelMap context = (ModelMap) joinPoint.getArgs()[1];
             Object retVal = joinPoint.proceed();
             if (retVal instanceof String) {
+                context.put("view_path", "/");
                 context.put("_page_body_", retVal + ".ftl");
                 return "layout/layout";
             }

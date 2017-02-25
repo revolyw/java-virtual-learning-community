@@ -10,8 +10,7 @@ import java.io.Serializable;
  */
 @Entity
 @Table(name = "mcquestion")
-public class McQuestion extends BaseModel implements Serializable{
-    private static final long serialVersionUID = -9122139521144330919L;
+public class McQuestion extends BaseModel  {
     @Id
     private int id;
     private String content;

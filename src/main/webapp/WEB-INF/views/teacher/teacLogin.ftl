@@ -3,10 +3,10 @@
 <head>
     <title>教师登陆</title>
 
-    <script src="dist/jquery.min.js"></script>
+    <script src="../../../dist/jquery.min.js"></script>
 
-    <link rel="Stylesheet" href="dist/css/bootstrap.min.css"/>
-    <link rel="Stylesheet" href="css/teacher.css"/>
+    <link rel="Stylesheet" href="/dist/css/bootstrap.min.css"/>
+    <link rel="Stylesheet" href="/css/teacher.css"/>
 
 </head>
 <body>
@@ -25,12 +25,12 @@
                 <div id="bg" class="col-md-12">
                     <div class="container">
                         <div class="row">
-                            </br>
-                            </br>
+                            <br/>
+                            <br/>
                             <div class="col-md-offset-3 col-md-3">
                                 <div id="login">
                                     <div class="top_logo">
-                                        <img src="img/communityLogo.png" style="border:1px solid #e8e8e8;"></a>
+                                        <img src="../../../img/communityLogo.png" style="border:1px solid #e8e8e8;"></a>
                                     </div>
                                     <h2 class="login_title">
                                         虚拟学习社——后台管理系统</h2>

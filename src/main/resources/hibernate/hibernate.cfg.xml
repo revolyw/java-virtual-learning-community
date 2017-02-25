@@ -14,17 +14,5 @@
         <property name="use_sql_comments">false</property>
 
         <mapping resource="hibernate/entity.hbm.xml"/>
-        <mapping class="model.Knowledge"/>
-        <mapping class="model.KnowledgeContent"/>
-        <mapping class="model.Video"/>
-        <mapping class="model.Teachers"/>
-        <mapping class="model.QuestionCatalogue"/>
-        <mapping class="model.RelationshipForQuestion"/>
-        <mapping class="model.McQuestion"/>
-        <mapping class="model.FiQuestion"/>
-        <mapping class="model.Practice"/>
-        <mapping class="model.Theme"/>
-        <mapping class="model.Comment"/>
-        <mapping class="model.Reply"/>
     </session-factory>
 </hibernate-configuration>

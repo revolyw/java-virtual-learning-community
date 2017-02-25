@@ -1,6 +1,6 @@
 package controller;
 
-import com.sun.xml.internal.rngom.parse.host.Base;
+import antlr.debug.MessageAdapter;
 import dao.base.BaseDao;
 import framework.HTTP;
 import framework.SysConfig;
@@ -8,12 +8,13 @@ import model.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.ui.ModelMap;
+import org.springframework.util.CollectionUtils;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
+import util.LoggerUtil;
 import util.StringUtil;
 
-import javax.xml.transform.Result;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -50,6 +51,8 @@ public class RestfulController {
     private BaseDao<Comment> commentDao;
     @Autowired
     private BaseDao<Reply> replyDao;
+    @Autowired
+    private BaseDao<Message> messageDao;
 
     //获取知识目录
     @RequestMapping("/getKnowledgeTree")
@@ -81,6 +84,31 @@ public class RestfulController {
     public List<Teachers> getTeachers(HTTP http, ModelMap context) {
         List<Teachers> teachers = teachersDao.findAll();
         return teachers;
+    }
+
+    //获取给教师的留言
+    @RequestMapping("/getMessages")
+    public List<List<Message>> getMessages(HTTP http, ModelMap context) {
+        int pageSize = http.getInt("pageSize", 5);
+        int teachId = http.getInt("teachId", 0);
+        List<Message> messages = messageDao.findListByField("teacId", teachId+"");
+        if (CollectionUtils.isEmpty(messages)) {
+            return null;
+        }
+        int i = 1;
+        List<List<Message>> messageMatrix = new ArrayList<>();
+        List<Message> oneLineMassages = new ArrayList<>();
+        for (Message message : messages) {
+            oneLineMassages.add(message);
+            if (i++ % pageSize == 0) {
+                messageMatrix.add(oneLineMassages);
+                oneLineMassages = new ArrayList<>();
+            }
+        }
+        if (!CollectionUtils.isEmpty(oneLineMassages)) {
+            messageMatrix.add(oneLineMassages);
+        }
+        return messageMatrix;
     }
 
     //获取试题
@@ -186,6 +214,7 @@ public class RestfulController {
         return result;
     }
 
+    //获取所有回复
     @RequestMapping("/getReplys")
     public List<Object> getReplys(HTTP http) {
         int commentId = http.getInt("commentId", 0);

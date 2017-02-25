@@ -10,8 +10,7 @@ import java.io.Serializable;
  */
 @Entity
 @Table(name = "relationshipforquestion")
-public class RelationshipForQuestion extends BaseModel implements Serializable {
-    private static final long serialVersionUID = 8799858303131121009L;
+public class RelationshipForQuestion extends BaseModel {
     @Id
     private int id;
     private String sectionId;

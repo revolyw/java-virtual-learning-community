@@ -9,7 +9,7 @@ import javax.persistence.Table;
  */
 @Entity
 @Table(name = "knowledge_content")
-public class KnowledgeContent {
+public class KnowledgeContent extends BaseModel {
     @Id
     private int id;
     private String content;
