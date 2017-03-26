@@ -3,12 +3,12 @@ package dao.base;
 import org.hibernate.SessionFactory;
 import org.hibernate.criterion.DetachedCriteria;
 import org.hibernate.criterion.Restrictions;
-import org.springframework.orm.hibernate4.support.HibernateDaoSupport;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.orm.hibernate5.support.HibernateDaoSupport;
 import org.springframework.stereotype.Repository;
 import util.ObjectUtil;
 import util.StringUtil;
 
-import javax.annotation.Resource;
 import java.lang.reflect.ParameterizedType;
 import java.util.Collection;
 import java.util.List;
@@ -23,7 +23,7 @@ public class BaseDaoImpl<T> extends HibernateDaoSupport implements BaseDao<T> {
      *
      * @param sessionFactory
      */
-    @Resource
+    @Autowired
     public void setMySessionFactory(SessionFactory sessionFactory) {
         super.setSessionFactory(sessionFactory);
     }
