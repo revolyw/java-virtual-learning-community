@@ -4,7 +4,8 @@
        xsi:schemaLocation="http://www.springframework.org/schema/beans
 		http://www.springframework.org/schema/beans/spring-beans-4.3.xsd">
 
-    <!--读取数据源配置项及acegi框架配置项-->
+
+    <!--读取数据源配置项-->
     <bean id="configurationCenterHolder"
           class="framework.ConfigurationCenterHolder">
         <!--<property name="order" value="1" />-->
