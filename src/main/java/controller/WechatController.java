@@ -10,10 +10,10 @@ import service.WechatService;
  * 微信服务接口
  * Created by Willow on 7/10/17.
  */
-@RestController("/wechat")
-@Configuration
+@RestController
+@RequestMapping("/wechat")
 public class WechatController {
-    @RequestMapping("/")
+    @RequestMapping("")
     public String init(HTTP http) {
         String echoStr = http.getString("echoStr", "");
         String signature = http.getString("signature", "");
