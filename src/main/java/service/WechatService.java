@@ -23,7 +23,7 @@ public class WechatService {
         //字典序排序
         Collections.sort(parameters);
         String generatedSignature = DigestUtils.shaHex(parameters.get(0) + parameters.get(1) + parameters.get(2));
-        LoggerUtil.info("generate signature is " + generatedSignature + " the right signature is " + signature);
+        LoggerUtil.info("generate signature is " + generatedSignature + " the right signature is " + signature + " the compare is " + Objects.equals(generatedSignature, signature));
         return Objects.equals(generatedSignature, signature);
     }
 }

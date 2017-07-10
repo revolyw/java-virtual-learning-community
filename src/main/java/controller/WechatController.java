@@ -1,7 +1,6 @@
 package controller;
 
 import framework.HTTP;
-import org.springframework.context.annotation.Configuration;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import service.WechatService;
@@ -20,8 +19,10 @@ public class WechatController {
         String signature = http.getString("signature", "");
         String timestamp = http.getString("timestamp", "");
         String nonce = http.getString("nonce", "");
-        LoggerUtil.info("echoStr");
+        LoggerUtil.info("echostr is " + echoStr + "timestamp is " + timestamp + "nonce is " + nonce);
         boolean validResult = WechatService.validateSignature(signature, timestamp, nonce);
-        return validResult ? echoStr : "fail";
+        String result = validResult ? echoStr : "fail";
+        LoggerUtil.info("result is " + result);
+        return result;
     }
 }
