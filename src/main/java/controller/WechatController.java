@@ -2,6 +2,7 @@ package controller;
 
 import framework.HTTP;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 import service.WechatService;
 import util.LoggerUtil;
@@ -13,7 +14,7 @@ import util.LoggerUtil;
 @RestController
 @RequestMapping("/wechat")
 public class WechatController {
-    @RequestMapping("")
+    @RequestMapping(value = "", method = RequestMethod.GET)
     public String init(HTTP http) {
         String echoStr = http.getString("echostr", "");
         String signature = http.getString("signature", "");
