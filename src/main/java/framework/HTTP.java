@@ -38,4 +38,15 @@ public class HTTP {
             return defaultValue;
         return Integer.valueOf(value);
     }
+
+    public boolean getBoolean(String key, boolean defaultValue) {
+        String value = req.getParameter(key);
+        if (StringUtil.isEmpty(value))
+            return defaultValue;
+        if (value.equals("false") || value.equals("true")) {
+            return Boolean.valueOf(value);
+        } else {
+            return defaultValue;
+        }
+    }
 }
