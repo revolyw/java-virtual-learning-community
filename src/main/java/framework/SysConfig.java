@@ -12,7 +12,7 @@ public class SysConfig {
 
     static {
         DEV = "dev".equals(System.getProperty("environment"));
-        HOST = DEV ? "http://java.willowspace.net" : "http://java.willowspace.cn";
+        HOST = DEV ? "https://java.willowspace.net" : "https://java.willowspace.cn";
     }
 
     public void init() {
