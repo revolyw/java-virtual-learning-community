@@ -3,6 +3,7 @@ package controller;
 import framework.HTTP;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 import service.WechatService;
 import util.LoggerUtil;
@@ -15,6 +16,7 @@ import util.LoggerUtil;
 @RequestMapping("/wechat")
 public class WechatController {
     @RequestMapping(value = "", method = RequestMethod.GET)
+    @ResponseBody
     public String init(HTTP http) {
         String echoStr = http.getString("echostr", "");
         String signature = http.getString("signature", "");
@@ -22,7 +24,7 @@ public class WechatController {
         String nonce = http.getString("nonce", "");
         LoggerUtil.info("echostr is " + echoStr + "timestamp is " + timestamp + "nonce is " + nonce);
         boolean validResult = WechatService.validateSignature(signature, timestamp, nonce);
-        String result = validResult ? echoStr : "fail";
+        String result = validResult ? echoStr : "";
         LoggerUtil.info("result is " + result);
         return result;
     }
