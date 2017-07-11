@@ -13,7 +13,7 @@ import java.util.Objects;
  * Created by Willow on 7/10/17.
  */
 public class WechatService {
-    private static final String TOKEN = "willow";
+    private static final String TOKEN = "6j7w94AD3t3nX93z";
 
     public static boolean validateSignature(String signature, String timestamp, String nonce) {
         List<String> parameters = new ArrayList<>();
