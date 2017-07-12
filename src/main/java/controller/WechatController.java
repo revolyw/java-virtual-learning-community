@@ -28,4 +28,9 @@ public class WechatController {
         LoggerUtil.info("result is " + result);
         return result;
     }
+
+    @RequestMapping(value = "/get/access_token",method = RequestMethod.GET)
+    public String getAccessToken(HTTP http){
+        return "";
+    }
 }

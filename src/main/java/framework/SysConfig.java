@@ -9,6 +9,8 @@ import util.LoggerUtil;
 public class SysConfig {
     public static boolean DEV = false;
     public static String HOST;
+    public static String WECHAT_APP_ID;
+    public static String WECHAT_APP_SECRET;
 
     static {
         DEV = "dev".equals(System.getProperty("environment"));
