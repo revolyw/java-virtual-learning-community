@@ -12,7 +12,7 @@
         <junit.version>4.12</junit.version>
         <spring.context.version>4.3.3.RELEASE</spring.context.version>
         <spring.core.version>4.3.3.RELEASE</spring.core.version>
-        <spring.mvc.version>4.3.3.RELEASE</spring.mvc.version>
+        <spring.mvc.version>5.2.20.RELEASE</spring.mvc.version>
         <spring.orm.version>4.3.3.RELEASE</spring.orm.version>
         <druid.version>1.0.26</druid.version>
         <hibernate.version>5.2.2.Final</hibernate.version>
